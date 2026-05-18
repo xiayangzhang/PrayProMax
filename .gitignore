@@ -1,0 +1,26 @@
+.DS_Store
+*.log
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.env.local
+
+web/build/
+web/dist/
+
+.seed-cache/
+.tmp/
+
+# Per-user session work + rendered outputs (contain PII after anchor render)
+.seed/
+.session/
+outputs/
+
+# Phase B audit intermediate (kept locally as decision record)
+.audit/
+
+# Local claude-code config
+.claude/

@@ -1,0 +1,2984 @@
+# PrayProMax — Tradition Index v1
+#
+# 派别清单 + 状态跟踪。从 ref.md 派生 (v0) → 经 3-worker audit (v0.5) → 经 lineage 规则筛 (v1)。
+#
+# status 枚举:
+#   pending  - 在 scope，待 seeding
+#   seeded   - 已生成子 md
+#   reviewed - 已人工 review
+#   skipped  - 在 INDEX 但不入 seeding；skip_reason 说明原因
+#
+# skip_reason 枚举:
+#   no-lineage     : 20-21c 单创始人 NRM / self-help / energy work（按 CONTRIBUTING 传承规则）
+#   spurious       : 不是独立 prayer-bearing tradition（per audit）
+#   no-prayer      : 无定式祷词（ref.md 文末剔除）
+#   split (see children) : 已拆为子条目
+#   merged-into:<id>      : 已合并到另一条
+#
+version: 1
+generated_from: ref.md
+schema: schemas/tradition.schema.md
+audit_applied: .audit/v0/aggregate.md
+traditions:
+- id: baosheng-dadi-cult
+  name: 保生大帝信仰
+  name_en: Baosheng Dadi Cult
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from guandi-mazu-baosheng-wangye
+  seeded_at: '2026-05-18'
+- id: chan-zong-yankou-shuilu
+  name: 禅宗 · 焰口 / 水陆
+  name_en: Chan Zong — Yankou / Shuilu rites
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 大悲咒、瑜伽焰口咒。
+  seeded_at: '2026-05-18'
+  notes: (sync-backfilled)
+- id: dongbei-chumaxian
+  name: 东北出马仙（保家堂口）
+  name_en: Northeast China Chumaxian (Baojia Tangkou)
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 请仙咒、香堂唱词。
+  seeded_at: '2026-05-18'
+- id: guandi-cult
+  name: 關帝信仰
+  name_en: Guandi (Lord Guan) Cult
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from guandi-mazu-baosheng-wangye
+  seeded_at: '2026-05-18'
+- id: guandi-mazu-baosheng-wangye
+  name: 关帝 / 妈祖 / 保生大帝 / 王爷法事系
+  name_en: Guandi / Mazu / Baosheng Dadi / Wangye Ritual Tradition
+  category: east-asian-han
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 各醮典科仪经文。
+  skip_reason: split (see children)
+- id: hongtou-fashi
+  name: 紅頭法師
+  name_en: Hongtou Fashi (Red-head ritual master)
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from hongtou-wutou-fashi
+  seeded_at: '2026-05-18'
+- id: hongtou-wutou-fashi
+  name: 红头法师 / 乌头法师
+  name_en: Hongtou / Wutou Fashi (Red-head / Black-head Masters)
+  category: east-asian-han
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 法主公请神咒、度亡咒。
+  skip_reason: split (see children)
+- id: huabei-dingxiang
+  name: 华北顶香 / 仙家堂
+  name_en: North China Dingxiang / Xianjia Tang
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 胡黄常蟒请仙咒。
+  seeded_at: '2026-05-18'
+  notes: (sync-backfilled)
+- id: huayan-zong
+  name: 华严宗 · 华严海会
+  name_en: Huayan Zong — Huayan Sea Assembly
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 华严字母念诵。
+  seeded_at: '2026-05-18'
+- id: jingming-dao
+  name: 净明道
+  name_en: Jingming Dao
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 忏悔文、净明八宝偈。
+  seeded_at: '2026-05-18'
+- id: jingtu-zong
+  name: 净土宗
+  name_en: Jingtu Zong (Pure Land)
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 「南无阿弥陀佛」六字洪名。
+  seeded_at: '2026-05-18'
+  notes: (sync-backfilled)
+- id: kejia-shigong-pai
+  name: 客家师公派
+  name_en: Hakka Shigong Pai
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 师公唱戏神歌词。
+  seeded_at: '2026-05-18'
+- id: lingbao-pai
+  name: 灵宝派
+  name_en: Lingbao Pai
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 度亡科仪文（如《灵宝度亡科》）。
+  seeded_at: '2026-05-18'
+- id: lu-zong
+  name: 律宗
+  name_en: Lu Zong (Vinaya School)
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 三坛大戒授戒文。
+  seeded_at: '2026-05-18'
+- id: lushan-pai
+  name: 闾山派 / 三奶夫人派
+  name_en: Lushan Pai (Three Ladies)
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 请陈靖姑咒、收惊词。
+  aliases:
+  - sannai-furen-pai
+  seeded_at: '2026-05-18'
+- id: maoshan-zong
+  name: 茅山宗（上清后裔）
+  name_en: Maoshan Zong (Shangqing lineage)
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 神霄雷法咒、五雷符咒。
+  aliases:
+  - Shangqing
+  seeded_at: '2026-05-18'
+- id: mazu-cult
+  name: 媽祖信仰
+  name_en: Mazu Cult
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from guandi-mazu-baosheng-wangye
+  seeded_at: '2026-05-18'
+- id: mindong-linshui-furen
+  name: 闽东 · 临水夫人陈靖姑信仰
+  name_en: Eastern Fujian Lady Linshui (Chen Jinggu) Cult
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 请神咒、催生咒。
+  seeded_at: '2026-05-18'
+- id: puan-pai
+  name: 普庵派
+  name_en: Pu'an Pai
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 普庵咒（汉传最强咒之一）。
+  seeded_at: '2026-05-18'
+- id: quanzhen-dao
+  name: 全真道
+  name_en: Quanzhen Dao
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 早晚课经、太乙救苦真经。
+  seeded_at: '2026-05-18'
+- id: sanyi-jiao
+  name: 三一教（夏教）
+  name_en: Sanyi Jiao (Xia Jiao)
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 三教合一的忏文与心法咒。
+  seeded_at: '2026-05-18'
+- id: tiantai-zong-chanfa
+  name: 天台宗 · 忏法系
+  name_en: Tiantai Zong — Repentance Rites
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 梁皇宝忏、大悲忏、法华三昧忏文。
+  seeded_at: '2026-05-18'
+- id: wangye-cult
+  name: 王爺信仰
+  name_en: Wangye Cult
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from guandi-mazu-baosheng-wangye
+  seeded_at: '2026-05-18'
+- id: wutou-fashi
+  name: 烏頭法師
+  name_en: Wutou Fashi (Black-head ritual master)
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from hongtou-wutou-fashi
+  seeded_at: '2026-05-18'
+- id: xianghua-yingfu-seng
+  name: 香花僧 / 应赴僧
+  name_en: Xianghua Seng / Yingfu Seng
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 焰口咒文、施食真言。
+  seeded_at: '2026-05-18'
+- id: xuantian-shangdi-famen
+  name: 玄天上帝法门 / 北帝派
+  name_en: Xuantian Shangdi Famen (Beidi Pai)
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 玄天上帝宝诰、镇煞咒。
+  aliases:
+  - beidi-pai
+  seeded_at: '2026-05-18'
+- id: yiguandao
+  name: 一貫道
+  name_en: Yiguandao
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Major Sinophone NRM with millions of adherents in Taiwan/SE Asia; has fixed 五字真言, altar liturgy, and 三寶 initiation
+    — conspicuous absence.
+  added_via: audit:claude
+  seeded_at: '2026-05-18'
+- id: yuexi-leizhou-leishen-pai
+  name: 粤西雷州雷神法派
+  name_en: Western Guangdong Leizhou Thunder God Pai
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 雷部敕令咒。
+  seeded_at: '2026-05-18'
+- id: zhaijiao
+  name: 齋教
+  name_en: Zhaijiao / Vegetarian Sects
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Taiwan/Fujian lay Buddhist sectarian traditions Longhua, Jintong, and Xiantian have documented ritual and recitation
+    systems absent from v0.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: zhengyi-dao
+  name: 正一道 / 天师道
+  name_en: Zhengyi Dao (Celestial Masters)
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 玉清咒、雷霆咒、章奏文。
+  aliases:
+  - tianshi-dao
+  - Celestial Masters
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: zhenyan-zong-han
+  name: 真言宗汉地复兴
+  name_en: Zhenyan Zong (Chinese Shingon revival)
+  category: east-asian-han
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 真言密咒、护摩祝祷文。
+  seeded_at: '2026-05-18'
+- id: ji-shu
+  name: 時宗
+  name_en: Ji-shu
+  category: east-asian-japan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 念佛、御文章读诵。
+  seeded_at: '2026-05-18'
+- id: jinja-shinto
+  name: 神社神道
+  name_en: Jinja Shinto
+  category: east-asian-japan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 祝词（norito）核心。
+  seeded_at: '2026-05-18'
+- id: jodo-shinshu
+  name: 浄土真宗
+  name_en: Jodo Shinshu
+  category: east-asian-japan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 念佛、御文章读诵。
+  seeded_at: '2026-05-18'
+- id: jodo-shu-japan
+  name: 浄土宗
+  name_en: Jodo-shu
+  category: east-asian-japan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 念佛、御文章读诵。
+  seeded_at: '2026-05-18'
+- id: kakure-kirishitan
+  name: 隠れキリシタン
+  name_en: Kakure Kirishitan / Hidden Christians
+  category: east-asian-japan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Japanese hidden-Christian communities preserve orasho prayer chants from Latin/Portuguese/Japanese sources as
+    a distinct corpus.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: konkokyo
+  name: 金光教
+  name_en: Konkokyo
+  category: east-asian-japan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 教派神道一派，镇魂归神祝词。
+  seeded_at: '2026-05-18'
+- id: koshinto-kototama
+  name: 古神道 / 言霊学派
+  name_en: Koshinto / Kototama School
+  category: east-asian-japan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 言灵祝词（如「ひふみ祝詞」）。
+  seeded_at: '2026-05-18'
+- id: kurozumikyo
+  name: 黒住教
+  name_en: Kurozumikyo
+  category: east-asian-japan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 教派神道一派，镇魂归神祝词。
+  seeded_at: '2026-05-18'
+- id: kyoha-shinto
+  name: 教派神道十三派
+  name_en: Kyoha Shinto (Sect Shinto)
+  category: east-asian-japan
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 各派镇魂归神祝词。父类目，含黑住教、金光教、天理教、御岳教等。
+  skip_reason: spurious
+- id: mahikari
+  name: 真光系
+  name_en: Mahikari (Sukyo / Sekai)
+  category: east-asian-japan
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 镇魂归神法、御浄霊祝词。
+  skip_reason: no-lineage
+- id: nichiren-shu
+  name: 日蓮宗
+  name_en: Nichiren-shu
+  category: east-asian-japan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 唱题「南無妙法蓮華経」。
+  seeded_at: '2026-05-18'
+- id: obaku-shu
+  name: 黄檗宗
+  name_en: Ōbaku-shū (Japanese Obaku Zen)
+  category: east-asian-japan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Third Japanese Zen school retaining Ming-era Chinese chanting style (Tōon pronunciation of sutras); distinct prayer
+    corpus.
+  added_via: audit:claude
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: onmyodo
+  name: 陰陽道
+  name_en: Onmyodo
+  category: east-asian-japan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 土御门家延续。「急急如律令」反闭咒、星祭祭文。
+  seeded_at: '2026-05-18'
+- id: ontakekyo
+  name: 御岳教
+  name_en: Ontakekyo
+  category: east-asian-japan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 教派神道一派，镇魂归神祝词。
+  seeded_at: '2026-05-18'
+- id: oomoto
+  name: 大本教
+  name_en: Oomoto
+  category: east-asian-japan
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 镇魂归神法、御浄霊祝词。
+  previous_id: omoto
+  skip_reason: no-lineage
+- id: rinzai-shu
+  name: 臨済宗
+  name_en: Rinzai-shū (Japanese Rinzai Zen)
+  category: east-asian-japan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Mainline Japanese Zen lineage with daily sutra chanting (般若心経・楞厳呪・大悲呪) and koan-context recitations; not in INDEX.
+  added_via: audit:claude
+  seeded_at: '2026-05-18'
+- id: rissho-kosei-kai
+  name: 立正佼成会
+  name_en: Rissho Kosei-kai
+  category: east-asian-japan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 唱题「南無妙法蓮華経」。
+  seeded_at: '2026-05-18'
+- id: seicho-no-ie
+  name: 生長の家
+  name_en: Seicho-no-Ie
+  category: east-asian-japan
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 镇魂归神法、御浄霊祝词。
+  skip_reason: no-lineage
+- id: sekai-kyusei-kyo
+  name: 世界救世教
+  name_en: Sekai Kyusei Kyo
+  category: east-asian-japan
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 镇魂归神法、御浄霊祝词。
+  skip_reason: no-lineage
+- id: shingon-tomitsu
+  name: 真言宗（東密）
+  name_en: Shingon-shu (Tomitsu)
+  category: east-asian-japan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 真言（明咒）核心。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: shugendo
+  name: 修験道（山伏）
+  name_en: Shugendo (Yamabushi)
+  category: east-asian-japan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 真言、行者经文（《理趣经》《般若心经》）。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: soka-gakkai
+  name: 創価学会
+  name_en: Soka Gakkai
+  category: east-asian-japan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 唱题「南無妙法蓮華経」。
+  seeded_at: '2026-05-18'
+- id: soto-shu
+  name: 曹洞宗
+  name_en: Sōtō-shū (Japanese Soto Zen)
+  category: east-asian-japan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Major Japanese Buddhist school with fixed chanting (般若心経・修証義・大悲心陀羅尼); INDEX has every other major Japanese school
+    but no Zen.
+  added_via: audit:claude
+  seeded_at: '2026-05-18'
+- id: tendai-taimitsu
+  name: 天台宗（台密）
+  name_en: Tendai-shu (Taimitsu)
+  category: east-asian-japan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 真言+读经。
+  seeded_at: '2026-05-18'
+- id: tenrikyo
+  name: 天理教
+  name_en: Tenrikyo
+  category: east-asian-japan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 教派神道一派，镇魂归神祝词。
+  seeded_at: '2026-05-18'
+- id: cheondogyo
+  name: 天道教（천도교）
+  name_en: Cheondogyo
+  category: east-asian-korea
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 「至气今至愿为大降」侍天主咒。
+  seeded_at: '2026-05-18'
+- id: daejonggyo
+  name: 大倧教 / 檀君教
+  name_en: Daejonggyo / Dangungyo
+  category: east-asian-korea
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 檀君崇祭文。
+  seeded_at: '2026-05-18'
+- id: daesun-jinrihoe
+  name: 大巡真理会
+  name_en: Daesun Jinrihoe
+  category: east-asian-korea
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: split from jeungsando-daesun-jinrihoe
+  skip_reason: no-lineage
+- id: jeung-san-do
+  name: 甑山道
+  name_en: Jeung San Do
+  category: east-asian-korea
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from jeungsando-daesun-jinrihoe
+  seeded_at: '2026-05-18'
+- id: jeungsando-daesun-jinrihoe
+  name: 甑山道 / 大巡真理会
+  name_en: Jeungsando / Daesun Jinrihoe
+  category: east-asian-korea
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 太乙咒「吽哆吽哆 太乙天上元君」核心咒。
+  skip_reason: split (see children)
+- id: jogye-order
+  name: 大韓佛教曹溪宗
+  name_en: Jogye Order (Korean Seon Buddhism)
+  category: east-asian-korea
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Mainline Korean Buddhist school with established 천수경 / 반야심경 / 신묘장구대다라니 chanting; INDEX lists Won Buddhism but
+    omits the orthodox school covering ~10M adherents.
+  added_via: audit:claude
+  seeded_at: '2026-05-18'
+- id: muism
+  name: 巫俗（무속）
+  name_en: Muism (Korean shamanism)
+  category: east-asian-korea
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 굿巫歌、巫词。
+  seeded_at: '2026-05-18'
+- id: won-buddhism
+  name: 圓佛教
+  name_en: Won Buddhism
+  category: east-asian-korea
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 一圆相念诵。
+  skip_reason: no-lineage
+- id: dong-sasui
+  name: 侗族萨岁信仰
+  name_en: Dong Sasui Cult
+  category: east-asian-folk
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 祭萨歌、款约词。
+  seeded_at: '2026-05-18'
+- id: miao-zhuiniu-huannuoyuan
+  name: 苗族椎牛仪 / 还傩愿
+  name_en: Miao Zhuiniu Rite / Huan Nuo Yuan
+  category: east-asian-folk
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 椎牛祭祀唱词。
+  seeded_at: '2026-05-18'
+- id: naxi-dongba
+  name: 纳西东巴教
+  name_en: Naxi Dongba
+  category: east-asian-folk
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 东巴经诵读、招魂经。
+  seeded_at: '2026-05-18'
+- id: qiang-shibi
+  name: 羌族释比
+  name_en: Qiang Shibi
+  category: east-asian-folk
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 释比唱经（《刷勒日》）。
+  seeded_at: '2026-05-18'
+- id: tujia-tima
+  name: 土家族梯玛 / 还愿
+  name_en: Tujia Tima / Huanyuan
+  category: east-asian-folk
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 梯玛神歌。
+  seeded_at: '2026-05-18'
+- id: yao-dujie-guadeng
+  name: 瑶族度戒 / 挂灯
+  name_en: Yao Dujie / Guadeng
+  category: east-asian-folk
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 度戒唱词。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: yi-bimo
+  name: 彝族毕摩
+  name_en: Yi Bimo
+  category: east-asian-folk
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 毕摩经唱诵（《指路经》等）。
+  seeded_at: '2026-05-18'
+- id: zhuang-shigong-mojiao
+  name: 壮族师公 / 麽教
+  name_en: Zhuang Shigong / Mojiao
+  category: east-asian-folk
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 师公唱词、麽经。
+  seeded_at: '2026-05-18'
+- id: bali-hindu
+  name: 印尼 / 巴厘印度教
+  name_en: Balinese Hinduism
+  category: southeast-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 梵语曼陀罗（如 Tri Sandhya）。
+  seeded_at: '2026-05-18'
+- id: burmese-nat
+  name: 缅甸纳特（Nat）信仰
+  name_en: Burmese Nat Cult
+  category: southeast-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 召灵唱词（Nat-gadaw 巫女吟唱）。
+  seeded_at: '2026-05-18'
+- id: burmese-theravada-paritta
+  name: 缅甸南传佛教诵经
+  name_en: Burmese Theravada Paritta chanting
+  category: southeast-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Distinct Burmese Pali chanting tradition (Mingun-style, Mahasi monastery liturgy); Thai Paritta is listed but
+    Burmese is not.
+  added_via: audit:claude
+  seeded_at: '2026-05-18'
+- id: cambodian-smot
+  name: ស្មូត
+  name_en: Cambodian Buddhist Smot
+  category: southeast-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Khmer smot is a distinct Buddhist prayer/chant genre for funerals, Pchum Ben, Kathina, and soul-calling rites.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: cao-dai
+  name: 越南高台教
+  name_en: Caodaism
+  category: southeast-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 圣坛祈祷文。
+  seeded_at: '2026-05-18'
+- id: dao-mau
+  name: 越南母道教（Đạo Mẫu）
+  name_en: Dao Mau (Vietnamese Mother Goddess)
+  category: southeast-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 上同附体唱词「Hát Văn」。
+  seeded_at: '2026-05-18'
+- id: hoa-hao
+  name: 越南和好教
+  name_en: Hoa Hao Buddhism
+  category: southeast-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 念佛与训词。
+  seeded_at: '2026-05-18'
+- id: indonesian-sufi-tarekat
+  name: 印尼 Sufi Tarekat
+  name_en: Indonesian Sufi Tarekat
+  category: southeast-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Dhikr 念名。
+  seeded_at: '2026-05-18'
+- id: kebatinan-kejawen
+  name: 印尼 Kebatinan / Kejawen
+  name_en: Kebatinan / Kejawen
+  category: southeast-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 爪哇 mantra-japa、Kidung 圣咒。
+  seeded_at: '2026-05-18'
+- id: khmer-krou
+  name: 柬埔寨克鲁（Khmer Krou）
+  name_en: Khmer Krou
+  category: southeast-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 巴利+古高棉咒语。
+  seeded_at: '2026-05-18'
+- id: lao-baci
+  name: 老挝 Baci / Sou Khwan
+  name_en: Lao Baci / Sou Khwan
+  category: southeast-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Mo Phon 主祝者诵《Su Khwan》祝文。
+  seeded_at: '2026-05-18'
+- id: malay-bomoh
+  name: 马来 Bomoh / Pawang
+  name_en: Malay Bomoh / Pawang
+  category: southeast-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Jampi 马来咒。
+  seeded_at: '2026-05-18'
+- id: philippine-albularyo
+  name: 菲律宾 Albularyo
+  name_en: Philippine Albularyo
+  category: southeast-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Oraciones（拉丁/西语祷文）+ Bulong 民咒。
+  seeded_at: '2026-05-18'
+- id: saiyasat
+  name: 泰国白法 / 黑法
+  name_en: Thai Saiyasat (White / Black Magic)
+  category: southeast-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Saiyasat 咒语、Khom 古文咒。
+  seeded_at: '2026-05-18'
+- id: sak-yant
+  name: 泰国佛牌 · 刺符（Sak Yant）
+  name_en: Sak Yant (Thai Yantra Tattoo)
+  category: southeast-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 卡塔（咒语）开光。
+  seeded_at: '2026-05-18'
+- id: thai-paritta
+  name: 泰国南传护卫诵（Paritta）
+  name_en: Thai Theravada Paritta
+  category: southeast-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 巴利护卫经全套。
+  seeded_at: '2026-05-18'
+- id: vietnamese-buddhist-liturgics
+  name: Phật giáo Việt Nam
+  name_en: Vietnamese Buddhist Liturgics
+  category: southeast-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Vietnamese Thiền/Pure Land liturgies have distinctive kinh tụng, repentance, funeral, and daily chanting books
+    absent from v0.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: aghori
+  name: अघोर
+  name_en: Aghori
+  category: south-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from kaula-kapalika-aghori
+  seeded_at: '2026-05-18'
+- id: bhairava-kashmir-shaiva
+  name: 拜罗婆派（克什米尔湿婆派）
+  name_en: Bhairava / Kashmir Shaivism
+  category: south-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Bhairava 咒、Spanda 颂。
+  seeded_at: '2026-05-18'
+- id: bhakti-traditions
+  name: Bhakti 派系（Kabir Panth、Warkari、Lingayat 等）
+  name_en: Bhakti traditions (Kabir Panth / Warkari / Lingayat etc.)
+  category: south-asia
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: Bhajan、Kirtan 唱赞。
+  skip_reason: split (see children)
+- id: ganapatya
+  name: गाणपत्य
+  name_en: Ganapatya
+  category: south-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Ganesha-centered Hindu sect with Ganapati Atharvashirsha and Ganapati mantra corpora missing from the Hindu taxonomy.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: gaudiya-vaishnavism
+  name: 毗湿奴派（Gaudiya / ISKCON 等）
+  name_en: Vaishnavism (Gaudiya / ISKCON)
+  category: south-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Maha Mantra 圣名念诵。
+  previous_id: vaishnava-gaudiya
+  seeded_at: '2026-05-18'
+- id: jainism
+  name: 耆那教 Pratikraman / Samayika
+  name_en: Jain Pratikraman / Samayika
+  category: south-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 忏悔与念诵 Navkar Mantra。
+  previous_id: jain-pratikraman
+  seeded_at: '2026-05-18'
+- id: kabir-panth
+  name: कबीर पंथ
+  name_en: Kabir Panth (Sant tradition)
+  category: south-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from bhakti-traditions
+  seeded_at: '2026-05-18'
+- id: kaula
+  name: कौल
+  name_en: Kaula
+  category: south-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from kaula-kapalika-aghori
+  seeded_at: '2026-05-18'
+- id: kaula-kapalika-aghori
+  name: 考拉派 / 卡帕利卡 / 阿戈里
+  name_en: Kaula / Kapalika / Aghori
+  category: south-asia
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 忿怒尊咒。
+  skip_reason: split (see children)
+- id: lingayat
+  name: ಲಿಂಗಾಯತ
+  name_en: Lingayat / Veerashaiva (Karnataka Shaiva)
+  category: south-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from bhakti-traditions
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: nath-sampradaya
+  name: नाथ संप्रदाय
+  name_en: Nath Sampradaya
+  category: south-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Nath yogic-tantric lineages preserve Gorakhbani, guru invocations, and Goraksha mantra practice distinct from
+    Aghori/Kaula buckets.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: newar-vajracharya
+  name: 尼泊尔 Newar Vajracharya
+  name_en: Newar Vajracharya
+  category: south-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 密咒、火供咒。
+  seeded_at: '2026-05-18'
+- id: pushtimarg
+  name: पुष्टिमार्ग
+  name_en: Pushtimarg
+  category: south-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Vallabha/Pushtimarg has haveli seva, smaran, and Ashtachhap kirtan corpora not captured by the Gaudiya Vaishnava
+    row.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: sant-mat-radha-soami
+  name: Sant Mat / Radha Soami
+  name_en: Sant Mat / Radha Soami
+  category: south-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Simran（五圣名念诵）。
+  seeded_at: '2026-05-18'
+- id: shaiva-siddhanta
+  name: 湿婆悉檀派
+  name_en: Shaiva Siddhanta
+  category: south-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Panchakshari 咒「Om Namah Shivaya」。
+  seeded_at: '2026-05-18'
+- id: shakta
+  name: 沙克塔派
+  name_en: Shakta
+  category: south-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 杜尔迦、迦梨咒。
+  seeded_at: '2026-05-18'
+- id: sikhism
+  name: 锡克教 Akhand Path
+  name_en: Sikh Akhand Path
+  category: south-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 古鲁经不间断诵读。
+  previous_id: sikh-akhand-path
+  seeded_at: '2026-05-18'
+- id: sinhala-pirith
+  name: සිංහල පිරිත්
+  name_en: Sinhala Buddhist Pirith
+  category: south-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Sri Lankan Theravada pirit/paritta has its own Piruvana Poth/Pirit Potha corpus and should not be conflated with
+    Thovil.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: smarta-puja
+  name: स्मार्त
+  name_en: Smarta Puja
+  category: south-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from vedic-smarta
+  seeded_at: '2026-05-18'
+- id: sri-lanka-thovil
+  name: 斯里兰卡 Thovil / Sanni Yakuma
+  name_en: Sri Lankan Thovil / Sanni Yakuma
+  category: south-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 驱邪咒文。
+  seeded_at: '2026-05-18'
+- id: sri-vaishnavism
+  name: ஶ்ரீவைணவம்
+  name_en: Sri Vaishnavism
+  category: south-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Tamil Sri Vaishnava liturgy centers on Nālāyira Divya Prabandham and Pancharatra temple worship, distinct from
+    Gaudiya/ISKCON.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: sri-vidya
+  name: 室利韦迪亚（Śrī Vidyā）
+  name_en: Sri Vidya
+  category: south-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 三女神咒续派（Panchadasi、Shodashi 咒）。
+  seeded_at: '2026-05-18'
+- id: swaminarayan-sampradaya
+  name: સ્વામિનારાયણ સંપ્રદાય
+  name_en: Swaminarayan Sampradaya
+  category: south-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Major modern Vaishnava sampradaya with fixed arti, dhun, stuti, prarthana, and nitya puja texts absent from v0.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: tamasic-folk-india
+  name: 印度民间塔玛西派
+  name_en: Indian Folk Tamasic traditions
+  category: south-asia
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 民间咒语。
+  skip_reason: spurious
+- id: vedic-shrauta
+  name: श्रौत / कर्मकाण्ड
+  name_en: Vedic Shrauta / Karma Kanda
+  category: south-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from vedic-smarta
+  seeded_at: '2026-05-18'
+- id: vedic-smarta
+  name: 吠陀祭祀派（Karma Kanda / Smarta）
+  name_en: Vedic / Smarta (Karma Kanda)
+  category: south-asia
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 吠陀曼陀罗（Gayatri 等）。
+  skip_reason: split (see children)
+- id: warkari
+  name: वारकरी
+  name_en: Warkari (Maharashtrian Vithoba bhakti)
+  category: south-asia
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from bhakti-traditions
+  seeded_at: '2026-05-18'
+- id: cham-dance
+  name: 羌姆金刚舞
+  name_en: Cham Vajra Dance
+  category: tibetan-himalayan
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 伴随诵咒。
+  skip_reason: spurious
+- id: chod
+  name: གཅོད
+  name_en: Chod / Zhije Chod
+  category: tibetan-himalayan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Machig Labdron's Chod is a cross-school Tibetan practice lineage with its own liturgies and supplication texts,
+    not the same as Cham dance.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: drukpa-bhutan
+  name: 不丹 Drukpa
+  name_en: Drukpa (Bhutan)
+  category: tibetan-himalayan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 噶举系列咒。
+  seeded_at: '2026-05-18'
+- id: gelug
+  name: 格鲁派
+  name_en: Gelug
+  category: tibetan-himalayan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 文殊心咒、宗喀巴心咒。
+  seeded_at: '2026-05-18'
+- id: jonang
+  name: 觉囊派
+  name_en: Jonang
+  category: tibetan-himalayan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 时轮金刚咒。
+  seeded_at: '2026-05-18'
+- id: kagyu
+  name: 噶举派
+  name_en: Kagyu
+  category: tibetan-himalayan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 大手印祈请文、那洛六法咒。
+  seeded_at: '2026-05-18'
+- id: nyingma
+  name: 宁玛派
+  name_en: Nyingma
+  category: tibetan-himalayan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 莲师心咒「嗡阿吽班杂咕噜叭嘛悉地吽」、伏藏咒。
+  seeded_at: '2026-05-18'
+- id: pawo-pawmo
+  name: 布米巫 / Pawo & Pawmo
+  name_en: Pawo & Pawmo (Tibetan oracular shamans)
+  category: tibetan-himalayan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 招神唱词。
+  seeded_at: '2026-05-18'
+- id: sakya
+  name: 萨迦派
+  name_en: Sakya
+  category: tibetan-himalayan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 喜金刚咒。
+  seeded_at: '2026-05-18'
+- id: yungdrung-bon
+  name: 苯教（雍仲苯）
+  name_en: Yungdrung Bon
+  category: tibetan-himalayan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 「嗡玛智牟耶萨列得」苯教心咒。
+  seeded_at: '2026-05-18'
+- id: baladi-yemenite
+  name: נוסח בלדי
+  name_en: Baladi Yemenite Rite
+  category: abrahamic-judaism
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from yemenite-rite
+  seeded_at: '2026-05-18'
+- id: beta-israel-haymanot
+  name: ቤተ እስራኤል
+  name_en: Beta Israel Haymanot
+  category: abrahamic-judaism
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Ethiopian Jewish Ge'ez liturgy has prayer collections and musical performance practice absent from the Jewish
+    section.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: bnei-baruch
+  name: Bnei Baruch
+  name_en: Bnei Baruch
+  category: abrahamic-judaism
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: split from kabbalah-centre-bnei-baruch
+  skip_reason: no-lineage
+- id: breslov
+  name: 巴拉提斯拉夫派（Breslov）
+  name_en: Breslov Hasidism
+  category: abrahamic-judaism
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Hitbodedut 自发祷告。
+  seeded_at: '2026-05-18'
+- id: edot-hamizrach
+  name: 米兹拉希仪礼
+  name_en: Mizrahi Rite
+  category: abrahamic-judaism
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 独特祷文唱诵（与也门、塞法迪并列）。
+  previous_id: mizrahi-rite
+  seeded_at: '2026-05-18'
+- id: hasidism
+  name: 哈西迪派（Hasidism）
+  name_en: Hasidism
+  category: abrahamic-judaism
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Nigun 旋律 + 拉比祝祷。
+  seeded_at: '2026-05-18'
+- id: italian-jewish-rite
+  name: נוסח איטליאני
+  name_en: Italian Jewish Rite
+  category: abrahamic-judaism
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Minhag Bene Roma/Italian rite has a separate mahzor and early Palestinian liturgical survivals absent from v0.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: kabbalah-centre
+  name: Kabbalah Centre
+  name_en: Kabbalah Centre
+  category: abrahamic-judaism
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: split from kabbalah-centre-bnei-baruch
+  skip_reason: no-lineage
+- id: kabbalah-centre-bnei-baruch
+  name: 耶路撒冷卡巴拉中心 / Bnei Baruch
+  name_en: Kabbalah Centre / Bnei Baruch
+  category: abrahamic-judaism
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 圣名诵念、Tikkun 文。
+  skip_reason: split (see children)
+- id: karaite-judaism
+  name: יהדות קראית
+  name_en: Karaite Judaism
+  category: abrahamic-judaism
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Karaite communities have distinct siddurim and Torah-service prayer practice outside Rabbinic siddur rites.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: merkabah-hekhalot
+  name: 默卡巴 / Hekhalot 神秘派
+  name_en: Merkabah / Hekhalot Mysticism
+  category: abrahamic-judaism
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 上升异象祷文。
+  seeded_at: '2026-05-18'
+- id: misnagdim-lithuanian
+  name: 米斯纳格丁派 / 立陶宛系
+  name_en: Misnagdim / Lithuanian Yeshiva tradition
+  category: abrahamic-judaism
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 严格祈祷文+学习诵读。
+  skip_reason: spurious
+- id: nusach-ashkenaz
+  name: נוסח אשכנז
+  name_en: Nusach Ashkenaz
+  category: abrahamic-judaism
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Ashkenazi siddur rite is a primary Jewish prayer corpus missing while less distinct Lithuanian/Misnagdic social
+    labels are present.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: orthodox-halacha
+  name: 正统派 Halacha 仪礼
+  name_en: Orthodox Halachic Liturgy
+  category: abrahamic-judaism
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Siddur 祈祷文（Shema、Amidah）。
+  seeded_at: '2026-05-18'
+- id: practical-kabbalah
+  name: 实践卡巴拉（Practical Kabbalah）
+  name_en: Practical Kabbalah
+  category: abrahamic-judaism
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 神之圣名（72/42 字母名）。
+  seeded_at: '2026-05-18'
+- id: romaniote-rite
+  name: נוסח רומניוטים
+  name_en: Romaniote Rite
+  category: abrahamic-judaism
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Greek Romaniote Jews preserve Mahzor Romania/Minhag Romania material distinct from Sephardi and Italian rites.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: sephardi-rite
+  name: 塞法迪仪礼
+  name_en: Sephardi Rite
+  category: abrahamic-judaism
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 独特祷文唱诵（与也门、米兹拉希并列）。
+  seeded_at: '2026-05-18'
+- id: shami-yemenite
+  name: נוסח שאמי
+  name_en: Shami Yemenite Rite
+  category: abrahamic-judaism
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from yemenite-rite
+  seeded_at: '2026-05-18'
+- id: yemenite-rite
+  name: 也门仪礼
+  name_en: Yemenite (Teimani) Rite
+  category: abrahamic-judaism
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 独特祷文唱诵（与塞法迪、米兹拉希并列）。
+  skip_reason: split (see children)
+- id: ambrosian-rite
+  name: Ritus Ambrosianus
+  name_en: Ambrosian Rite
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Milanese Latin rite has distinct missal, breviary, chant, prefaces, and Eucharistic prayers separate from Roman
+    Catholic generic rites.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: anglican-high-church
+  name: 圣公会高教派
+  name_en: Anglican High Church
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 公祷书 Book of Common Prayer。
+  seeded_at: '2026-05-18'
+- id: armenian-apostolic
+  name: Հայ Առաքելական Եկեղեցի
+  name_en: Armenian Apostolic Church
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Major Oriental Orthodox church with Sharakan hymnody and Patarag liturgy in Classical Armenian; ref groups Assyrian/Coptic/Tewahedo
+    but misses Armenian.
+  added_via: audit:claude
+  seeded_at: '2026-05-18'
+- id: assyrian-church-of-the-east
+  name: 东方亚述教会
+  name_en: Assyrian Church of the East
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 古叙利亚语圣礼文。
+  seeded_at: '2026-05-18'
+- id: black-church-gospel
+  name: 黑人教会传统
+  name_en: Black Church / Gospel Tradition
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Gospel 赞美词。
+  seeded_at: '2026-05-18'
+- id: catholic-charismatic-renewal
+  name: 天主教灵恩复兴运动
+  name_en: Catholic Charismatic Renewal
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 释放祷告、按手祝福词。
+  seeded_at: '2026-05-18'
+- id: catholic-marian-apparition
+  name: 天主教 Marian Apparition 派
+  name_en: Catholic Marian Apparition tradition
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 玫瑰经、露德祷文。
+  seeded_at: '2026-05-18'
+- id: celtic-blessing-carmina-gadelica
+  name: 凯尔特祝福派
+  name_en: Celtic Blessing tradition (Carmina Gadelica)
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Carmina Gadelica 古盖尔语祝词。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: charismatic-movement
+  name: 灵恩派（Charismatic Movement）
+  name_en: Charismatic Movement
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 释放祷告。
+  seeded_at: '2026-05-18'
+- id: christian-science
+  name: 基督教科学派
+  name_en: Christian Science
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 玛丽·贝克·艾迪式祈祷代医疗。
+  seeded_at: '2026-05-18'
+- id: coptic-orthodox
+  name: 科普特正教
+  name_en: Coptic Orthodox
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 科普特语圣礼文。
+  seeded_at: '2026-05-18'
+- id: eastern-orthodox-liturgy
+  name: 东正教 圣礼礼仪派
+  name_en: Eastern Orthodox Sacramental Liturgy
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 圣金口若望礼仪、降圣火祈祷。
+  seeded_at: '2026-05-18'
+- id: el-shaddai-ph
+  name: 菲律宾 El Shaddai
+  name_en: El Shaddai (Philippine charismatic)
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 集体祷告。
+  seeded_at: '2026-05-18'
+- id: ethiopian-tewahedo
+  name: 埃塞俄比亚 Tewahedo
+  name_en: Ethiopian Tewahedo Orthodox
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 吉兹语（Ge'ez）圣礼文。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: hesychasm
+  name: 静修主义 Hesychasm
+  name_en: Hesychasm
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 「主耶稣基督，神之子，怜悯我罪人」耶稣祷文。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: iglesia-ni-cristo
+  name: 菲律宾 Iglesia ni Cristo
+  name_en: Iglesia ni Cristo
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 集体祷告。
+  seeded_at: '2026-05-18'
+- id: inner-healing-ministry
+  name: 内在医治事工
+  name_en: Inner Healing Ministry (Sozo-style)
+  category: abrahamic-christianity
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 切断仇敌祷告文。
+  skip_reason: spurious
+- id: jehovahs-witnesses
+  name: 耶和华见证人
+  name_en: Jehovah's Witnesses
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 王国聚会公祷。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: lutheran-liturgical
+  name: Lutheran
+  name_en: Lutheran Liturgical Tradition
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from lutheran-reformed-liturgical
+  seeded_at: '2026-05-18'
+- id: lutheran-reformed-liturgical
+  name: 路德宗 / 改革宗 · 礼仪派
+  name_en: Lutheran / Reformed Liturgical
+  category: abrahamic-christianity
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 主日祷词、按立祝文。
+  skip_reason: split (see children)
+- id: malankara-orthodox
+  name: മലങ്കര ഓർത്തഡോക്സ് സുറിയാനി സഭ
+  name_en: Malankara Orthodox Syrian Church
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Indian Oriental Orthodox tradition with West-Syriac liturgy adapted to Malayalam; distinct from Syriac Orthodox
+    proper.
+  added_via: audit:claude
+  seeded_at: '2026-05-18'
+- id: maronite
+  name: الكنيسة المارونية
+  name_en: Maronite Church
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Maronite Syriac Antiochene Qurbono and Fenqitho/office prayers are independent corpora missing from v0.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: mormonism-lds
+  name: 摩门教（LDS）
+  name_en: Mormonism (LDS)
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 圣殿恩道门口诀、洗礼祷文。
+  seeded_at: '2026-05-18'
+- id: mozarabic-rite
+  name: Ritus Hispano-Mozarabicus
+  name_en: Mozarabic Rite
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Hispano-Mozarabic liturgy has distinct mass prayers, office, and chant corpus absent from Roman Catholic generic
+    coverage.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: new-apostolic-reformation
+  name: 新使徒改革
+  name_en: New Apostolic Reformation
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 切断仇敌祷告文。
+  seeded_at: '2026-05-18'
+- id: old-believers
+  name: старообрядцы
+  name_en: Russian Old Believers
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Old Believers preserve pre-Nikonian Russian Orthodox service books and znamenny chant as a distinct prayer-bearing
+    tradition.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: pabasa-ng-pasyon
+  name: Pabása ng Pasyón
+  name_en: Filipino Pabasa ng Pasyon
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Filipino Catholic Holy Week chanting of the Pasyón is a stable vernacular prayer/chant corpus missing from Southeast
+    Asian and Christian sections.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: pentecostalism
+  name: 五旬节派
+  name_en: Pentecostalism
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 方言祷告（glossolalia）、医治祷词。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: quakers
+  name: 贵格会（Quakers）
+  name_en: Religious Society of Friends (Quakers)
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: ⚠️ 边界。不 programmed 派以静默为主，但鼓励自发口头祷告（vocal ministry）。
+  seeded_at: '2026-05-18'
+- id: reformed-liturgical
+  name: Reformed
+  name_en: Reformed Liturgical Tradition
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from lutheran-reformed-liturgical
+  seeded_at: '2026-05-18'
+- id: roman-catholic-sacramental
+  name: 罗马天主教 · 圣礼神学派
+  name_en: Roman Catholic Sacramental Theology
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 拉丁圣事经文、驱魔《罗马礼》。
+  seeded_at: '2026-05-18'
+- id: santa-muerte
+  name: Santa Muerte 信仰
+  name_en: Santa Muerte
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 死神玫瑰经、Novenas。
+  seeded_at: '2026-05-18'
+- id: syriac-orthodox-west-syriac
+  name: ܥܕܬܐ ܣܘܪܝܝܬܐ ܬܪܝܨܬ ܫܘܒܚܐ
+  name_en: Syriac Orthodox / West Syriac Rite
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: West Syriac Shehimo, Beth Gazo, and Qurbono corpora are distinct from the Assyrian Church of the East's East Syriac
+    rite.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: syro-malabar
+  name: സീറോ മലബാർ സഭ
+  name_en: Syro-Malabar Church
+  category: abrahamic-christianity
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Indian East Syriac Qurbana, Raza, Malayalam/Syriac prayer books, and liturgical calendar are distinct from Assyrian
+    Church entries.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: ahmadiyya
+  name: 阿赫迈底亚
+  name_en: Ahmadiyya
+  category: abrahamic-islam
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 集体杜阿。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: alawite-alevi
+  name: 阿拉维派 / 阿拉维特
+  name_en: Alawite / Alevi
+  category: abrahamic-islam
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: Hikma 内传念词。
+  skip_reason: split (see children)
+- id: alawites-nusayri
+  name: علوية (نصيرية)
+  name_en: Alawites (Syrian Nusayri)
+  category: abrahamic-islam
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from alawite-alevi
+  seeded_at: '2026-05-18'
+- id: alevism
+  name: Alevilik
+  name_en: Alevism (Anatolian / Turkish)
+  category: abrahamic-islam
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from alawite-alevi
+  seeded_at: '2026-05-18'
+- id: ba-alawiyya
+  name: طريقة آل باعلوي
+  name_en: Ba 'Alawiyya Tariqa
+  category: abrahamic-islam
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Hadrami Ba 'Alawi litany tradition includes Ratib al-Haddad, Wird al-Latif, Mawlid, and Southeast Asian dhikr
+    practice absent from v0.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: bektashi
+  name: 苏菲 Bektashi
+  name_en: Bektashi Order
+  category: abrahamic-islam
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Wird 念词。
+  seeded_at: '2026-05-18'
+- id: chishtiyya
+  name: 苏菲 Chishtiyya
+  name_en: Chishti Order
+  category: abrahamic-islam
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Qawwali 音乐祈祷。
+  seeded_at: '2026-05-18'
+- id: dawoodi-bohra
+  name: الداؤودية البهرة
+  name_en: Dawoodi Bohra
+  category: abrahamic-islam
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Tayyibi Ismaili Bohra dua, namaz, majlis, and Fatimid devotional corpora differ from Nizari Aga Khan Ismaili practice.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: ibadi-islam
+  name: الإباضية
+  name_en: Ibadi Islam
+  category: abrahamic-islam
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Ibadi Islam is a distinct Islamic denomination with separate fiqh of prayer and Omani/Ibadi supplicatory manuscripts.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: ismaili-aga-khan
+  name: 伊斯玛仪派 / 阿迦汗系
+  name_en: Ismaili / Aga Khan tradition
+  category: abrahamic-islam
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Dua、Ginan 唱赞。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: mevlevi
+  name: 苏菲 Mevlevi
+  name_en: Mevlevi Order
+  category: abrahamic-islam
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Sama 转舞伴 Naat 颂。
+  seeded_at: '2026-05-18'
+- id: mouride
+  name: الطريقة المريدية
+  name_en: Mouride Brotherhood
+  category: abrahamic-islam
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Senegalese Muridiyya has a large Khassaides corpus of Ahmadou Bamba devotional poems and distinctive chanting
+    practice.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: naqshbandi
+  name: 苏菲 Naqshbandi
+  name_en: Naqshbandi Order
+  category: abrahamic-islam
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Khatm-i Khwajagan 念名仪式。
+  seeded_at: '2026-05-18'
+  notes: (sync-backfilled)
+- id: qadiriyya
+  name: 苏菲 Qadiriyya
+  name_en: Qadiriyya Order
+  category: abrahamic-islam
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 「Ya Hayy Ya Qayyum」连诵。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: rifaiyya
+  name: 苏菲 Rifa'iyya
+  name_en: Rifa'i Order
+  category: abrahamic-islam
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Wird 念词。
+  seeded_at: '2026-05-18'
+- id: ruqyah
+  name: 鲁卡耶 Ruqyah
+  name_en: Ruqyah
+  category: abrahamic-islam
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 古兰特定章节驱邪咒文。
+  skip_reason: spurious
+- id: sanusiyya
+  name: 苏菲 Sanusiyya
+  name_en: Sanusi Order
+  category: abrahamic-islam
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Wird 念词。
+  seeded_at: '2026-05-18'
+- id: shadhiliyya
+  name: 苏菲 Shadhiliyya
+  name_en: Shadhili Order
+  category: abrahamic-islam
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Wird 念词。
+  seeded_at: '2026-05-18'
+- id: tijaniyya
+  name: 苏菲 Tijaniyya
+  name_en: Tijani Order
+  category: abrahamic-islam
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Wird 念词。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: twelver-shia-ashura
+  name: 十二伊玛目什叶 · 阿舒拉哀仪
+  name_en: Twelver Shia — Ashura mourning
+  category: abrahamic-islam
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Latmiyya、Marsiya 哀诗。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: twelver-shia-dua-ziyara
+  name: الدعاء والزيارة الإمامية
+  name_en: Twelver Shia Du'a and Ziyara
+  category: abrahamic-islam
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 'Existing Ashura row misses the broader Imami devotional corpus: Sahifa al-Sajjadiyya, Mafatih al-Jinan, Du''a
+    Kumayl, and ziyarat.'
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: bahai
+  name: 巴哈伊（Bahá'í）
+  name_en: Bahá'í Faith
+  category: abrahamic-other
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 强制日祷文、Hidden Words 念诵。
+  seeded_at: '2026-05-18'
+- id: druze
+  name: 德鲁兹派
+  name_en: Druze
+  category: abrahamic-other
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 一神内传秘文。
+  seeded_at: '2026-05-18'
+- id: mandaeism
+  name: 曼达派
+  name_en: Mandaeism
+  category: abrahamic-other
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 阿拉姆语礼文（《Ginza Rabba》节段）。
+  seeded_at: '2026-05-18'
+- id: rastafari-nyahbinghi
+  name: 拉斯塔法里 Nyahbinghi
+  name_en: Rastafari Nyahbinghi
+  category: abrahamic-other
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Chants 鼓圣典+《诗篇》改编。
+  seeded_at: '2026-05-18'
+- id: sabians
+  name: 东方礼教徒（Sabians）
+  name_en: Sabians
+  category: abrahamic-other
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 古传水洗礼文。
+  skip_reason: merged-into:mandaeism
+- id: samaritanism
+  name: שומרונים
+  name_en: Samaritanism
+  category: abrahamic-other
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Samaritans preserve a separate Samaritan Hebrew/Aramaic liturgy and common-prayers tradition facing Mount Gerizim.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: yarsanism
+  name: یارسان / اهل حق
+  name_en: Yarsanism / Ahl-e Haqq
+  category: abrahamic-other
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Kurdish-Iranian Yarsan jam ritual uses kalam recitation, tanbur-accompanied hymns, and Kalām-e Saranjām scripture
+    absent from v0.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: yazidi
+  name: 雅兹迪信仰
+  name_en: Yazidism
+  category: abrahamic-other
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Qewl 圣歌、Sebeha 念珠咒。
+  seeded_at: '2026-05-18'
+- id: zoroastrianism
+  name: 祆教 / 琐罗亚斯德教
+  name_en: Zoroastrianism
+  category: abrahamic-other
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Major living Iranian liturgical religion with Yasna, Gathas, Yashts, Niyayishn, and Khordeh Avesta daily prayer
+    corpora absent from v0.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: amorc-rosicrucian
+  name: AMORC 玫瑰十字会
+  name_en: AMORC (Ancient Mystical Order Rosae Crucis)
+  category: western-occult
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 神圣呼语 + 咒文。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: anthroposophy-christian-community
+  name: 人智学 · 基督社区
+  name_en: Anthroposophy — Christian Community
+  category: western-occult
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Steiner 系圣礼祝文。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: argenteum-astrum
+  name: A∴A∴
+  name_en: A∴A∴ (Argenteum Astrum)
+  category: western-occult
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 圣天使对话咒文。
+  previous_id: a-a
+  seeded_at: '2026-05-18'
+- id: aurum-solis
+  name: Aurum Solis
+  name_en: Aurum Solis
+  category: western-occult
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 神圣呼语 + 咒文。
+  seeded_at: '2026-05-18'
+- id: builders-of-the-adytum
+  name: BOTA
+  name_en: Builders of the Adytum (BOTA)
+  category: western-occult
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 神圣呼语 + 咒文。
+  previous_id: bota
+  seeded_at: '2026-05-18'
+- id: chaos-magick
+  name: 混沌魔法（Chaos Magick）
+  name_en: Chaos Magick
+  category: western-occult
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Sigil 启动咒、口头宣声（barbarous names）。
+  seeded_at: '2026-05-18'
+- id: chaos-witchcraft-tech-pagan
+  name: 混沌女巫派 / Tech-Pagan
+  name_en: Chaos Witchcraft / Tech-Pagan
+  category: western-occult
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 自创咒文。
+  skip_reason: spurious
+- id: cochranian-sabbatic-craft
+  name: 现代术士派（Cochranian、Sabbatic Craft）
+  name_en: Modern Traditional Craft (Cochranian / Sabbatic)
+  category: western-occult
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 各自传咒。
+  seeded_at: '2026-05-18'
+- id: freemasonry
+  name: 共济会
+  name_en: Freemasonry
+  category: western-occult
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 入会誓词与等级仪文。
+  seeded_at: '2026-05-18'
+- id: golden-dawn
+  name: 金色黎明
+  name_en: Hermetic Order of the Golden Dawn
+  category: western-occult
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: LBRP 小驱逐五芒星仪式咒。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: hermeticism
+  name: 赫密士主义当代社团
+  name_en: Contemporary Hermeticism
+  category: western-occult
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 《赫密士集》神圣呼语。
+  seeded_at: '2026-05-18'
+- id: lectorium-rosicrucianum
+  name: 玫瑰十字 Lectorium Rosicrucianum
+  name_en: Lectorium Rosicrucianum
+  category: western-occult
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 灵知派祷文。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: martinism
+  name: 玛丁主义（Martinism）
+  name_en: Martinism
+  category: western-occult
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 按手祷词与净化文。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: ordo-templi-orientis
+  name: 东方圣殿骑士团（OTO）
+  name_en: Ordo Templi Orientis
+  category: western-occult
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 诺斯替弥撒文（Liber XV）。
+  previous_id: oto
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: reclaiming-starhawk
+  name: Reclaiming（Starhawk）
+  name_en: Reclaiming Tradition (Starhawk)
+  category: western-occult
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 政治女神圈咏唱。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: silver-star-society
+  name: 银星会
+  name_en: Silver Star Society
+  category: western-occult
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 神圣呼语 + 咒文。
+  skip_reason: merged-into:a-a
+- id: spiritism-kardecism
+  name: Spiritism · Kardecism（凯德克派）
+  name_en: Spiritism (Kardecism)
+  category: western-occult
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 《福音》祈祷文。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: spiritualism-nsac
+  name: Spiritualism / NSAC
+  name_en: Spiritualism / NSAC
+  category: western-occult
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 主祷文+灵媒祷告。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: thelema
+  name: 瑟勒玛（Thelema）
+  name_en: Thelema
+  category: western-occult
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Liber Resh、Star Ruby 仪式文。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: theosophical-society
+  name: 神智学协会
+  name_en: Theosophical Society
+  category: western-occult
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Lucis Trust「伟大祈祷文」。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: wicca-alexandrian
+  name: 威卡 Alexandrian
+  name_en: Alexandrian Wicca
+  category: western-occult
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Charge of the Goddess、各圈咒。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: wicca-dianic
+  name: 威卡 Dianic
+  name_en: Dianic Wicca
+  category: western-occult
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Charge of the Goddess、各圈咒。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: wicca-eclectic
+  name: 威卡 Eclectic
+  name_en: Eclectic Wicca
+  category: western-occult
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Charge of the Goddess、各圈咒。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: wicca-gardnerian
+  name: 威卡 Gardnerian
+  name_en: Gardnerian Wicca
+  category: western-occult
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Charge of the Goddess、各圈咒。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: basque-sorginak-revival
+  name: 巴斯克 Sorginak 复兴
+  name_en: Basque Sorginak Revival
+  category: european-pagan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 巴斯克语咒。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: dievturiba
+  name: Dievturība（拉脱维亚）
+  name_en: Dievturība (Latvian)
+  category: european-pagan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Dainas 民歌祷词。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: druidry-modern
+  name: 凯尔特德鲁伊（OBOD / ADF / AODA）
+  name_en: Modern Druidry (OBOD / ADF / AODA)
+  category: european-pagan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 威尔士盖尔语祝祷词。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: finnish-suomenusko
+  name: Finnish Suomenusko
+  name_en: Suomenusko (Finnish Native Faith)
+  category: european-pagan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Loitsu 民咒。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: heathenry-asatru
+  name: Heathenry / Ásatrú
+  name_en: Heathenry / Ásatrú
+  category: european-pagan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Galdr 咒、Blót 祝祷词。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: hellenismos-ysee
+  name: Hellenismos / YSEE
+  name_en: Hellenismos / YSEE
+  category: european-pagan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 荷马颂、奥菲斯颂复诵。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: hungarian-osmagyar-vallas
+  name: 匈牙利 Ősmagyar Vallás
+  name_en: Ősmagyar Vallás (Hungarian Native Faith)
+  category: european-pagan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 古马扎尔祝词。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: kemetism
+  name: Kemetism
+  name_en: Kemetism
+  category: european-pagan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 古埃及《亡灵书》《金字塔铭文》节段。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: maausk
+  name: Maausk（爱沙尼亚）
+  name_en: Maausk (Estonian)
+  category: european-pagan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 圣林祝祷。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: religio-romana
+  name: Religio Romana / Cultus Deorum
+  name_en: Religio Romana / Cultus Deorum
+  category: european-pagan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 拉丁祭文。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: rodnovery
+  name: Rodnovery（斯拉夫）
+  name_en: Rodnovery (Slavic Native Faith)
+  category: european-pagan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 斯拉夫诸神召唤词。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: romuva
+  name: Romuva（立陶宛）
+  name_en: Romuva (Lithuanian)
+  category: european-pagan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Daina 古歌祷词。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: sami-noaidi
+  name: Sami Noaidi
+  name_en: Sami Noaidi
+  category: european-pagan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Joik 萨满歌。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: seidr-galdr
+  name: Seiðr / Galdr 北欧法术派
+  name_en: Seiðr / Galdr Norse Magic
+  category: european-pagan
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: Galdr 韵咒。
+  skip_reason: spurious
+- id: stregheria
+  name: Stregheria
+  name_en: Stregheria
+  category: european-pagan
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 意大利民间咒（Aradia 经文）。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: abakua
+  name: Abakuá
+  name_en: Abakuá
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Bonkó 圣语 Iremes 念词。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: akan-akomfoo
+  name: Akan Akɔmfoɔ
+  name_en: Akan Akɔmfoɔ
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 神灵歌（Suman 咒）。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: aladura
+  name: Aladura
+  name_en: Aladura (Praying People) Churches
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 集体祷告+圣歌。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: bori
+  name: Bori
+  name_en: Bori
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 神灵附体唱词。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: bwiti
+  name: Bwiti
+  name_en: Bwiti
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Gabonese Bwiti initiation/healing rites use sacred song, harp, dance, and ritual prayer around iboga, absent from
+    v0.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: candomble
+  name: 坎东布雷 Candomblé
+  name_en: Candomblé
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Pontos cantados、Yorubá 圣歌。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: candomble-de-caboclo
+  name: Candomblé de Caboclo
+  name_en: Candomblé de Caboclo
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 原住民+非裔祖灵歌。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: celestial-church-of-christ
+  name: Celestial Church
+  name_en: Celestial Church of Christ
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 集体祷告+圣歌。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: cherubim-and-seraphim
+  name: Cherubim and Seraphim
+  name_en: Cherubim and Seraphim Church
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 集体祷告+圣歌。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: espiritismo-cruzado
+  name: Espiritismo Cruzado
+  name_en: Espiritismo Cruzado
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Oraciones + 非裔圣歌。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: famadihana
+  name: 马达加斯加 Famadihana
+  name_en: Madagascar Famadihana
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 翻骨祭祖祝祷。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: hoodoo-rootwork
+  name: Hoodoo / Rootwork
+  name_en: Hoodoo / Rootwork
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 圣经诗篇祷告 + 民间咒。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: ifa-orisha-yoruba
+  name: 约鲁巴 · Ifa / Òrìṣà 崇拜
+  name_en: Yoruba Ifa / Òrìṣà Tradition
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Oríkì 赞歌、Odu Ifa 韵文。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: kimbanguism
+  name: Kimbanguism
+  name_en: Kimbanguism
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 圣歌+集体祷告。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: mami-wata
+  name: Mami Wata 信仰
+  name_en: Mami Wata Cult
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 水神召唤歌。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: mungiki-kikuyu
+  name: 基库尤 Mungiki
+  name_en: Kikuyu Mungiki
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 祈祷词（Ngai 召唤）。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: obeah
+  name: Obeah
+  name_en: Obeah
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 加勒比咒、《圣经》改编咒。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: palo-mayombe
+  name: Palo Mayombe / Palo Monte
+  name_en: Palo Mayombe / Palo Monte
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Mambo 唱咒、Lengua 圣语。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: quimbanda
+  name: Quimbanda
+  name_en: Quimbanda
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Pontos 唱咒。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: santeria-lukumi
+  name: 桑特里亚 / Lukumí
+  name_en: Santería / Lukumí
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Lukumí 语圣歌、Moyuba 祷文。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: shembe-nazareth-baptist
+  name: Shembe
+  name_en: Shembe (Nazareth Baptist Church)
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 非洲圣歌+按手祷告词。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: umbanda
+  name: 翁班达 Umbanda
+  name_en: Umbanda
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Pontos cantados 与 Pontos riscados 配咒。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: vodou-haitian
+  name: 海地伏都 Vodou Haïtien
+  name_en: Haitian Vodou
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Priye Ginen、Langaj 仪式语。
+  seeded_at: '2026-05-18'
+  notes: (sync-backfilled)
+- id: vodun-west-african
+  name: Vodun（贝宁等西非）
+  name_en: West African Vodun (Benin etc.)
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 召灵歌咒。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: voodoo-louisiana
+  name: 路易斯安那伏都 Voodoo
+  name_en: Louisiana Voodoo
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Mojo bag 配诗篇+祷词。
+  seeded_at: '2026-05-18'
+- id: waaqeffanna
+  name: Waaqeffannaa
+  name_en: Oromo Waaqeffanna
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Oromo indigenous religion has qaalluu-led prayers and Irreechaa thanksgiving rituals not covered by existing African
+    entries.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: zar
+  name: Zar
+  name_en: Zar
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Zar 歌、附身唱词。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: zion-christian-church
+  name: Zion Christian Church
+  name_en: Zion Christian Church (ZCC)
+  category: african-diasporic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 非洲圣歌+按手祷告词。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: andean-despacho
+  name: Andean Despacho / Pago a la Tierra
+  name_en: Andean Despacho / Pago a la Tierra
+  category: americas-indigenous
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Quechua / Aymara 祝祷词。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: barquinha
+  name: Barquinha
+  name_en: Barquinha
+  category: americas-indigenous
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Daime 分支圣歌。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: cherokee-stomp-dance
+  name: Cherokee Stomp Dance
+  name_en: Cherokee Stomp Dance
+  category: americas-indigenous
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Stomp chants 应答歌。
+  seeded_at: '2026-05-18'
+- id: curanderismo
+  name: Curanderismo
+  name_en: Curanderismo
+  category: americas-indigenous
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Oraciones、Limpia 祷词。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: espiritualistas-trinitarios-marianos
+  name: Espiritualistas Trinitarios Marianos
+  name_en: Espiritualistas Trinitarios Marianos
+  category: americas-indigenous
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Oraciones + 灵媒祷告。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: huni-kuin-nixi-pae
+  name: Huni Kuin Nixi Pae
+  name_en: Huni Kuin Nixi Pae
+  category: americas-indigenous
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Huni Kuin ayahuasca ritual preserves Huni Meka chants in Hãtxa Kuin, distinct from Shipibo icaros and Santo Daime
+    hinos.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: inuit-angakkuq
+  name: Inuit Angakkuq 萨满
+  name_en: Inuit Angakkuq Shamanism
+  category: americas-indigenous
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 萨满吟唱（吟魂歌）。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: lakota-seven-rites
+  name: 拉科塔七圣礼
+  name_en: Lakota Seven Sacred Rites
+  category: americas-indigenous
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Wakan Tanka 召唤歌（Inipi、Yuwipi 等）。
+  seeded_at: '2026-05-18'
+- id: longhouse-handsome-lake
+  name: 长屋宗教（Longhouse / Handsome Lake）
+  name_en: Longhouse Religion (Handsome Lake)
+  category: americas-indigenous
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Thanksgiving Address（开场祷文）。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: mapuche-machi-ngillatun
+  name: Ngillatun / Machi
+  name_en: Mapuche Machi and Ngillatun
+  category: americas-indigenous
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Mapuche ngillatun, machitun, tayül, and machi song-prayer practice form a major South American indigenous corpus
+    absent from v0.
+  added_via: audit:codex
+  seeded_at: '2026-05-18'
+- id: maya-aj-qij
+  name: 玛雅 Aj Q'ij
+  name_en: Maya Aj Q'ij
+  category: americas-indigenous
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Kʼicheʼ 玛雅日历祝祷词。
+  seeded_at: '2026-05-18'
+- id: mexicayotl
+  name: Mexicayotl / Mexicanidad
+  name_en: Mexicayotl / Mexicanidad
+  category: americas-indigenous
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Nahuatl 古祭文。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: midewiwin-ojibwe
+  name: Ojibwe Midewiwin 大医会
+  name_en: Ojibwe Midewiwin (Grand Medicine Society)
+  category: americas-indigenous
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Mide 圣歌。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: native-american-church
+  name: 美洲原住民教会（NAC）
+  name_en: Native American Church (NAC)
+  category: americas-indigenous
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Peyote songs 圣歌。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: navajo-blessingway
+  name: 纳瓦霍祝福之路（Hózhójí）
+  name_en: Navajo Blessingway (Hózhójí)
+  category: americas-indigenous
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 完整 Hózhó 祝词诗。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: pueblo-kachina
+  name: Pueblo Kachina 仪式
+  name_en: Pueblo Kachina Rites
+  category: americas-indigenous
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Kiva 仪式歌。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: santo-daime
+  name: Santo Daime
+  name_en: Santo Daime
+  category: americas-indigenous
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Hinos 圣歌。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: shipibo-conibo-ayahuasca
+  name: Shipibo-Conibo Ayahuasca
+  name_en: Shipibo-Conibo Ayahuasca
+  category: americas-indigenous
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Icaros 唱诵核心。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: sun-dance
+  name: 太阳舞（Sun Dance）
+  name_en: Sun Dance
+  category: americas-indigenous
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 太阳舞圣歌。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: uniao-do-vegetal
+  name: União do Vegetal（UDV）
+  name_en: União do Vegetal (UDV)
+  category: americas-indigenous
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Chamadas 唱词。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: wixarika-huichol-marakame
+  name: Wixárika / Huichol Marakame
+  name_en: Wixárika / Huichol Marakame
+  category: americas-indigenous
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 鹿神/Peyote 圣歌。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: altai-burkhanism
+  name: 阿尔泰 Burkhanism
+  name_en: Altai Burkhanism
+  category: north-asian-shamanic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 阿尔泰语祝祷。
+  seeded_at: '2026-05-18'
+- id: chukchi-koryak-shamanism
+  name: 楚科奇 / 科里亚克萨满
+  name_en: Chukchi / Koryak Shamanism
+  category: north-asian-shamanic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 萨满吟唱。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: ewenki-oroqen-daur-shamanism
+  name: 鄂温克、鄂伦春、达斡尔萨满
+  name_en: Evenki / Oroqen / Daur Shamanism
+  category: north-asian-shamanic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 萨满唱词（萨满歌）。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: manchu-shamanism
+  name: 满族萨满 / 关姓堂、博、查玛
+  name_en: Manchu Shamanism (Guan-clan tang / Bo / Cama)
+  category: north-asian-shamanic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 神歌（neyen）。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: mongolian-boo
+  name: 蒙古博 / Böö 萨满教
+  name_en: Mongolian Böö Shamanism
+  category: north-asian-shamanic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Yörööl 祝词、长生天颂。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: tengrism
+  name: 腾格里复兴（Tengrism）
+  name_en: Tengrism Revival
+  category: north-asian-shamanic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 突厥诸语祝祷词。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: tuvan-kham
+  name: 图瓦萨满 Kham
+  name_en: Tuvan Kham Shamanism
+  category: north-asian-shamanic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 萨满 algysh 诵咒。
+  seeded_at: '2026-05-18'
+- id: yakut-sakha-shamanism
+  name: 雅库特 / 萨哈萨满
+  name_en: Yakut / Sakha Shamanism
+  category: north-asian-shamanic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Algys 祝词、Toyuk 史诗咒。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: fijian-sevusevu
+  name: Fiji Yaqona / Sevusevu
+  name_en: Fijian Yaqona / Sevusevu
+  category: oceanic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from samoa-tonga-fiji-kava
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: kahuna-pule
+  name: Kahuna 系
+  name_en: Kahuna lineage
+  category: oceanic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Pule（夏威夷祷文）。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: kanak-coutume
+  name: 新喀里多尼亚 Kanak 老者议会仪
+  name_en: New Caledonia Kanak Council Rite (Coutume)
+  category: oceanic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Coutume 仪式祝词。
+  seeded_at: '2026-05-18'
+- id: maori-tohunga
+  name: 毛利图杭加（Tohunga）
+  name_en: Māori Tohunga
+  category: oceanic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Karakia 祈祷词核心。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: modern-hooponopono
+  name: 夏威夷胡纳 · Ho'oponopono
+  name_en: Hawaiian Huna — Ho'oponopono
+  category: oceanic
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 「I'm sorry / Please forgive me / Thank you / I love you」四句口诀。
+  previous_id: hooponopono
+  skip_reason: no-lineage
+- id: png-sing-sing-sanguma
+  name: 巴布亚新几内亚 Sing-sing / Sanguma
+  name_en: Papua New Guinea Sing-sing / Sanguma
+  category: oceanic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 部落歌咒。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: samoa-kava-lotu-tofa
+  name: Samoa Lotu Tofa / Kava
+  name_en: Samoan Kava + Lotu Tofa
+  category: oceanic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from samoa-tonga-fiji-kava
+  seeded_at: '2026-05-18'
+- id: samoa-tonga-fiji-kava
+  name: 萨摩亚、汤加、斐济 · Kava 仪 / Lotu Tofa
+  name_en: Samoa / Tonga / Fiji — Kava Rite / Lotu Tofa
+  category: oceanic
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: Tāmafa 致辞、Lotu Tofa 晚祷。
+  skip_reason: split (see children)
+- id: tongan-faikava
+  name: Tonga Faikava
+  name_en: Tongan Kava
+  category: oceanic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from samoa-tonga-fiji-kava
+  seeded_at: '2026-05-18'
+- id: torres-strait-ailan-kastom
+  name: 托雷斯海峡 Ailan Kastom
+  name_en: Torres Strait Ailan Kastom
+  category: oceanic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 海岛歌咒。
+  seeded_at: '2026-05-18'
+- id: yolngu-arrernte-songlines
+  name: 澳大利亚 Yolŋu / Arrernte 原住民仪式
+  name_en: Australian Yolŋu / Arrernte Aboriginal Rites
+  category: oceanic
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Songlines 歌路（咒歌一体）。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: access-consciousness
+  name: Access Bars / Access Consciousness
+  name_en: Access Bars / Access Consciousness
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: false
+  ref_note: 纯按头部 32 能量点，无任何念诵。
+  skip_reason: no-prayer
+- id: anastasia-ringing-cedars
+  name: Anastasia / Ringing Cedars
+  name_en: Anastasia / Ringing Cedars of Russia
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: false
+  ref_note: 生态家园实践+静默冥想，无咒语。
+  skip_reason: no-prayer
+- id: ayahuasca-neo-shamanic
+  name: Ayahuasca Neo-shamanic 系
+  name_en: Ayahuasca Neo-shamanism
+  category: modern-energy-newage
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: Icaros 唱诵主线。
+  seeded_at: '2026-05-18'
+  notes: grok-skipped
+- id: bodytalk-system
+  name: BodyTalk System
+  name_en: BodyTalk System
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: false
+  ref_note: 身体动作指示，无咒语。
+  skip_reason: no-prayer
+- id: crystal-healing
+  name: 水晶疗法 / Crystal Grid 仪
+  name_en: Crystal Healing / Crystal Grid
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: false
+  ref_note: 纯能量摆设，伴随意图但无定式祷词。
+  skip_reason: no-prayer
+- id: damanhur-synchronic-lines
+  name: Damanhur 同步隔间仪
+  name_en: Damanhur Synchronic Cell Rite
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: false
+  ref_note: 符号舞与几何能量场，无定式咒文。
+  skip_reason: no-prayer
+- id: eckankar
+  name: Eckankar
+  name_en: Eckankar
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: HU 圣音持诵。
+  skip_reason: no-lineage
+- id: eft-tapping
+  name: EFT 情绪释放敲打法
+  name_en: EFT (Emotional Freedom Techniques)
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: ⚠️ 边界。Setup Statement「虽然我有…我依然爱并接受我自己」属肯定式祷词。
+  skip_reason: no-lineage
+- id: family-constellations
+  name: 海宁格家庭系统排列（Family Constellations）
+  name_en: Family Constellations (Hellinger)
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: false
+  ref_note: 代表性陈述非咒语祷词，是当事人感受语言。
+  skip_reason: no-prayer
+- id: federacao-espirita-brasileira
+  name: Federação Espírita Brasileira
+  name_en: Brazilian Spiritist Federation
+  category: modern-energy-newage
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from mediumship-church-snu-feb
+  seeded_at: '2026-05-18'
+- id: findhorn-meditation
+  name: Findhorn 集体冥想
+  name_en: Findhorn Group Meditation
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: false
+  ref_note: 主要静默与花卉对话，无定式祷词。
+  skip_reason: no-prayer
+- id: harner-core-shamanism
+  name: 新德鲁伊 / Michael Harner 核心萨满工作坊
+  name_en: Michael Harner Core Shamanism
+  category: modern-energy-newage
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 召唤动物图腾的吟唱（journey songs）。
+  seeded_at: '2026-05-18'
+- id: holotropic-breathwork
+  name: Holotropic Breathwork / Rebirthing / Wim Hof Method
+  name_en: Holotropic Breathwork / Rebirthing / Wim Hof Method
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: false
+  ref_note: 纯呼吸+音乐，无咒语祷词。
+  skip_reason: no-prayer
+- id: karuna-holy-fire-reiki
+  name: Karuna Reiki / Holy Fire Reiki
+  name_en: Karuna Reiki / Holy Fire Reiki
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 附带圣火祷文。
+  skip_reason: no-lineage
+- id: lucis-trust-great-invocation
+  name: Lucis Trust · 大祈祷文
+  name_en: Lucis Trust — The Great Invocation
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 「Let Light stream forth into the minds of men…」每月满月集体念诵。
+  skip_reason: no-lineage
+- id: matrix-energetics
+  name: Matrix Energetics
+  name_en: Matrix Energetics
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: false
+  ref_note: 纯能量传导+意图，无定式咒。
+  skip_reason: no-prayer
+- id: mediumship-church-snu-feb
+  name: Mediumship Church（英国 SNU、巴西 FEB）
+  name_en: Mediumship Church (SNU / FEB)
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 集体祷文 + 灵媒祷告。
+  skip_reason: split (see children)
+- id: new-thought-affirmative-prayer-circle
+  name: 新思维 · 肯定祈祷圈
+  name_en: New Thought — Affirmative Prayer Circles
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 五步肯定祷词。
+  skip_reason: merged-into:new-thought-unity-religious-science
+- id: new-thought-unity-religious-science
+  name: 新思维 · Unity / Religious Science
+  name_en: New Thought — Unity / Religious Science
+  category: modern-energy-newage
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: 肯定祈祷（Affirmative Prayer）核心。
+  seeded_at: '2026-05-18'
+- id: plant-medicine-kambo-sananga-rape
+  name: Plant medicine Kambo / Sananga / Rapé 圈
+  name_en: Plant Medicine Circles (Kambo / Sananga / Rapé)
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: false
+  ref_note: 当代施用版基本无咒，纯植物作用（传统部落版含咒但已纳入 Shipibo 等条目）。
+  skip_reason: no-prayer
+- id: pranic-healing
+  name: Pranic Healing（崔崇焕）
+  name_en: Pranic Healing (Choa Kok Sui)
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 「祝福地球祷文」+ Twin Hearts 冥想词。
+  skip_reason: no-lineage
+- id: quantum-touch
+  name: Quantum Touch
+  name_en: Quantum Touch
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: false
+  ref_note: 纯呼吸 + 触摸，无咒语。
+  skip_reason: no-prayer
+- id: reconnective-healing
+  name: Reconnective Healing
+  name_en: Reconnective Healing
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: false
+  ref_note: 纯能量传导。
+  skip_reason: no-prayer
+- id: reiki-usui
+  name: 灵气（Reiki） · Usui 系
+  name_en: Usui Reiki
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 五戒「今日不发怒、不忧虑、感恩、勤勉、待人和善」+ 三符默念。
+  skip_reason: no-lineage
+- id: sound-healing-solfeggio
+  name: 音疗 · 颂钵 / 铜锣 / 音叉 / Solfeggio
+  name_en: Sound Healing (singing bowls / gong / tuning forks / Solfeggio)
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: false
+  ref_note: 纯声波振动，无歌词祷文（若伴诵咒另算）。
+  skip_reason: no-prayer
+- id: spiritual-response-therapy
+  name: SRT（Spiritual Response Therapy）
+  name_en: Spiritual Response Therapy (SRT)
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: false
+  ref_note: 图表+心灵询问，无定式咒。
+  skip_reason: no-prayer
+- id: spiritualists-national-union
+  name: Spiritualists' National Union
+  name_en: Spiritualists' National Union
+  category: modern-energy-newage
+  status: seeded
+  has_prayer_tradition: true
+  ref_note: split from mediumship-church-snu-feb
+  seeded_at: '2026-05-18'
+- id: subud
+  name: Subud（拉提汉）
+  name_en: Subud (Latihan)
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: ⚠️ 边界。拉提汉前有静默集体祈祷与「Bismillah ar-Rahman ar-Rahim」念诵开场，主仪本身无言。
+  skip_reason: no-lineage
+- id: theta-healing
+  name: ThetaHealing
+  name_en: ThetaHealing
+  category: modern-energy-newage
+  status: skipped
+  has_prayer_tradition: true
+  ref_note: 「创造者啊…让一切美善降下」开端祷词。
+  skip_reason: no-lineage
