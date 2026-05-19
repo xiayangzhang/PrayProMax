@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: western-occult/martinism, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: "可部分自代：改为个人静默祈祷与内省式措辞，保留复归、净化、谦卑与神圣光明意象；不使用启蒙传授、传承权柄或授受宣告语。"
 ---
 

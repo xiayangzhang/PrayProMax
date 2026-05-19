@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: oceanic/torres-strait-ailan-kastom, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝此 persona，改为普通的托雷斯海峡共同体祝愿文，保留海岛、家族、祖先敬意与和平意象，但删除长老领唱、歌持者权威、仪式性召请和任何暗示受托传承的措辞。
 ---
 

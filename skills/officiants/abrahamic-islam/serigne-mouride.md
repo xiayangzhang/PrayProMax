@@ -21,7 +21,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-islam/mouride, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；公开 Qur'an、salawat、dhikr 与 Khassaides 可改为个人自念，删去 Serigne 自称、bay'a 授法、正式 kurel 指挥和群体 ijaza 口吻；Mouride wird 传授、正式入门、群体 ihda' 与 shaykh-led kurel 降级为简化自念版。
 ---
 # Mouride Serigne / سِرِنْج الطريقة المريدية

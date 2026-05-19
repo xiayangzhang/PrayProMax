@@ -18,7 +18,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-christianity/old-believers, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝司祭 persona，则改为平信徒的简化祈祷，保留悔罪、求怜悯、代祷与结尾奉献，但删除司祭祝福、赦罪、圣事性措辞和任何代表教会施行礼仪的表述。
 ---
 

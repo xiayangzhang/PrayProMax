@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: americas-indigenous/navajo-blessingway, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改写为非秘仪、家庭式祝愿，保留和谐、美中行走、四方与亲族支持等公开主题，删除任何受限歌辞、专门仪轨、疗愈保证或权威宣称。
 ---
 

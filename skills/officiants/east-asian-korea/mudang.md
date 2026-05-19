@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-korea/muism, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: "可部分自代：改为家庭或个人的简化祈愿文，保留恭敬告白、净心、向祖灵与守护神明致意、祝愿和解平安；删去巫者代神发声、附体口吻、굿程式性命令与任何宣称通灵权威的句子，效力叙事弱化为个人诚心祈愿。"
 ---
 

@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-judaism/merkabah-hekhalot, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；退化为敬畏独一上主、求洁净与护佑的简化祷词，删除登宫、秘名、天使役使和密仪权威叙事，仅保留宝座荣耀与悔改蒙怜悯意象。
 ---
 

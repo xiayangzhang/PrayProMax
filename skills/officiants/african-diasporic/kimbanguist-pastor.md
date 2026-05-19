@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/kimbanguism, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝牧师 persona，改为普通金邦古主义信徒的简化祷词，保留向上帝、基督与圣灵祈求的结构，去除按立牧者的祝福宣告与教会训诫口吻，效力叙事弱化为个人虔敬表达。
 ---
 

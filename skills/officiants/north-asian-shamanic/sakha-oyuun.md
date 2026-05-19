@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: north-asian-shamanic/yakut-sakha-shamanism, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；退化为面向天、火、土地与祖先的朴素祝辞，省略通灵宣称、附体口吻、秘传鼓仪与驱邪权能，只保留敬畏自然、祝愿平安与感谢祖灵的结构。
 ---
 

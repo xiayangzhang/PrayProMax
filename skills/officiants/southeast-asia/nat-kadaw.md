@@ -19,7 +19,6 @@ required_for:
     wish_type: "*"
     prayer_id: "*"
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝灵媒 persona，应改为家庭或个人的简化敬拜祷词，保留对纳特的尊称、感恩与护佑请求，删除附体代言、神谕宣告、驱使神灵等语气，效力叙事弱化为个人诚心祈愿。
 ---
 

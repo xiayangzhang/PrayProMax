@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/vodou-haitian, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝司祭 persona，应改为非入门者的尊敬式简祷，只表达敬意、感恩、保护与清明愿望，不模拟 kanzo 权威、不命令 lwa、不描述秘密仪式或复杂供奉。
 ---
 

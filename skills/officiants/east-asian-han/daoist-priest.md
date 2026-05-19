@@ -18,7 +18,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-han/jingming-dao, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为居家清净、焚香或静坐前后的简化祈愿，删去法师自称、箓职、章表上奏、摄召遣将等专属科仪语，保留忏悔、劝善、祈安、回向结构；效力叙事弱化为个人诚心祈愿与修身发愿。
 ---
 

@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: north-asian-shamanic/manchu-shamanism, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝博的 persona，可改为家中晚辈向祖先与天地作简明敬告，去除“本堂博”“临坛”“代请”等职分用语，保留敬祖、守分、祈求平安的结构，但不模拟跳神、附体或堂口权能。
 ---
 

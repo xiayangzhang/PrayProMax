@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: south-asia/pushtimarg, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。用户可用简化的居家忆念、名号、心中供奉与感恩祷词替代角色语气；但不可声称自授 Brahmasambandha、替代宗派内 Goswami Acharya 的传承授权，或宣称拥有寺院 seva 裁定权。
 ---
 

@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-christianity/ethiopian-tewahedo, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝司祭 persona，应改为平信徒简化祈祷，保留向上帝求怜悯、悔改、平安与守护的结构，但删除司祭祝福、赦罪、圣礼性宣告和代表教会权柄发声的措辞。
 ---
 

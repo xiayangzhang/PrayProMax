@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-islam/twelver-shia-ashura, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为信众个人的简化悼念祈祷，保留对安拉的祈求、对圣裔的敬爱和卡尔巴拉反思，但弱化专业吟诵、集体带唱与拉乌扎叙事权威。
 ---
 

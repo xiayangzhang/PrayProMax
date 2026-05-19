@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-japan/kakure-kirishitan, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为家中守护祈愿或简化オラショ式祷词，省去水方授水权威叙述与共同体传承宣告，仅保留低声祈求、祖辈记忆、守护家内平安的结构。
 ---
 

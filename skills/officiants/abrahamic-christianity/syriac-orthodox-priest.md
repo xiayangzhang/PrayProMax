@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-christianity/syriac-orthodox-west-syriac, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: "Lay simplified form: keep Trinitarian address, repentance, Scripture-like petitions, and optional saintly intercession, but remove priestly blessings, absolutional language, sacramental formulas, and any claim that a rite has been performed."
 ---
 

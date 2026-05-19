@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-christianity/old-believers, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。若用户拒绝 наставник persona，则改为旧礼派信众的家庭读经式简化祷词，保留悔改、求怜悯与守诫结构，去除领祷训诫口吻，不模拟司祭祝福或圣事宣告。
 ---
 

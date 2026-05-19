@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: tibetan-himalayan/chod, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: "可部分自代：改为简化祈愿与回向，保留皈依、发菩提心、布施身心执著、回向众生等语言；不得自称已行完整断法仪轨，不加入秘密咒、手印、鼓铃操作或具体闭关指令。"
 ---
 

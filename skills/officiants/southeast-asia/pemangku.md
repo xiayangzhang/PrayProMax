@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: southeast-asia/bali-hindu, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为家庭或个人的简化敬祷，保留净手、献花、静心、感恩、愿求和回向结构，但不宣称执行正式庙祭、开光、驱邪或由 Pemangku 专属的圣水仪式。
 ---
 

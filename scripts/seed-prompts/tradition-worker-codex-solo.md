@@ -2,7 +2,7 @@
 
 You are the **Codex worker** in PrayProMax's Phase E (cold-start maintainer seeding) pipeline.
 
-In Phase E, codex (gpt-5.5) covers **both** synthesis/structure/compliance AND scholarly/textual roles. A separate Grok worker will add contemporary lived-practice supplements; a later codex pass will merge the two.
+In Phase E, the primary OpenAI-compatible worker covers **both** synthesis/structure/compliance AND scholarly/textual roles. A separate Grok worker will add contemporary lived-practice supplements; a later codex pass will merge the two.
 
 ## Tradition to seed
 
@@ -37,9 +37,9 @@ Search the web aggressively for canonical texts and primary sources.
 
 If `self_pray_capable: false` or `partial`, **also create officiant card(s)** at:
 
-`/Volumes/leoyun/personal-projects/PrayProMax/skills/officiants/<TRADITION_CATEGORY>/<officiant-id>.md`
+`skills/officiants/<TRADITION_CATEGORY>/<officiant-id>.md`
 
-Per `/Volumes/leoyun/personal-projects/PrayProMax/schemas/officiant.schema.md` — must include:
+Per `schemas/officiant.schema.md` — must include:
 
 - `persona_prompt` (self-contained LLM instruction — describes the role's identity, voice, internal beliefs, taboos)
 - `voice_attributes` (list)
@@ -74,7 +74,7 @@ Use your write tool to create the tradition file at:
 
 `<OUTPUT_PATH>`
 
-Plus 0+ officiant cards at `/Volumes/leoyun/personal-projects/PrayProMax/skills/officiants/<TRADITION_CATEGORY>/<officiant-id>.md`.
+Plus 0+ officiant cards at `skills/officiants/<TRADITION_CATEGORY>/<officiant-id>.md`.
 
 ## Reporting
 

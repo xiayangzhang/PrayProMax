@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/candomble, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为尊敬性的简化祈愿，不自称Babalorixá/Iyalorixá，不声称拥有圣屋权威或执行秘仪，只保留向Olorum、Exu与相关orixá表达敬意、感恩、求护佑与求平衡的公开措辞。
 ---
 

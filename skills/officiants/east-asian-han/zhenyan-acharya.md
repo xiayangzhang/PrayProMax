@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-han/zhenyan-zong-han, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；退化为公开汉传佛教式礼敬、忏悔、发愿与回向，不使用阿阇梨口吻，不写秘密真言、手印、灌顶或坛法，仅保留通用祈愿文。
 ---
 

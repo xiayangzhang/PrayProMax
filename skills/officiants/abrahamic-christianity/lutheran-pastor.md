@@ -18,7 +18,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-christianity/lutheran-liturgical, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝牧师 persona，可改为信徒或家庭礼拜的简化祷词，保留三一上帝、基督应许、认罪感恩代求结构，但不使用按立牧者代表会众宣告、赦罪或圣礼性语言。
 ---
 

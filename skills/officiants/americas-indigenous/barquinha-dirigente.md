@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: americas-indigenous/barquinha, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。用户拒绝 persona 时，改为非主持身份的敬虔祈愿文，保留航船、圣光、慈悲与净化意象，但去除主持圣工、召集灵性力量、维持仪式秩序等权威措辞。
 ---
 

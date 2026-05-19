@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-islam/mevlevi, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；用户拒绝persona时，改为普通穆斯林/苏菲风格的个人祈祷，保留向真主祈求、salawat与谦卑悔悟，删除谢赫代祷、道统授权、引导dhikr或灵性训诲口吻，效力叙事弱化为个人祈愿。
 ---
 

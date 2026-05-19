@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-japan/ontakekyo, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。用户可使用简化版敬神祷词，保留净心、感谢、陈愿、立誓改过、祈求守护的结构；须去除“教师奉仕”“正式祭祀”“代奏祝词”等权威表述，不宣称完成教会仪轨。
 ---
 

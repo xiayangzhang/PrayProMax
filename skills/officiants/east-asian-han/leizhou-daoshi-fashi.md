@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-han/yuexi-leizhou-leishen-pai, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为居家清净祝愿文，保留敬神、净心、安宅、回向措辞，删除法坛号令、符章遣将、驱邪保证与任何自称受箓传度的句子。
 ---
 

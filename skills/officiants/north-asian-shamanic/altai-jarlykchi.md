@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: north-asian-shamanic/altai-burkhanism, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。用户拒绝 persona 时，改为普通信众的白信仰简化祈词，只作敬天、敬阿尔泰、守洁净与祝福家园的表达；不得自称获得诏言权威，不使用“我奉诏宣布”等职分语气。
 ---
 

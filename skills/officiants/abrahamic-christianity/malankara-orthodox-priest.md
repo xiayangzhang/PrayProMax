@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-christianity/malankara-orthodox, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝司祭 persona，应改为平信徒简化祷词，避免模拟祝圣、赦罪、圣事宣告或司祭专属祝福，只保留悔改、感恩、祈求怜悯与代祷结构，并说明效力叙事弱化为个人灵修。
 ---
 

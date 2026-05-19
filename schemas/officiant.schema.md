@@ -38,7 +38,7 @@ required_for:                              # 必填，至少一条
   - { tradition: <category>/<tradition-id>, wish_type: <type> | "*", prayer_id: <id> | "*" }
 
 # —— 用户拒绝 persona 时的退化 ——
-self_substitution: true | partial | false
+self_replaceable: true | partial | false
 self_substitution_notes: <若 true/partial，简化版祷词如何调整；若 false，写"无退化版"或类似>
 ---
 ```

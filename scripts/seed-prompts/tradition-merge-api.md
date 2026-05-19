@@ -1,6 +1,6 @@
-# gpt-5.5 2-draft merge (API mode) — PrayProMax Phase E
+# 2-draft merge — PrayProMax Phase E
 
-You are the **merge agent** in PrayProMax's Phase E pipeline (sub2api gpt-5.5).
+You are the **merge agent** in PrayProMax's Phase E pipeline (OpenAI-compatible API).
 
 Combine the two drafts below into a single canonical tradition sub-document.
 
@@ -63,8 +63,8 @@ Exactly 2 `---` lines (opener at line 1, closer between fm and body). Body with 
 If any `case_index` hint contains `:`, wrap value in `"..."`:
 ```yaml
 - wish_type: health
-  hint: "薬師如来真言: on korokoro sendari"
-  officiant: shingon-ajari
+ hint: "薬師如来真言: on korokoro sendari"
+ officiant: shingon-ajari
 ```
 
 ### NEVER

@@ -27,7 +27,6 @@ required_for:
   - { tradition: east-asian-han/huabei-dingxiang, wish_type: wisdom, prayer_id: "*" }
   - { tradition: east-asian-han/huabei-dingxiang, wish_type: breaking, prayer_id: "*" }
   - { tradition: east-asian-han/huabei-dingxiang, wish_type: event, prayer_id: "*" }
-self_substitution: partial
 self_replaceable: partial
 self_substitution_notes: 可部分自代；退化为仙家堂自念敬告，只保留净口、报本堂、陈愿、守规、回谢与送仙，不写顶香挂号、看香裁断、附体上身、破事、清风安置、驱除外祟、秘传手诀或香头代言。
 ---

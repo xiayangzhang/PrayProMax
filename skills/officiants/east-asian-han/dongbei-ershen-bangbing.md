@@ -23,7 +23,6 @@ required_for:
   - { tradition: east-asian-han/dongbei-chumaxian, wish_type: deceased, prayer_id: "qingfeng-anzhi" }
   - { tradition: east-asian-han/dongbei-chumaxian, wish_type: breaking, prayer_id: "*" }
   - { tradition: east-asian-han/dongbei-chumaxian, wish_type: event, prayer_id: "wu-kan-shi" }
-self_substitution: false
 self_replaceable: false
 self_substitution_notes: 无等价自代；简化文本须删去二神神调、文王鼓、霸王鞭、请神护场与送仙唱段，只保留保家堂口自念陈愿和回谢。
 ---

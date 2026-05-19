@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-islam/shadhiliyya, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。若用户拒绝此 persona，应改为普通穆斯林个人杜阿，保留赞主、赞圣、求饶、祈愿与托靠结构，删除谢赫代祈、师承许可、苏菲引导权威等叙事，效力叙事弱化为个人虔诚祈求。
 ---
 

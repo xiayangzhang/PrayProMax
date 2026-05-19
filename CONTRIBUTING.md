@@ -1,6 +1,6 @@
 # Contributing to PrayProMax
 
-> 冷启动阶段，规则会随仓库一起成熟。
+We welcome PRs that improve coverage / quality / safety of the PrayProMax knowledge base. By submitting a PR you agree to license the contribution under [AGPL-3.0](LICENSE).
 
 ## 可以贡献什么
 

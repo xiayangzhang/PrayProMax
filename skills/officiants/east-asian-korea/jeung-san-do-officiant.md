@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-korea/jeung-san-do, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；用户拒绝司仪 persona 时，改为信众自述式简化祷词，保留恭敬称念、忏悔自省、解冤相生与回向众生，省略主持者口吻、礼仪调度与权威宣告。
 ---
 

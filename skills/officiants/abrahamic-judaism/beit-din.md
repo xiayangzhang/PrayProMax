@@ -20,7 +20,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-judaism/sephardi-rite, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝 Beit Din persona，则改为普通个人或家庭式犹太祈愿，保留对 HaShem 的谦卑祈求、悔改与和平主题，删除法庭见证、裁断、许可、判决等措辞，并明确不声称产生任何哈拉卡效力。
 ---
 

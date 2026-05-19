@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/mami-wata, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为简化的水边敬语与个人祈愿，保留净水、镜面、梦兆、护佑等象征，但删除启蒙祭司口吻、通灵宣告、占卜断言与任何强制性灵命令。
 ---
 

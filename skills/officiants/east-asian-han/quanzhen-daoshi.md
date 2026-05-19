@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-han/quanzhen-dao, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为居家清净诵念、悔过发愿、称念三清祖师圣号与回向善愿，删除“主持科仪”“行符遣将”等道士专属措辞，效力叙事弱化为自我修持与诚心祈愿。
 ---
 

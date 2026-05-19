@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: americas-indigenous/espiritualistas-trinitarios-marianos, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为信众本人以朴素语言向上帝、圣母与光明指导祈求，不使用“我作为facultad传言”或“灵体降临”措辞，保留净化、安慰、悔改、护佑与行善结构，效力叙事弱化为个人祈愿。
 ---
 

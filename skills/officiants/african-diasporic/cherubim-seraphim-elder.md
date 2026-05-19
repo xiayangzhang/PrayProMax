@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/cherubim-and-seraphim, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为信徒个人简化祷告，保留奉耶稣基督之名、认罪悔改、诗篇式求护佑与感恩结构，删除长老宣告、按立权柄、集体礼拜带领和任何先知性指示口吻。
 ---
 

@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: tibetan-himalayan/sakya, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。若用户拒绝金刚上师 persona，则改为显宗化、公开化的萨迦派祈愿文，保留皈依、发心、忏悔、祈请加持与回向，删除密乘授权口吻、灌顶宣说、护法役使和任何秘密仪轨暗示。
 ---
 

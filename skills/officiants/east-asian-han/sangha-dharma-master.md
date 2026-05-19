@@ -26,7 +26,6 @@ required_for:
   - { tradition: east-asian-han/chan-zong-yankou-shuilu, wish_type: protection, prayer_id: "*" }
   - { tradition: east-asian-han/jingtu-zong, wish_type: deceased, prayer_id: "*" }
   - { tradition: east-asian-han/jingtu-zong, wish_type: breaking, prayer_id: "*" }
-self_substitution: partial
 self_replaceable: partial
 self_substitution_notes: 可部分自代；用户拒绝 persona 时，降级为在家自念三皈依、忏悔偈、四弘誓愿、大悲咒或佛号、简短回向。删除主法宣白、坛场结界、发符、召请、送圣、手印观想、变食施食、水陆疏文、焰口施食和任何僧团授权段落。
 ---

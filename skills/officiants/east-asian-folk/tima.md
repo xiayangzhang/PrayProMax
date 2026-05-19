@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-folk/tujia-tima, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝梯玛 persona，可改为家中长辈式的简化谢愿祷词，保留谢恩、守愿、祈求家宅平安，去除梯玛神歌、司仪召请和通灵权威叙事。
 ---
 

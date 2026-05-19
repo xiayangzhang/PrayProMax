@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/bori, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；退化版应去除“我作为灵媒承载灵声”的措辞，改为普通信众以尊敬语言向 Bori 灵群祈请保护、平安与清明，不模拟附体、不宣称传达神谕。
 ---
 

@@ -18,7 +18,6 @@ required_for:
   - { tradition: abrahamic-christianity/mormonism-lds, wish_type: sacrament, prayer_id: "*" }
   - { tradition: abrahamic-christianity/mormonism-lds, wish_type: baptism, prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；普通个人或家庭祷告可改为信徒本人向天父祈祷，但圣餐、洗礼等需圣职权柄与教会钥匙叙事的教仪文本不可用自代版伪装执行，只能写作纪念性或学习性祷词。
 ---
 

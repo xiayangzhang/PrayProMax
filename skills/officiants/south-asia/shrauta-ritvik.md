@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: south-asia/vedic-shrauta, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；用户拒绝祭官 persona 时，改为居家敬礼式祈愿，保留清净、正当、回向秩序的措辞，但不模拟吠陀祭官权威、不称已行 श्रौत 祭仪、不使用伪造吠陀咒。
 ---
 

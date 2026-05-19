@@ -18,7 +18,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-han/lushan-pai, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为居家合掌焚香式的简化祈愿，保留敬请三奶夫人与护法护佑的措辞，删除敕令兵将、符箓施法、驱遣邪祟等法师专属口吻，效力叙事弱化为虔诚祈愿与自我安定。
 ---
 

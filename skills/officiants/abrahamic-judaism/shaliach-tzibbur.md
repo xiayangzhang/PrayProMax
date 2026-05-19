@@ -18,7 +18,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-judaism/romaniote-rite, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: "可部分自代：改为个人或家庭自行诵读的简化祷文，去除代表会众、重复领诵、需要法定会众场景的措辞；效力叙事从公共礼拜代表性弱化为私人祈愿。"
 ---
 

@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: south-asia/nath-sampradaya, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。若用户拒绝上师 persona，改为普通敬礼式纳特祈愿，保留对阿迪纳特、戈拉克纳特与内在修持的称念，删除上师代言、灌授权威、秘传口吻与任何效力保证。
 ---
 

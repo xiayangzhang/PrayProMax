@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-japan/kakure-kirishitan, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。若用户拒绝帳方 persona，则改为普通信徒的静默祈愿，保留感恩、悔改、守护与回忆先祖的结构，删去“帳方代共同体领祷”的权威措辞，并避免模拟秘传オラショ。
 ---
 

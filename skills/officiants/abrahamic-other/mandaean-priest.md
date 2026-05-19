@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-other/mandaeism, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝司祭 persona，则改为非圣礼性的曼达派风格默祷，保留伟大生命、光明、活水、洁净与和平意象，但不写成正式洗礼、亡者升光礼或司祭专属祝圣文本，并明确不声称仪式效力。
 ---
 

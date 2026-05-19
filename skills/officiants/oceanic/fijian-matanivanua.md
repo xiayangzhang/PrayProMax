@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: oceanic/fijian-sevusevu, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；简化版应改为来访者或家庭代表的谦逊致意，不冒称matanivanua权威，不使用专属氏族名号、酋长称谓或秘密陈辞，保留呈献、致敬、请求接纳与祝愿和平的基本结构。
 ---
 

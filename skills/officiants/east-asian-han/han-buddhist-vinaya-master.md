@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-han/lu-zong, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；简化为在家善信的皈依、忏悔、发愿、回向文，不自称律师或僧伽代表，不使用羯磨、授戒、僧团证明等权威措辞，效力叙事弱化为个人持戒发心。
 ---
 

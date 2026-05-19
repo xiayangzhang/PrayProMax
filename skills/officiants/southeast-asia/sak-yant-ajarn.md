@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: southeast-asia/sak-yant, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝阿赞 persona，改为普通信众的礼敬三宝与师承传统的简化祈愿，不使用阿赞自称、不模拟授符或加持，只保留守戒、慈悲、护身安稳与回向。
 ---
 

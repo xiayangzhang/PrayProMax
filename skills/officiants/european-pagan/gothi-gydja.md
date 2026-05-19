@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: european-pagan/heathenry-asatru, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为个人或家庭的简化敬拜词，保留祝圣、致敬、陈愿、致谢结构，但不宣称主持 blót、见证誓言或代表同道团体发声。
 ---
 

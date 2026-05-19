@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/bwiti, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。退化版应去除尼玛身份宣告、入门权威和祖灵代言口吻，改为尊重布维蒂意象的个人静心祷词，仅保留感恩祖先、寻求清明、请求道路平衡等非仪式性表达。
 ---
 

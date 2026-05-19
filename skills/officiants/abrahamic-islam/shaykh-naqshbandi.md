@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-islam/naqshbandi, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；退化为普通穆斯林个人杜阿，保留赞主、祝圣、忏悔、求护佑与托靠真主，删除导师师承口吻与引导性训诫，效力叙事弱化为个人祈愿。
 ---
 

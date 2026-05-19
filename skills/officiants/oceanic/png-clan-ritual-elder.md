@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: oceanic/png-sing-sing-sanguma, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝此 persona，改为简化的共同体祝愿，保留祖先、土地、和解与保护意象，删除长老权威口吻、禁忌性称谓和任何 sanguma 指涉。
 ---
 

@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: americas-indigenous/wixarika-huichol-marakame, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: "可部分自代：改写为非秘仪的感恩与守护祷词，只保留对土地、祖先、火、雨、玉米与共同体平衡的尊敬；删除任何声称真实传承权威、秘歌、朝圣步骤或神圣植物实践的内容，效力叙事弱化为个人敬意与反思。"
 ---
 

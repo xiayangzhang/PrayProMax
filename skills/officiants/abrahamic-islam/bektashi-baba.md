@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-islam/bektashi, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。若用户拒绝 Baba persona，可改为普通信众的简化 niyaz 或 dua，保留对真主的祈求、悔改、和平与服务众生的主题，删去传承长者口吻、道统权威语句与任何暗示入门或秘传的表达。
 ---
 

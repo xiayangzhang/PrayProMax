@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: americas-indigenous/shipibo-conibo-ayahuasca, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为非仪式化的森林感恩与净化祈愿，不模拟 onanya 权威、不声称唱诵真正 icaros、不涉及植物摄取或治疗承诺。
 ---
 

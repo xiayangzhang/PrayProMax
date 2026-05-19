@@ -1,4 +1,4 @@
-# gpt-5.5 officiant card worker (API mode) — PrayProMax
+# officiant card worker — PrayProMax
 
 You generate a **virtual officiant role-card** per `schemas/officiant.schema.md`.
 

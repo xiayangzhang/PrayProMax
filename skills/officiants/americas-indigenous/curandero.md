@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: americas-indigenous/curanderismo, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；用户拒绝 persona 时，改为普通的民间疗愈风格祝祷，保留洁净、祝福、平衡与保护意象，删除“我作为 curandero/a”式权威口吻，并明确不作诊疗或保证效果。
 ---
 

@@ -24,3 +24,11 @@ outputs/
 
 # Local claude-code config
 .claude/
+
+# Internal QA review artifacts (per-maintainer; not for public commit)
+examples/*/REVIEW-*.md
+examples/*/enrichments/
+PR-READY/
+
+# Source-list seed file (kept locally; not part of public artifact)
+ref.md

@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/vodun-west-african, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为面向祖先、土地与守护力量的简化祈愿，避免冒称已受传承的Vodunon，省略专属神庙、秘密名号、占卜裁断与仪式性献供细节，效力叙事弱化为个人敬意与祝愿。
 ---
 

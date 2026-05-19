@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """PrayProMax — exhaustive multi-tradition pray flow with 3-tier caching.
 
-For each of 291 seeded traditions:
+For each of 289 seeded traditions:
   L1 (prayers/ RAG)   — already-contributed skeleton for this wish_type + tradition
   L2 (case_index)     — tradition's own hint for this wish_type
   L3 (web search)     — grok --search fallback; findings stage as PR candidates
@@ -25,6 +25,7 @@ Opts:
     --max N              cap to first N traditions (testing)
 """
 import argparse
+import os
 import asyncio
 import json
 import re
@@ -37,8 +38,8 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-SUB2API = ROOT / 'scripts/sub2api.py'
-GROK_SCRIPT = Path.home() / '.claude/skills/grok-api/scripts/grok.py'
+LLM_CALL = ROOT / 'scripts/llm-call.py'
+# (legacy reference removed — grok now invoked via llm-call.py which supports grok-* models)
 INDEX_PATH = ROOT / 'skills/traditions/INDEX.yaml'
 TRAD_DIR = ROOT / 'skills/traditions'
 OFFICIANT_DIR = ROOT / 'skills/officiants'
@@ -47,8 +48,8 @@ PRAYERS_INDEX = PRAYERS_DIR / 'INDEX.json'
 SESSION_DIR = ROOT / '.session'
 OUTPUTS_DIR = ROOT / 'outputs'
 
-MODEL = 'gpt-5.5'
-GROK_MODEL = 'grok-4.20-fast'
+MODEL = os.environ.get('OPENAI_MODEL', 'gpt-5.5')
+GROK_MODEL = os.environ.get('XAI_MODEL', 'grok-4.3')
 
 WISH_TYPES = ['health', 'wealth', 'protection', 'deceased',
               'relationship', 'wisdom', 'breaking', 'event']
@@ -56,11 +57,11 @@ WISH_TYPES = ['health', 'wealth', 'protection', 'deceased',
 STATE_LOCK = asyncio.Lock()
 
 
-# ───── sub2api / grok callers ────────────────────────────────
+# ───── OpenAI-compatible API / grok callers ────────────────────────────────
 
 async def call_gpt(prompt, max_tokens=4096, timeout=600):
     proc = await asyncio.create_subprocess_exec(
-        'python3', str(SUB2API), MODEL,
+        'python3', str(LLM_CALL), MODEL,
         '--max-tokens', str(max_tokens), '--timeout', str(timeout),
         stdin=asyncio.subprocess.PIPE,
         stdout=asyncio.subprocess.PIPE,
@@ -74,14 +75,13 @@ async def call_gpt(prompt, max_tokens=4096, timeout=600):
 
 async def call_grok_search(query, max_tokens=2048):
     proc = await asyncio.create_subprocess_exec(
-        'python3', str(GROK_SCRIPT),
-        '--model', GROK_MODEL, '--search', '--max-tokens', str(max_tokens),
-        query,
-        stdin=asyncio.subprocess.DEVNULL,
+        'python3', str(LLM_CALL), GROK_MODEL,
+        '--max-tokens', str(max_tokens), '--search',
+        stdin=asyncio.subprocess.PIPE,
         stdout=asyncio.subprocess.PIPE,
         stderr=asyncio.subprocess.PIPE,
     )
-    out, err = await proc.communicate()
+    out, err = await proc.communicate(input=query.encode())
     if proc.returncode != 0:
         raise RuntimeError(f'grok rc={proc.returncode}: {err.decode()[:300]}')
     return out.decode().strip()
@@ -243,6 +243,22 @@ Output ONE markdown section:
 - **No-deprivation clause**: where wealth / longevity / success is requested, include an in-body line that explicitly does not seek to dispossess or shorten the lives of others (e.g. 「不夺他人福报、不损他人寿数」 or its tradition-appropriate analogue).
 - **No quid-pro-quo / 交换 / 还愿 / 牲祭 clauses**: do NOT draft "if you grant X, I will offer / sacrifice / pay / vow Y" exchanges. Do NOT include payment schedules, animal sacrifice, soul-bond obligations, or "future-debt to deity" clauses. Frame as **至诚 supplication / dedication / praise / 回向** rather than barter. Even if the tradition historically used exchange ritual (e.g. 还愿戏 / 牲品供养), the drafted prayer must use the **non-transactional core form**, not the bargain form.
 - **Initiation taboos**: if the tradition's case_index hint includes officiant-required practices and we're drafting a self-pray version, use the simplified / lay form noted in the officiant card's `self_substitution_notes` (if available), not the officiant's reserved liturgy.
+- **`mitigation` field is structural guidance for you, not prayer text**: when the tradition's `mitigation` field describes how to handle backlash/wrong-use (e.g. "avoid commercial tantric claims", "mark Vedic-svara as priest-mediated", "保持天主教信仰框架"), do NOT encode these statements as prose disclaimers in the prayer body. Instead, manifest mitigation through APPROPRIATE CLOSING RITUAL CONTENT (回向 / 净化 / 谢神 / 护身咒 / Thelemic banishing close / "by Your mercy and holy will" rather than a bargain) — actual liturgical material, not policy text.
+
+- **Oral / closed-lineage minimal-section rule** — this rule fires ONLY when ALL of:
+  (a) tradition is primarily oral OR has closed initiation, AND
+  (b) public sources do NOT reliably reconstruct the original liturgy in canonical verbatim form, AND
+  (c) without this rule, you would have to fabricate / guess romanized phonemes / invent chant syllables.
+  Examples: 羌族释比, 苗/彝/瑶 师公口传, Abakuá secret rites, 某些 Vodou / Candomblé initiation prayers, Yolŋu / Arrernte Songlines, 某些 Native American secret ceremonies, 土家族梯玛 closed portions.
+  When this rule fires, output **a minimal 3–7 line section** total:
+  - ONE short opening line acknowledging the tradition's lineage (user's language)
+  - ONE short petition with `{{{{anchors.<key>}}}}` placeholders (user's language)
+  - ONE brief closing humility line (user's language)
+  - **DO NOT** include literal phrases like `公开可引用部分有限`, `本派别仪轨多属师承口传`, `下以白话祝祷代之`, "This prayer is open/public", "We do not claim authority", or any "this section / this prayer is..." style meta-disclaimer **as prayer body**. Express humility via a SHORT prayerful petition only ("不冒师承，不越秘传" or "May we honor without overreach").
+  - **DO NOT** fabricate romanized chant syllables or pad with translated Chinese versions of imagined ritual.
+  - 3–7 lines TOTAL. Truly short. Empty space is acceptable.
+
+- **No fabrication of original-language text** (applies to ALL traditions): only embed mantras / scriptures / liturgical formulas you can recall with HIGH confidence as canonical verbatim text. If only fragments are confident (e.g. you remember `Bismillah ar-Rahman ar-Rahim` but not the full specific tariqa wird), embed only those fragments and skip the rest. For obscure or specialized awrad / qewl / esoteric formulas (Tijaniyya specialized awrad, Abakuá ritual phrases, Beta Israel non-rabbinic liturgy, niche Rosicrucian Latin, etc.), when uncertain, default to general supplication forms attested in the tradition's BROADER canon (Fātiḥa / general dhikr / Shema / Psalms / etc.) rather than guessing at specific rare liturgies. A sparse correct section beats a verbose corrupted one.
 
 ## LANGUAGE RULES (critical)
 
@@ -315,6 +331,8 @@ Output ONE markdown section:
 - **Mitigation when backlash_risk medium/high**: embed tradition's `mitigation` as closing protective ritual (part of prayer body)
 - **No-harm clause** + **No-deprivation clause**: wealth/longevity/success requests must include an in-body line that does not dispossess or harm others
 - **No quid-pro-quo / 交换 / 还愿**: don't draft "if X then I'll Y" bargain prayers; use 至诚 supplication, not barter
+- **Oral/closed-lineage minimal section**: if tradition is oral or closed-initiation and public liturgical language isn't safely reconstructible, output a SHORT 3-7 line section: brief acknowledgment + petition with `{{{{anchors.*}}}}` + humility close. NEVER include `公开可引用部分有限` / `本派别仪轨多属师承口传` / "This prayer is open" / "We do not claim authority" or any "this section is..." disclaimer **as prayer body**. Express humility via a SHORT prayerful petition only.
+- **No fabrication of original-language text**: only embed mantras/scriptures you recall with HIGH confidence as canonical. For obscure specialized formulas (Tijaniyya awrad / Abakuá ritual / Beta Israel non-rabbinic / etc.), when uncertain, default to general supplications from the tradition's broader canon. Sparse correct > verbose corrupted.
 
 ## LANGUAGE RULE (critical)
 
@@ -327,17 +345,42 @@ on a single line.'''
     return await call_gpt(prompt, max_tokens=4096)
 
 
-async def evaluate_l3_findings(tradition_name, search_findings):
-    """Quick verification: did grok actually find a real practice?"""
-    prompt = f'''Quick judge: did this web search find a genuine, verifiable fixed prayer / mantra / liturgical practice from {tradition_name}? Or was it vague / hallucinated / "tradition has no such practice"?
+async def evaluate_l3_findings(tradition_name, wish_text, wish_type, search_findings):
+    """Skeptical verification: does this finding genuinely match THIS wish for THIS tradition?
 
-Search result:
+    The earlier v0.1 verify pass was too lenient — it asked "does prayer exist"
+    not "does prayer fit this wish". Result: 6/6 PR candidates for one
+    github-flourish session were false positives (Trika / Hesychasm / Jainism
+    / Lectorium / Sun Dance / Hekhalot — all contemplative / non-material
+    traditions wrongly tagged as having wealth practice).
+
+    This v0.2 version is explicitly skeptical and checks wish-tradition fit.
+    """
+    prompt = f'''You are a SKEPTICAL verifier of search findings for prayer/practice claims.
+
+Tradition: {tradition_name}
+User wish: {wish_text}
+wish_type: {wish_type}
+
+Search result to verify:
 {search_findings}
 
-Reply with ONLY ONE of:
-HAS_PRAYER   — clear evidence of a real fixed prayer/mantra with source
-NO_PRAYER    — search confirmed tradition has nothing of the sort
-UNCERTAIN    — too vague to tell
+For HAS_PRAYER, ALL of these must be true:
+1. The cited mantra/practice is canonical and verifiable in the tradition's primary corpus
+2. This practice is a RECOGNIZED, TRADITIONAL use for THIS specific wish (or wish_type) — not a modern syncretic projection, not a "generally applies to all wishes" claim
+3. The tradition's theology/intent ALIGNS with the user's wish — does NOT contradict it
+
+Default to NO_PRAYER (skeptical bias). Common false positives to reject:
+- Tradition has SOME mantra → caller infers it covers this wish → REJECT unless attested for THIS purpose
+- Tradition has a popular "wealth" or "blessing" mantra in folk-adapted forms but the NAMED tradition (e.g. Trika Shaivism, Hesychasm, Pratikraman, Lectorium Rosicrucianum) is a strictly contemplative / philosophical / ascetic / gnostic school → REJECT (popular mantras belong to different syncretic strands, not this canon)
+- Tradition is fundamentally about the OPPOSITE of the wish (Pure Land + wealth; Hesychasm + project success; Jainism + material gain; ascetic + acquisition) → REJECT
+- Search result is mostly descriptive of the tradition without naming a SPECIFIC practice for this purpose → REJECT
+- Search result actually concludes "tradition has no such practice" but provides a generic adjacent practice → REJECT
+
+Output ONE of:
+HAS_PRAYER   — canonical practice exists for THIS SPECIFIC wish in THIS SPECIFIC tradition
+NO_PRAYER    — tradition has nothing for this wish (or wish is alien to tradition's intent)
+UNCERTAIN    — truly ambiguous (rare)
 
 One word only.'''
     raw = await call_gpt(prompt, max_tokens=20)
@@ -390,7 +433,7 @@ async def process_tradition(entry, wish_text, wish_type, anchor_keys,
                 'reason': 'L2 hint=无 and --skip-l3'}
 
     findings = await l3_search(entry, wish_text, wish_type)
-    judgment = await evaluate_l3_findings(entry['name'], findings)
+    judgment = await evaluate_l3_findings(entry['name'], wish_text, wish_type, findings)
 
     if judgment == 'NO_PRAYER':
         return {'tid': tid, 'status': 'no-match', 'tier': 'L3',
@@ -598,7 +641,15 @@ def assemble_outputs(session_dir, state, anchors, universal_closing_text=''):
         nc_lines.append('')
         nc_lines.append('## Errored')
         for r in errored:
-            nc_lines.append(f'- `{r["tid"]}` — {r.get("reason","?")}')
+            raw = r.get('reason', '?')
+            # Sanitize upstream / HTTP / JSON internals for committable output
+            if raw.startswith('gpt rc') or raw.startswith('grok rc') or 'HTTP' in raw:
+                reason = 'upstream transient error; needs manual rerun'
+            elif raw.startswith('timeout'):
+                reason = raw
+            else:
+                reason = raw[:120]
+            nc_lines.append(f'- `{r["tid"]}` — {reason}')
     (out_dir / 'needs-confirmation.md').write_text('\n'.join(nc_lines))
 
     # PR-CANDIDATE.md (enrichments)

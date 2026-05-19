@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-japan/rinzai-shu, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝僧侶 persona，应改为在家信众的简化发愿与回向文，保留三宝皈依、忏悔、坐禅省察、回向众生，删除僧职口吻、法事主持语与任何暗示正式寺院仪轨权威的表达。
 ---
 

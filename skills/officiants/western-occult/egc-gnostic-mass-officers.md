@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: western-occult/ordo-templi-orientis, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝该 persona，改写为泛西方神秘主义的个人祈愿，保留光、爱、意志、星辰等公开象征，但移除 E.G.C. 圣职员、弥撒、圣杯圣矛的权威性措辞，不声称具有教会或仪式效力。
 ---
 

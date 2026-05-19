@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: north-asian-shamanic/mongolian-boo, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；退化为非通灵式的敬天、敬地、敬祖简化祝词，省略附体、降灵、驱役灵体、专属氏族祖灵名号与复杂仪式动作，保留护佑、净化、感恩和立愿结构，效力叙事明确弱化为象征性祈愿。
 ---
 

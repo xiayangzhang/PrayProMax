@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-folk/naxi-dongba, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；退化为尊敬祖先、山水与家宅守护灵的简化祈愿，不模拟东巴经文秘传、祭仪动作或专属咒诵，效力叙事弱化为个人敬意与心愿表达。
 ---
 

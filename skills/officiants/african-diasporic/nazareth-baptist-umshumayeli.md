@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/shembe-nazareth-baptist, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝该 persona，应改为普通信众式简化祷词，保留对上帝的敬畏、悔改、家庭与共同体祝福，但去除宣讲者权威、领唱召集、教会职分口吻与任何代表会众发令的措辞。
 ---
 

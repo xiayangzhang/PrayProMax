@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: americas-indigenous/midewiwin-ojibwe, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。若用户拒绝persona注入，改写为公开、简化、非秘传的感恩与疗愈祈愿，不模拟入会者权威，不声称执行Midewiwin仪式，不使用秘传歌辞、药方或会内程序。
 ---
 

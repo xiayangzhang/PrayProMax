@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: western-occult/aurum-solis, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为非启蒙者的赫尔墨斯式冥想祷词，删去阶位权威、秘传宣称与强召命令，保留光明、秩序、德性与内在提升的象征语言。
 ---
 

@@ -18,7 +18,6 @@ required_for:
   - { tradition: abrahamic-christianity/catholic-charismatic-renewal, wish_type: deliverance, prayer_id: "*" }
   - { tradition: abrahamic-christianity/catholic-charismatic-renewal, wish_type: exorcism, prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝此 persona，应改写为平信徒可用的简化释放祈祷或代祷，向天主祈求保护、悔改、医治与平安，不直接命令邪灵，不模拟正式大驱魔礼，不宣称诊断附魔。
 ---
 

@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-christianity/mormonism-lds, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝此persona，改写为普通LDS成员的个人祷告，保留“天父”“奉耶稣基督的名”与顺服神旨意的结构，但不使用圣职祝福、按手、宣告式权柄措辞或任何教仪性语言。
 ---
 

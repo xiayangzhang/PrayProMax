@@ -23,6 +23,7 @@ Opts:
     --no-rag-write           skip writing to prayers/ knowledge base
 """
 import argparse
+import os
 import asyncio
 import json
 import re
@@ -34,7 +35,7 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-SUB2API = ROOT / 'scripts/sub2api.py'
+LLM_CALL = ROOT / 'scripts/llm-call.py'
 INDEX_PATH = ROOT / 'skills/traditions/INDEX.yaml'
 TRAD_DIR = ROOT / 'skills/traditions'
 OFFICIANT_DIR = ROOT / 'skills/officiants'
@@ -42,17 +43,17 @@ PRAYERS_DIR = ROOT / 'prayers'
 PRAYERS_INDEX = PRAYERS_DIR / 'INDEX.json'
 OUTPUTS_DIR = ROOT / 'outputs'
 
-MODEL = 'gpt-5.5'
+MODEL = os.environ.get('OPENAI_MODEL', 'gpt-5.5')
 
 WISH_TYPES = ['health', 'wealth', 'protection', 'deceased',
               'relationship', 'wisdom', 'breaking', 'event']
 
 
-# ───── sub2api wrapper ──────────────────────────────────────────
+# ───── OpenAI-compatible API wrapper ──────────────────────────────────────────
 
 async def call_gpt(prompt, max_tokens=4096, timeout=600):
     proc = await asyncio.create_subprocess_exec(
-        'python3', str(SUB2API), MODEL,
+        'python3', str(LLM_CALL), MODEL,
         '--max-tokens', str(max_tokens),
         '--timeout', str(timeout),
         stdin=asyncio.subprocess.PIPE,
@@ -61,7 +62,7 @@ async def call_gpt(prompt, max_tokens=4096, timeout=600):
     )
     out, err = await proc.communicate(input=prompt.encode())
     if proc.returncode != 0:
-        raise RuntimeError(f'sub2api failed rc={proc.returncode}: {err.decode()[:300]}')
+        raise RuntimeError(f'OpenAI-compatible API failed rc={proc.returncode}: {err.decode()[:300]}')
     return out.decode().strip()
 
 

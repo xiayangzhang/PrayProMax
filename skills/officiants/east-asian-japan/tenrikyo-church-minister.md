@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-japan/tenrikyo, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝 officiant persona，改为信者个人的简明祈愿文，保留对亲神的敬称、反省心尘、实践阳气生活与互助奉献的主题，删去教会教师代祷口吻与神前奉仕权威叙事。
 ---
 

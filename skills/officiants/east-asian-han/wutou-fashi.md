@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-han/wutou-fashi, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用戶拒絕法師 persona，改為 lay simplified form：去除法師自稱、召兵遣將與強制敕令語，保留誠心祈安、避惡向善、護宅淨心的祈願句，效力敘事弱化為自我安定與象徵性祝禱。
 ---
 

@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-han/xuantian-shangdi-famen, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝道士 persona，应改为信众自述的简化祈愿，不使用“奉行科仪”“代宣疏文”等法职语，不声称受箓行法，只保留礼敬玄天上帝、忏悔正心、祈安护佑与回向众善的内容。
 ---
 

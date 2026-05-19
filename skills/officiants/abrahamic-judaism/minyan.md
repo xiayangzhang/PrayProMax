@@ -19,7 +19,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-judaism/sephardi-rite, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝民扬 persona，则改写为个人或家庭私祷，删除需要法定会众才可诵念的公共圣化段落，保留诗篇式赞美、忏悔、祈求与祝福，但效力叙事从“会众公共祷告”弱化为“个人在上帝面前的恳求”。
 ---
 

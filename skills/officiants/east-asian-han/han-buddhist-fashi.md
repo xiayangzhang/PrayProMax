@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-han/tiantai-zong-chanfa, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝法师 persona，应改为居士或普通信众自诵的简化祈愿，保留皈依、忏悔、发愿、回向四段，删除“法师代众启白”“登坛作法”等权威性措辞，效力叙事弱化为个人修心与随分祈愿。
 ---
 

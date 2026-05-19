@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-other/rastafari-nyahbinghi, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝长老 persona，改为简化的 Rastafari 风格个人祈愿，保留 Jah、感恩、公义、和平与 Zion 意象，但弱化“长老带领会众”“Nyahbinghi 鼓唱权威”和共同体仪式口吻。
 ---
 

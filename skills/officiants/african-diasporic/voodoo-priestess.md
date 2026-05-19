@@ -18,7 +18,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/voodoo-louisiana, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。若用户拒绝女祭司 persona，应改为个人敬祖与祝福祷词：保留祖先、道路、保护、净心等象征性措辞，删除祭司权威、召灵命令、祭坛职分和任何秘传暗示；效力叙事弱化为个人诚心表达。
 ---
 

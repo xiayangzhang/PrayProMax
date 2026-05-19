@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-judaism/hasidism, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。若用户拒绝此 persona，可改为个人化、简短的哈西迪风格祷词，保留喜乐、悔悟、感恩、共同体祝福与“我们”的措辞；去除领唱者权威叙事、会堂带领语气和任何暗示正式礼拜职能的表达。
 ---
 

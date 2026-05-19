@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: southeast-asia/khmer-krou, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；用户可采用 lay simplified form，仅保留敬祖师、安抚地方灵、祈求护身与身心平衡的温和祷词，避免自称掌握克鲁咒诀、驱邪权能或替他人施术。
 ---
 

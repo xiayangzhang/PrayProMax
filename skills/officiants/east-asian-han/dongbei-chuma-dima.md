@@ -26,7 +26,6 @@ required_for:
   - { tradition: east-asian-han/dongbei-chumaxian, wish_type: wisdom, prayer_id: "*" }
   - { tradition: east-asian-han/dongbei-chumaxian, wish_type: breaking, prayer_id: "*" }
   - { tradition: east-asian-han/dongbei-chumaxian, wish_type: event, prayer_id: "*" }
-self_substitution: partial
 self_replaceable: partial
 self_substitution_notes: 可部分自代；退化为保家堂口自念版，只保留净口、敬本堂掌堂教主、陈愿、守规、回谢与送仙，不写附体、上身、看事、破关、收徒、开堂、仙家口传裁断、清风安置或驱除外祟。
 ---

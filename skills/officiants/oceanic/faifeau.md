@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: oceanic/samoa-kava-lotu-tofa, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: "可部分自代：用户可用简化的家庭祷告口吻表达感谢、求智慧与平安；应省略牧职宣告、正式祝福权柄、主持 kava 圆席的仪式性发言。效力叙事弱化为个人或家庭祈愿。"
 ---
 

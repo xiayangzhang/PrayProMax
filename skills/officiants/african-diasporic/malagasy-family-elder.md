@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/famadihana, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝 persona，可改为普通家族追思祷词，保留感恩祖先、记念逝者、祝愿亲族和合三段，但弱化仪式权威与 Famadihana 专属称谓，不宣称已完成传统仪式。
 ---
 

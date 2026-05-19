@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/quimbanda, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为非秘仪、非召灵的个人祈愿文本，保留尊重、保护、开路与断除恶意的主题，删除祭司权威宣称、灵性命令句、具体供奉或仪式操作，效力叙事弱化为象征性自我整顿与精神支持。
 ---
 

@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: modern-energy-newage/spiritualists-national-union, wish_type: healing, prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为简短的个人静心祷词，保留祝福、安宁、光明与疗愈意向，但去除“作为灵界疗愈媒介”的权威叙述，不作诊断或疗效承诺。
 ---
 

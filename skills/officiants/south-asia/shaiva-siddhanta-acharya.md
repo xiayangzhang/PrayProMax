@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: south-asia/shaiva-siddhanta, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为信众自诵的简化敬礼与发愿文，保留礼敬湿婆、忏悔净化、回向众生，不使用阿阇梨权威口吻、灌顶咒法或代行仪轨措辞。
 ---
 

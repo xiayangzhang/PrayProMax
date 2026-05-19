@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/umbanda, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；简化版应改为普通信众的敬礼与祈愿，省略主持gira、开坛、firmar ponto、命令灵体或代表terreiro发声等祭司权威措辞，只保留对Olorum、Orixás与光明向导的尊敬、感恩、守护与伦理承诺。
 ---
 

@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/vodun-west-african, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；退化版应改为普通信众的简化祈愿，只保留对法、祖灵与守护沃敦的尊敬性呼告，不声称已占卜、不宣读神谕、不使用秘密仪轨或献祭细节，效力叙事弱化为自省、求指引与求保护。
 ---
 

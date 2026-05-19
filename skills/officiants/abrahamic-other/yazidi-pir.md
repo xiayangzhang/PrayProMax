@@ -18,7 +18,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-other/yazidi, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝皮尔 persona，应改为简化的家庭祝福或静默祈愿，保留对 Xwedê、Tawûsê Melek、祖先与社群安宁的敬称，但不声称执行圣职仪轨、传授秘密圣歌或替代世袭圣职权威。
 ---
 

@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: south-asia/sri-vidya, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；退化为面向神圣母性的公开敬礼、感恩、护念与回向，不使用密咒、灌顶语、内修次第或上师授法口吻，效力叙事弱化为个人虔敬祈愿。
 ---
 

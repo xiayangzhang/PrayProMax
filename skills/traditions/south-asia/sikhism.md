@@ -38,64 +38,64 @@ search_strategy: |
   "Akhand Path" granthi OR self OR "sponsored for"
 case_index:
   - wish_type: health
-    hint: "Akhand Path sampooran paath followed by Ardas; personal self-recitation may use Japji Sahib and Ardas."
-    officiant: sikh-granthi
+    hint: "Self-recitation: open Japji Sahib (Mool Mantar + first few pauris), then personal Ardas naming the supplicant + the wish; close with Mundavani / Anand Sahib Chhakka. Akhand Path is a 48-hour ceremonial reading (officiant + sangat required) — do NOT inline it as if a single section."
+    officiant: none
     primary_language: gurbani-gurmukhi
   - wish_type: health
-    hint: "家庭或 sangat 可为康复、手术后或整体福祉安排 Akhand Path；若无正式 granthi 主持，仍须由能准确连续诵读者维持 maryada，并以 Ardas 收摄。"
-    officiant: none
-    primary_language: gurbani-gurmukhi
-  - wish_type: wealth
-    hint: "Akhand Path with Ardas framed as kirat karni, vand chhakna, and hukam acceptance; no separate wealth spell."
+    hint: "Ceremonial: Akhand Path sampooran paath followed by Ardas + Hukamnama. Officiant-mediated by qualified granthi + relay readers; do not draft the 1430-ang continuous text — only frame as event."
     officiant: sikh-granthi
     primary_language: gurbani-gurmukhi
   - wish_type: wealth
-    hint: "可为新事业、工作责任或家庭生计作 Ardas 与 Akhand Path，但表述为 honest livelihood、seva、vand chhakna 与 hukam acceptance，而非财富咒法。"
+    hint: "Self: Japji Sahib + Ardas framed as kirat karni (honest livelihood) + vand chhakna (sharing) + hukam acceptance; no wealth spell. Close with Mundavani."
     officiant: none
     primary_language: gurbani-gurmukhi
-  - wish_type: protection
-    hint: "Akhand Path with Ardas; individual prayer may include Benti Chaupai Sahib / Chaupai Sahib and Ardas."
+  - wish_type: wealth
+    hint: "Ceremonial: Akhand Path bhog + Ardas (officiant-mediated event, do not inline)."
     officiant: sikh-granthi
     primary_language: gurbani-gurmukhi
   - wish_type: protection
-    hint: "可为旅途安全、家庭平安、社区福祉或克服障碍安排 Akhand Path 与 Ardas；不得改写为驱邪、诅咒或强迫性仪式。"
+    hint: "Self: Benti Chaupai Sahib (or Chaupai Sahib) full recitation + Ardas; close with Mundavani."
     officiant: none
     primary_language: gurbani-gurmukhi
-  - wish_type: deceased
-    hint: "Akhand Path or Sehaj Path bhog with Anand Sahib, Ardas, and Hukamnama for antim ardas context."
+  - wish_type: protection
+    hint: "Ceremonial: Akhand Path + Ardas (officiant-mediated, do not inline)."
     officiant: sikh-granthi
     primary_language: gurbani-gurmukhi
   - wish_type: deceased
-    hint: "家庭追思、葬礼前后或 antim ardas 场合可安排 Akhand Path / Sehaj Path bhog，重点为 Gurbani、Ardas、Hukamnama 与 sangat remembrance。"
+    hint: "Self: Anand Sahib first 5 + last 1 pauri + Ardas naming the departed (antim ardas style)."
     officiant: none
     primary_language: gurbani-gurmukhi
-  - wish_type: relationship
-    hint: "Ardas before Guru Granth Sahib; for Anand Karaj context the canonical laavan are Sri Guru Granth Sahib, Ang 773-774."
+  - wish_type: deceased
+    hint: "Ceremonial: Sehaj Path or Akhand Path bhog with Anand Sahib full, Hukamnama, sangat remembrance (officiant-mediated, do not inline)."
     officiant: sikh-granthi
     primary_language: gurbani-gurmukhi
   - wish_type: relationship
-    hint: "可为婚姻准备、家庭和谐、新生命或亲属团聚作 Akhand Path 与 Ardas；Anand Karaj 仍以 Guru Granth Sahib 中 Laavan 为核心。"
+    hint: "Self: Ardas before Guru Granth Sahib for harmony; for Anand Karaj wedding context cite Laavan (Sri Guru Granth Sahib, Ang 773-774) as reference, not full recitation."
     officiant: none
     primary_language: gurbani-gurmukhi
-  - wish_type: wisdom
-    hint: "Japji Sahib, Akhand Path, Ardas, and Hukamnama centered on gurmat and bibek."
+  - wish_type: relationship
+    hint: "Ceremonial Anand Karaj: 4 Laavan with sangat circumambulation, officiant required (do not inline as text)."
     officiant: sikh-granthi
     primary_language: gurbani-gurmukhi
   - wish_type: wisdom
-    hint: "可为学习、考试、 spiritual guidance 或加深对 Guru 的虔敬安排 Akhand Path、Japji Sahib、Ardas 与 Hukamnama，重点为 gurmat、bibek 与 humility。"
+    hint: "Self: Japji Sahib opening + Ardas + Mool Mantar repetitions; close with Mundavani; framed as gurmat + bibek + humility."
     officiant: none
+    primary_language: gurbani-gurmukhi
+  - wish_type: wisdom
+    hint: "Ceremonial Akhand Path centered on gurmat (officiant-mediated, do not inline)."
+    officiant: sikh-granthi
     primary_language: gurbani-gurmukhi
   - wish_type: breaking
-    hint: "无；Sikh maryada does not provide curse-breaking rites. Only Ardas, Gurbani recitation, and hukam acceptance are used without exorcistic or coercive framing."
+    hint: "Self: Ardas + Gurbani recitation (Japji Sahib / Chaupai Sahib) + hukam acceptance. Sikh maryada does not provide curse-breaking or exorcistic rites — no coercive framing."
     officiant: none
     primary_language: gurbani-gurmukhi
   - wish_type: event
-    hint: "Akhand Path bhog or Ardas for a named event, followed by Hukamnama; common gurdwara form is Ardas after Gurbani."
+    hint: "Self: Ardas for a named event + Japji Sahib opening + Hukamnama (random Gurbani guidance) drawn after."
+    officiant: none
+    primary_language: gurbani-gurmukhi
+  - wish_type: event
+    hint: "Ceremonial Akhand Path bhog with sangat for major events (officiant-mediated, do not inline)."
     officiant: sikh-granthi
-    primary_language: gurbani-gurmukhi
-  - wish_type: event
-    hint: "可为生日、周年、毕业、考试、迁居、开业或其他里程碑安排 Akhand Path bhog 或 Ardas，随后取 Hukamnama，并按当地 gurdwara maryada 分发 prasad/langar。"
-    officiant: none
     primary_language: gurbani-gurmukhi
 verification:
   - "Sri Guru Granth Sahib, Ang 1-1430; opening Mool Mantar at Ang 1; Anand Sahib at Ang 917-922; Mundavani and Rag Mala at Ang 1429-1430."

@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: south-asia/bhairava-kashmir-shaiva, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为普通静心祈愿，保留对湿婆、拜罗婆与内在觉知的尊敬，但删除上师授权、灌顶、密续咒力与秘传仪轨口吻，效力叙事弱化为个人观照与祝愿。
 ---
 

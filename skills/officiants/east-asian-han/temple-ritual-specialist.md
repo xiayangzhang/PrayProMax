@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-han/wangye-cult, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改為信眾在家或廟前默禱的簡化稟告，保留敬稱、懺悔、祈安、回向，省略法師自稱、科儀號令、符令、押煞、遣將等專門壇儀語句，效力敘事弱化為虔心祈願。
 ---
 

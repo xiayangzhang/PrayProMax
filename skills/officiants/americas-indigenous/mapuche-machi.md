@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: americas-indigenous/mapuche-machi-ngillatun, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为普通信众的简化祈愿，只保留感恩土地、请求平衡与守护的公共措辞，不使用 Machi 身份、秘传歌辞、疗愈权威或仪式效力宣称。
 ---
 

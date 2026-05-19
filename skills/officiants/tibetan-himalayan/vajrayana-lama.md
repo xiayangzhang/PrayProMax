@@ -19,7 +19,6 @@ persona_prompt: |
 required_for:
   - { tradition: tibetan-himalayan/chod, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: "可部分自代：改为显明的皈依、发菩提心、断除我执、慈悲回向之简化祈愿；不得自称已受灌顶上师，不写秘密仪轨、观想次第、手鼓铃杵操作、朵玛供施或驱魔命令。效力叙事弱化为个人修心与祝愿。"
 ---
 

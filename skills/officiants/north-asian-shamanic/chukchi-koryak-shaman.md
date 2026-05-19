@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: north-asian-shamanic/chukchi-koryak-shamanism, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；用户拒绝 persona 时，改写为面向祖先、自然与共同体的朴素祝愿，保留感恩、守护、平衡、谦卑请求，删除萨满自称、鼓召辅灵、通灵口吻和任何仪式权能宣称。
 ---
 

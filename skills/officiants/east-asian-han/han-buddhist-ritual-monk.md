@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-han/xianghua-yingfu-seng, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝僧侣 persona，则改为居士式简化祈愿，保留皈依、忏悔、诵念、回向结构，删除主礼僧自称、登坛宣白、施食荐拔等专门科仪措辞，并明确效力叙事弱化为个人发愿与随喜回向。
 ---
 

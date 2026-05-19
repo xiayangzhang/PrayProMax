@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: european-pagan/kemetism, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为个人敬神祷词，保留赞颂、奉献、求愿、回归玛阿特的结构，但弱化“祭司诵读”“圣言权能”等叙事，不宣称具备专门礼仪职分。
 ---
 

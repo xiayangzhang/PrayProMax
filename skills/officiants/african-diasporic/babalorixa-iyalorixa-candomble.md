@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/candomble-de-caboclo, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；用户拒绝 persona 时，改写为尊重 Candomblé de Caboclo 意象的个人祈愿，不模拟司祭权威、不宣称主持仪式，只保留致敬、感恩、求护佑与回向共同体的简化结构。
 ---
 

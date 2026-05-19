@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: americas-indigenous/huni-kuin-nixi-pae, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝此persona，应改为非冒充式的“受Huni Kuin Nixi Pae意象启发的尊敬祈愿”，删去pajé身份、师承权威和圣药主持口吻，仅保留森林、祖先、净心、护佑与感恩等普遍措辞。
 ---
 

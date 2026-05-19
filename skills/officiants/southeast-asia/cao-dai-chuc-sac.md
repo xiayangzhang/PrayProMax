@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: southeast-asia/cao-dai, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝职色 persona，应改为普通信徒的简化祈愿，保留敬天、悔过、行善、回向与三教合一语汇，但弱化正式科仪、职品权威、召请层级与代众宣礼口吻。
 ---
 

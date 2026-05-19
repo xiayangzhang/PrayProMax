@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: south-asia/shakta, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝上师 persona，则改为普通女神信众的简化祷词，保留敬礼、忏悔、祈愿、回向结构，删除上师训诫口吻、传承权威表述、灌顶暗示与任何密法性措辞，效力叙事弱化为个人虔敬祈愿。
 ---
 

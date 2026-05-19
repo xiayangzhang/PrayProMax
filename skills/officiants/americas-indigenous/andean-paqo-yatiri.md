@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: americas-indigenous/andean-despacho, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: "可部分自代：退化为非专职的感恩与献意文本，保留对Pachamama、Apus、祖先与自然要素的敬称，但删除任何暗示正式师承、主持权能、诊断占卜或完整仪式效力的措辞。"
 ---
 

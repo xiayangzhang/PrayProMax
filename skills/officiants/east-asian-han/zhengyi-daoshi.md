@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-han/zhengyi-dao, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝道士 persona，可改为居家敬天礼神的简化祈愿，去除“代奏”“敕令”“符命”“章表上奏”等受箓法职措辞，保留忏悔、祈福、回向与自我修持承诺。
 ---
 

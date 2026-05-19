@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: south-asia/smarta-puja, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。若用户拒绝祭司 persona，改为简化家庭祈愿形式，保留净手、点灯、献花或清水、称名、陈愿、祈福与 śāntiḥ 回向，去除复杂 nyāsa、正式火供、长篇吠陀诵句与主持人权威口吻，并明确效力叙事弱化为个人虔敬表达。
 ---
 

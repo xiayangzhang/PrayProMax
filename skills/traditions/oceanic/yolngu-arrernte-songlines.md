@@ -90,40 +90,17 @@ verification:
 [权限确认：Country / clan / estate / kinship / custodian] → [承认 ancestors、elders、Law / rom / Altyerre] → [说明所涉人名、地名、事件与许可边界] → [正行：仅由授权者唱诵相应 manikay / bunggul / Altyerre song-cycle；未授权时只保留公开承认词] → [关系复归：Country、kinship、owners / managers、living / deceased 的位置被重新确认] → [封口：不传播 restricted 名号、曲调、图像、地名序列或丧葬内容]
 
 ## 通用骨架（占位符版本）
+> Yolŋu, Arrernte, Anangu and other First Nations Songline traditions encode country, kinship, and law through songs and ceremonies whose access is restricted to custodians by gender, age, initiation, and Country. Custodian-held content is not reproduced here. This skeleton keeps only a respectful acknowledgment.
+
 ```
-Ngarraku / nhanŋu wäŋa {{anchors.country_name}}.
-Rom ga wäŋa.
-Gurrutu.
-Yothu-yindi.
-Wangarr.
-
-Apmere {{anchors.country_name}}.
-Altyerre.
-Apmereke-artweye.
-Kwertengerle.
-Arntarntareme.
-
-We acknowledge {{anchors.elder_or_custodian_name}} and the custodians of {{anchors.country_name}}.
-We name only what has been permitted: {{anchors.permitted_public_names}}.
-We hold back what is restricted: {{anchors.restricted_boundary_statement}}.
-
-For {{anchors.person_or_group_name}}, in the matter of {{anchors.event_or_need}},
-the public words remain within permission:
-
-Yolŋu Matha:
-Rom ga wäŋa; gurrutu; yothu-yindi; Wangarr.
-
-Arrernte:
-Altyerre; apmere; apmereke-artweye; kwertengerle; arntarntareme.
-
-[Authorized custodian-only section:
-{{anchors.custodian_cleared_song_text_original}}
-]
-
-No other song, name, design, site-path, image, voice of the deceased, or restricted story is added.
-
-We return the words to {{anchors.country_name}},
-to elders past and present,
-to the proper owners and managers,
-and to the silence required by rom / Altyerre.
+With humble heart, we honor the Yolŋu, Arrernte, Anangu and all First Nations Songline custodians,
+the elders who hold the country, the songs, and the law.
+For {{anchors.beneficiary}} regarding {{anchors.petition_content}}:
+May this respectful petition not encroach on sacred-secret material reserved for custodians.
+We do not reproduce custodian-held song text, ceremony sequences, country-specific knowledge,
+or men's / women's restricted material.
+We acknowledge sovereignty and ongoing connection to Country.
+This is acknowledgment only — restricted content omitted; consult authorized custodians.
 ```
+
+> Non-custodian / outsider context only. Custodians use their own properly-authorized forms within Country and lineage, not this skeleton.

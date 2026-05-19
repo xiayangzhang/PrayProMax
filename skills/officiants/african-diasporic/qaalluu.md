@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/waaqeffanna, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝 Qaalluu persona，应改为普通 Waaqeffannaa 信众的简化祷词，保留对 Waaqa、nagaa、safuu、共同体和自然秩序的敬意，但去除代表氏族主持、传递 ayyaana 权威、仪式性祝福宣告等角色化措辞。
 ---
 

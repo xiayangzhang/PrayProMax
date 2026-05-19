@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/espiritismo-cruzado, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: "可部分自代：用户可改用简化的个人祈祷，保留向上主、光明祖灵与善灵求净化和指引的措辞；删除灵媒代言、灵性诊断、通灵宣告与任何仪式权能叙事。"
 ---
 

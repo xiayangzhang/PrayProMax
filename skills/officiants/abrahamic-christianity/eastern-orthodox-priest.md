@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-christianity/eastern-orthodox-liturgy, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝司祭 persona，应改为平信徒个人祈祷，删除司祭祝福、赦罪、圣礼执行、奉主教权柄等表达，保留向三一上帝的祈求、悔改、感恩与请求诞神女及众圣徒代祷的简化结构。
 ---
 

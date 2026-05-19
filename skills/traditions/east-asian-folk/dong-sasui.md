@@ -38,59 +38,29 @@ search_strategy: |
   现代 侗族 萨玛节 直播 OR practitioner blog
 case_index:
   - wish_type: health
-    hint: 《祭萨歌》敬请萨岁护寨护人、除病避灾段
-    officiant: dong-geshi
-    primary_language: kam-dong
-  - wish_type: health
-    hint: 现代日常敬萨岁茶、插万年青枝叶祈求身体康健、驱邪
+    hint: 外姓/非寨民/非地寺师范上下文；祭萨歌与款约词皆为侗语口传，公开难校。drafter 仅输出 3-5 行中文/英文诚实敬告 + petition + humility，不可拼造罗马化 Kam 仪文。
     officiant: none
-    primary_language: kam-dong
   - wish_type: wealth
-    hint: 《祭萨歌》祈田禾、谷仓、牛羊兴旺段
-    officiant: dong-geshi
-    primary_language: kam-dong
-  - wish_type: wealth
-    hint: 现代萨玛节或家户敬告中祈求五谷丰登、六畜兴旺、财运
+    hint: 外姓/非寨民上下文；同上，3-5 行诚实祝告即可，不模拟祭萨歌罗马化辞。
     officiant: none
-    primary_language: kam-dong
   - wish_type: protection
-    hint: 《祭萨歌》迎萨、守寨门、护桥路井泉段；并宣《款约词》守寨规
-    officiant: dong-kuanshou
-    primary_language: kam-dong
-  - wish_type: protection
-    hint: 现代绕寨游行、唱耶歌祈求村寨或个人平安、驱邪保境
+    hint: 外姓/非寨民上下文；3-5 行诚实祝告，可提敬告祖母萨岁、护寨民护行人，不复制款词。
     officiant: none
-    primary_language: kam-dong
   - wish_type: deceased
     hint: 无
     officiant: none
   - wish_type: relationship
-    hint: 《款约词》息争、守亲族婚姻规约、和寨和亲段
-    officiant: dong-kuanshou
-    primary_language: kam-dong
-  - wish_type: relationship
-    hint: 现代多耶歌舞或家户敬告中祈求家庭和睦、姻缘顺遂
+    hint: 外姓/非寨民上下文；3-5 行诚实祝告，不冒款约辞，不模拟寨规宣读。
     officiant: none
-    primary_language: kam-dong
   - wish_type: wisdom
-    hint: 《款约词》训诫后生、守老规、听寨老言段
-    officiant: dong-kuanshou
-    primary_language: kam-dong
-  - wish_type: wisdom
-    hint: 现代学习、传承萨岁之歌与款词时，敬告祖母萨岁，愿承老规与歌辞智慧
+    hint: 外姓/非寨民上下文；3-5 行诚实祝告，可表愿承老规与歌辞智慧，但不复制款词正文。
     officiant: none
-    primary_language: kam-dong
   - wish_type: breaking
     hint: 无
     officiant: none
   - wish_type: event
-    hint: 《祭萨歌》出寨行旅、建桥修路、开田立寨、合款前敬告段
-    officiant: dong-kuanshou
-    primary_language: kam-dong
-  - wish_type: event
-    hint: 现代重大活动前祭萨求保佑，如出行、节庆、耕种、萨玛节集会
+    hint: 外姓/非寨民上下文；3-5 行诚实祝告，可表愿萨岁护佑此次行旅/活动，不模拟祭萨歌。
     officiant: none
-    primary_language: kam-dong
 verification:
   - 《中国民间文学集成·贵州卷》侗族祭祀歌类：《祭萨歌》条
   - 《中国民间文学集成·贵州卷》侗族款词类：《款约词》条
@@ -107,67 +77,15 @@ verification:
 [净坛肃众] → [报寨名款名] → [启请萨岁] → [献酒饭茶肉] → [唱《祭萨歌》正辞] → [宣《款约词》守约誓辞] → [陈明所愿] → [请萨护寨护人] → [合众应声] → [回愿收辞]
 
 ## 通用骨架（占位符版本）
+
+> 侗族祭萨歌、款约词为侗语口传，公开校订版本极少；本骨架不复刻 Kam-Dong 罗马化辞，只保留诚实白话敬告。寨民/地寺师可在私下补完整口传辞句。
+
 ```
-今日净坛，报明寨名：
-{{anchors.village_name}}，{{anchors.kuan_name}}，
-{{anchors.clan_or_household}}，{{anchors.supplicant_name}}。
-
-Sax Suih, Sax Suih,
-Sax Max, Sax Max,
-nyenc gaeml nyenc gaeml,
-yaox nyenc yaox laox,
-Sax Suih o, Sax Suih;
-Sax Max o, Sax Max。
-
-酒在盏中，饭在盘中，茶在碗中，
-献于萨坛，献于祖母萨岁。
-{{anchors.offering_items}}。
-
-Sax Suih, daeux douc;
-Sax Max, daeux douc;
-daeux laih {{anchors.village_name}},
-daeux yanc {{anchors.household_name}},
-daeux nyenc {{anchors.supplicant_name}}。
-
-《祭萨歌》正辞：
-Sax Suih o, Sax Suih,
-Sax Max o, Sax Max,
-daengx gaeml, daengx laox,
-yanc bienc, yanc douc,
-menc douc, laih douc,
-douc nyenc, douc max,
-douc {{anchors.wish_subject}}。
-
-今以本寨本款之名，陈明所愿：
-{{anchors.petition_content}}。
-
-《款约词》守约誓辞：
-老款在上，祖规在前；
-不偷盗，不斗殴，
-不烧山，不毁林，
-不坏桥，不污井，
-不侵田界，不乱寨门，
-不作虚言，不背款约。
-{{anchors.vow_clause}}。
-
-Sax Suih o, Sax Suih,
-Sax Max o, Sax Max,
-请看{{anchors.village_name}}，
-请听{{anchors.kuan_name}}，
-护人丁，护田禾，
-护桥路，护井泉，
-护牛羊，护谷仓，
-护{{anchors.wish_subject}}。
-
-合众应声：
-Sax Suih!
-Sax Max!
-Douc laih, douc nyenc,
-douc yanc, douc gaeml。
-
-愿归本寨，愿归本款，
-愿归守约之人，愿归清净之心。
-{{anchors.closing_names}}。
-Sax Suih o, Sax Suih;
-Sax Max o, Sax Max。
+今日寄心远敬，向 萨岁（Sax Suih / Sax Max） 致诚意。
+为 {{anchors.supplicant_name}} 之 {{anchors.petition_content}}：
+愿萨岁护佑寨众、护佑亲族、护佑此愿；
+不损他人福报，不夺他人寿数，不取不义之财。
+谨记守约：不偷盗，不斗殴，不毁山林，不污井泉，不背老规。
+不冒款首之位，不擅诵祭萨正辞，不模拟款约宣读。
+此心远寄，愿萨岁照临。
 ```

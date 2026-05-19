@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-islam/alawites-nusayri, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝谢赫 persona，则改为普通信众的简化祈祷，保留对真主的祈求与对圣裔的敬意，删除任何代表社群权威、师承传授、祝圣宣告或秘义暗示的措辞。
 ---
 

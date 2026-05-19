@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-japan/jodo-shu-japan, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。用户拒绝僧侶 persona 时，改为在家信众的简短念佛祈愿，以归敬阿弥陀佛、称名、发愿、回向为主；避免模拟寺院法要、授戒、引导亡者仪轨或宣称具备僧侣法脉权威。
 ---
 

@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: southeast-asia/indonesian-sufi-tarekat, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: "可部分自代：改为普通信众的简化 du'a 与 dzikir 结构，保留向 Allah 祈求、salawat、悔过与回向善行；移除 mursyid 授权、baiat、ijazah、专属 wirid 指令等权威叙事。"
 ---
 

@@ -24,7 +24,6 @@ required_for:
   - { tradition: abrahamic-other/zoroastrianism, wish_type: relationship, prayer_id: "*" }
   - { tradition: abrahamic-other/zoroastrianism, wish_type: breaking, prayer_id: "*" }
   - { tradition: abrahamic-other/zoroastrianism, wish_type: event, prayer_id: "*" }
-self_substitution: partial
 self_replaceable: partial
 self_substitution_notes: 可部分自代；Khordeh Avesta 日课、Kusti、Gah、Niyayesh、Yasht、Patet 与简短 Doa Tan-Dorosti 可降级为自念结构；Yasna、Visperad、Vendidad、Nirangdin、Bareshnum、正式 Afrinagan/Jashan、Ashirvad 婚礼祝圣及亡者三夜/四日/周年礼不可写成等价自代，只能保留非主持式 remembrance/祝祷。
 ---

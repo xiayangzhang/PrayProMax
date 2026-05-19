@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: americas-indigenous/maya-aj-qij, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为非专业的敬意祷词，保留对四方、祖先、土地与当日生命力量的感谢，但不声称进行正式历法占问、圣火仪式或 Aj Q'ij 权威宣告。
 ---
 

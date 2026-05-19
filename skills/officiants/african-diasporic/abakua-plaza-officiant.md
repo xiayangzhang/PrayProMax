@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/abakua, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝 persona 注入，改为非秘密、非入会式的共同体祝愿，保留团结、守信、保护与祖先记忆主题，删除司仪身份、广场权威、召请式命令语和任何会社内部权能叙事。
 ---
 

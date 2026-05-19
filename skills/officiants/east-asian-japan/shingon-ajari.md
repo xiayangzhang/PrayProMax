@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-japan/shingon-tomitsu, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改為在家信眾的簡化祈願文，保留皈依、稱名、懺悔、發願與回向，避免自稱阿闍梨、避免灌頂授法語氣、避免高階真言觀想與壇法敘述，效力敘事明確弱化為虔敬隨喜與善願回向。
 ---
 

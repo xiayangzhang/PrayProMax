@@ -10,8 +10,8 @@
         ▼
 ┌─────────────────────────────────────────────────────────┐
 │ skills/traditions/INDEX.yaml                            │
-│   ├─ 291 seeded traditions (status=seeded)              │
-│   ├─ 54 skipped (no-prayer / no-lineage / split / ...)  │
+│   ├─ 289 seeded traditions (status=seeded)              │
+│   ├─ 56 skipped (no-prayer / no-lineage / split / ...)  │
 │   └─ schema: schemas/tradition.schema.md                │
 └─────────────────────────────────────────────────────────┘
         │
@@ -67,7 +67,7 @@ L2: tradition.case_index
     Per-tradition hint already seeded during Phase E. Cheap LLM call to
     draft prayer using the hint as the structural prompt.
 
-L3: web search (grok-4.20-fast --search)
+L3: web search (a Grok model with live search (or any web-search-capable LLM))
     Only when L1+L2 miss. Findings are:
       • used to draft a section for the current user
       • staged in .session/<id>/enrichments/ as PR candidates
@@ -81,16 +81,16 @@ knowledge base via PR; future users get L1/L2 hit.
 ## Dispatcher pipeline (Phase E seeding)
 
 ```
-INDEX.yaml (291 pending)
+INDEX.yaml (289 pending)
        │
        │   per-tradition parallel (semaphore=10):
        ▼
-   gpt-5.5 (sub2api)    ← writes skills/traditions/<cat>/<id>.md
+   an OpenAI-compatible chat model (OpenAI-compatible API)    ← writes skills/traditions/<cat>/<id>.md
        +
-   grok-4.20-fast       ← writes .seed/<id>/grok.md
+   a Grok model with live search       ← writes .seed/<id>/grok.md
        │   (with --search for contemporary supplement)
        ▼
-   gpt-5.5 merge        ← overwrites skills/traditions/<cat>/<id>.md
+   an OpenAI-compatible chat model merge        ← overwrites skills/traditions/<cat>/<id>.md
                           (merges codex draft + grok draft)
        ▼
    validate (schema + YAML + 8 wish_types + ...)
@@ -106,7 +106,7 @@ wish (text) + anchors (LOCAL-ONLY, key-value)
        │  classify (gpt) → wish_type
        │  safety check (gpt) → SAFE / AMBIGUOUS / HARMFUL
        ▼
-   for each of 291 seeded traditions (parallel=10):
+   for each of 289 seeded traditions (parallel=10):
        │
        ├─ L1 check (prayers/ RAG)
        ├─ L2 check (case_index has wish_type hint?)

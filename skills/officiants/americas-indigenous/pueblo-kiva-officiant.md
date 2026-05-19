@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: americas-indigenous/pueblo-kachina, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；退化为非秘仪的个人或家庭祈愿，只保留公开的自然、雨水、玉米、和平与共同体意象，不使用基瓦身份、秘密歌辞、面具细节或宣称具有正式仪式效力。
 ---
 

@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Officiant card batch dispatcher — scans seeded tradition files for
-required_officiants, generates missing officiant cards via sub2api gpt-5.5.
+required_officiants, generates missing officiant cards OpenAI-compatible API.
 
 Usage:
     python3 scripts/dispatch-officiants.py [--parallel N] [--limit N] [--ids id1,id2,...]
 """
 import argparse
+import os
 import asyncio
 import json
 import re
@@ -18,7 +19,7 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-SUB2API = ROOT / 'scripts/sub2api.py'
+LLM_CALL = ROOT / 'scripts/llm-call.py'
 OFFICIANT_PROMPT = ROOT / 'scripts/seed-prompts/officiant-worker-api.md'
 OFFICIANT_SCHEMA = ROOT / 'schemas/officiant.schema.md'
 INDEX_PATH = ROOT / 'skills/traditions/INDEX.yaml'
@@ -26,7 +27,7 @@ SEED_DIR = ROOT / '.seed'
 LOG_DIR = SEED_DIR / 'officiant-logs'
 STATE_PATH = SEED_DIR / 'officiant-dispatch-state.json'
 
-MODEL = 'gpt-5.5'
+MODEL = os.environ.get('OPENAI_MODEL', 'gpt-5.5')
 MAX_TOKENS = 8192
 CALL_TIMEOUT = 600
 
@@ -109,7 +110,7 @@ async def _run_once(prompt_text, output_path, log_path):
     output_path.parent.mkdir(parents=True, exist_ok=True)
     tmp_path = output_path.with_suffix(output_path.suffix + '.tmp')
 
-    args = ['python3', str(SUB2API), MODEL,
+    args = ['python3', str(LLM_CALL), MODEL,
             '--max-tokens', str(MAX_TOKENS),
             '--timeout', str(CALL_TIMEOUT)]
 

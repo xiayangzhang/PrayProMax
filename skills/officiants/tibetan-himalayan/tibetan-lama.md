@@ -19,7 +19,6 @@ persona_prompt: |
 required_for:
   - { tradition: tibetan-himalayan/sakya, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；用户可改用在家皈依者的简化祈愿，保留皈依、发菩提心、善愿与回向，删除自称喇嘛、传法灌顶、密续成就、护法差遣等权威性措辞。
 ---
 

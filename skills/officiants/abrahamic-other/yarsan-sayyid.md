@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-other/yarsanism, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: "可部分自代。若用户拒绝 Sayyid persona，改写为普通 Yarsan 信众的简化祈愿，保留对真理、圣约、会众和善行的敬意，删除任何代表会众授权、秘传引导或圣裔发声的措辞。"
 ---
 

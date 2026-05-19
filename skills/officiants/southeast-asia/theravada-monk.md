@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: southeast-asia/saiyasat, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝僧侣 persona，改为在家善信的简化回向文，删除僧侣身份、戒坛权威与代诵口吻，保留皈依、慈心、忏悔、护念与功德回向，效力叙事弱化为个人发愿与善意祝祷。
 ---
 

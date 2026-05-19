@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: north-asian-shamanic/tuvan-kham, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为不宣称通灵权能的简化祝祷，保留敬火、敬土地、敬祖先与自然灵的象征性语言，避免“我召灵”“我驱逐”等萨满职能表述。
 ---
 

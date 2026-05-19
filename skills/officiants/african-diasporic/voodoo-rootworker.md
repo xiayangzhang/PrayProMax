@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/voodoo-louisiana, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；退化版应改为个人祈愿或祖先纪念式文本，删去专业根术师的命令式措辞、灵工权威宣称与任何具体根术操作，只保留感谢、保护、净心、正愿与伦理边界。
 ---
 

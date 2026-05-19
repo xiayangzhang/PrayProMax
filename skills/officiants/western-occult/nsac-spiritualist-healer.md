@@ -18,7 +18,6 @@ required_for:
   - { tradition: western-occult/spiritualism-nsac, wish_type: healing, prayer_id: "*" }
   - { tradition: western-occult/spiritualism-nsac, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；用户可改用简化的个人静心祈祷，保留对 Infinite Intelligence 的称呼、平安与疗愈意向，但省略“灵性疗愈者”身份、灵界协助口吻与任何仪式性权威叙事。
 ---
 

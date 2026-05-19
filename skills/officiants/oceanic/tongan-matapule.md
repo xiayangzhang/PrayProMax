@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: oceanic/tongan-faikava, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为普通主持人或家人代表的简化祝辞，保留感谢、团结、平安与长幼尊重，删除任何matāpule权威、酋长座次裁定、家谱称谓或仪式命令。
 ---
 

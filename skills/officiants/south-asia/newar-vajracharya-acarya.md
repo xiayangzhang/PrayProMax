@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: south-asia/newar-vajracharya, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝 persona 注入，改为普通佛教居士式祈愿，保留皈依、供养、忏悔、发愿、回向结构，删除阿阇梨自称、密乘权威口吻、灌顶与秘密坛城暗示，效力叙事弱化为个人虔敬与善愿回向。
 ---
 

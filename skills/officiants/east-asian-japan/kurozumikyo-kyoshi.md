@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-japan/kurozumikyo, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝教师 persona，可改为信徒自述式的簡略拝詞，保留向天照大御神与教祖宗忠神的感謝、誠心奉告、明朗修心与回向日常实践，但删除教师奉仕、祝詞式宣读和代表他人奉告的权威语气。
 ---
 

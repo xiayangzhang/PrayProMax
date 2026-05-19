@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: south-asia/lingayat, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝 Jangama persona，可改为林伽雅特信众的简化自祷，保留伊什塔林伽忆念、诚实劳动与共同体祝福，省略 officiant 口吻和师承权威表述。
 ---
 

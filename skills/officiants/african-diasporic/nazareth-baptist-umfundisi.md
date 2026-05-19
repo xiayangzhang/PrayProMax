@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/shembe-nazareth-baptist, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: "可部分自代：改为信众或家庭成员的简化祈祷，保留敬神、悔改、求洁净、求平安与共同体祝福；删去任何代表教会牧职宣告、正式礼仪主持语、权威性祝福公式或秘密仪轨暗示。"
 ---
 

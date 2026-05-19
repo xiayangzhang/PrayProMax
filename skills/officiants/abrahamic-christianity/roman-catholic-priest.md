@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-christianity/roman-catholic-sacramental, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；用户可采用平信徒简化祷词，以个人或家庭祈祷形式向天主祈求，但不得写成司铎施行圣事、赦罪、祝圣圣体圣血或正式教会礼仪。
 ---
 

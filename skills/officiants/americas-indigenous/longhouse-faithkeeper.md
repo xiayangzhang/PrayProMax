@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: americas-indigenous/longhouse-handsome-lake, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为简化的感恩与自省祷词，保留对造物主、亲族、土地与清醒生活的敬意，但删除任何长屋礼序权威、秘仪暗示和代表共同体发言的措辞。
 ---
 

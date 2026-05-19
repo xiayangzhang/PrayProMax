@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-han/yiguandao, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。若不用點傳師 persona，改為一般一貫道後學的居家懺愿文，省略點道、引保、壇務與任何密訣語彙，只保留敬天、懺悔、發愿、行善與回向眾生的公開表述，效力敘事弱化為自我修持與心願呈白。
 ---
 

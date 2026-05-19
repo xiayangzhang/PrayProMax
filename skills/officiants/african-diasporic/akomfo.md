@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/akan-akomfoo, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为敬祖、敬天、祈求平衡的简化祝词，不模拟附体、占卜、神龛秘仪或祭司权威。
 ---
 

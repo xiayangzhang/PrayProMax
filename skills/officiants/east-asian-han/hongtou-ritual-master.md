@@ -31,7 +31,6 @@ required_for:
   - { tradition: east-asian-han/hongtou-fashi, wish_type: event, prayer_id: anzuo-kaiguang-diaoying }
 
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可退化为公开《祝香神咒》《淨天地神咒》《金光神咒》《順天聖母寶誥》与回向文本；不可自代开坛、发符、操营、收魂、出煞、安座、超度或任何密传法令。
 ---
 

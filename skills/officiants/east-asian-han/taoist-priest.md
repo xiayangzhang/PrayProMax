@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-han/wangye-cult, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若不用道士 persona，改為信眾自行誠心祝禱，刪去上奏文疏、敕令、遣將等具科儀權能的語句，保留敬拜王爺、祈安消災、修身行善與回向家宅平安的簡化結構。
 ---
 

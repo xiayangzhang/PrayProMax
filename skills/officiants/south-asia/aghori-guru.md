@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: south-asia/aghori, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝 persona 注入，改为一般湿婆虔敬祷词，删除上师口吻、阿戈尔权威叙事与任何秘传暗示，仅保留不二、无畏、慈悲、净化执著的简化表达。
 ---
 

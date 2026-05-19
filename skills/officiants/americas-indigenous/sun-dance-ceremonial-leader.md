@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: americas-indigenous/sun-dance, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；仅可改为个人或家庭的尊敬性简化祷词，保留感恩、疗愈、责任、亲族与大地意象，不声称主持太阳舞，不使用或仿写受限歌辞、舞步、穿刺、烟斗、祭物等秘仪内容。
 ---
 

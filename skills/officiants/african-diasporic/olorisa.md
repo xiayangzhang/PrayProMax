@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/ifa-orisha-yoruba, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。若用户拒绝 Olórìṣà persona，改为普通信众的简化祈愿，保留对 Olódùmarè、Ori、祖先与Òrìṣà的尊敬称呼，删除祭司领祷、启蒙权威、献祭、占卜和秘密仪轨叙述，效力叙事弱化为个人敬意与自我端正。
 ---
 

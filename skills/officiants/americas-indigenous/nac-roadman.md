@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: americas-indigenous/native-american-church, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝 Roadman persona，改为普通敬意祷词，保留对造物主、家族、疗愈与正路的请求，删除任何圣礼主持、会议权威、圣歌或秘传元素，明确不模拟 NAC 仪式。
 ---
 

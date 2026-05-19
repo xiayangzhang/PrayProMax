@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: north-asian-shamanic/tengrism, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝卡姆 persona，则改为普通腾格里敬天祈愿文，保留对长生天、大地、祖先与自然的敬语，但去除萨满代言、通灵、召灵与仪式权威叙事，效力表述弱化为个人诚心祈愿。
 ---
 

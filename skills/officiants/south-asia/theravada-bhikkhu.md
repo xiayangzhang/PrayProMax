@@ -18,7 +18,6 @@ persona_prompt: |
 required_for:
   - { tradition: south-asia/sinhala-pirith, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为在家简化诵念，保留礼佛、三皈依、五戒意向、慈心观与功德回向，避免冒称僧伽诵经权威或具足戒身份，效力叙事弱化为个人虔敬与善愿。
 ---
 

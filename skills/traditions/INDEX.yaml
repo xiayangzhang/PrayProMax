@@ -1,6 +1,6 @@
 # PrayProMax — Tradition Index v1
 #
-# 派别清单 + 状态跟踪。从 ref.md 派生 (v0) → 经 3-worker audit (v0.5) → 经 lineage 规则筛 (v1)。
+# 派别清单 + 状态跟踪。从 curated survey 派生 (v0) → 经 3-worker audit (v0.5) → 经 lineage 规则筛 (v1)。
 #
 # status 枚举:
 #   pending  - 在 scope，待 seeding
@@ -11,12 +11,12 @@
 # skip_reason 枚举:
 #   no-lineage     : 20-21c 单创始人 NRM / self-help / energy work（按 CONTRIBUTING 传承规则）
 #   spurious       : 不是独立 prayer-bearing tradition（per audit）
-#   no-prayer      : 无定式祷词（ref.md 文末剔除）
+#   no-prayer      : 无定式祷词（survey 标注无定式祷词）
 #   split (see children) : 已拆为子条目
 #   merged-into:<id>      : 已合并到另一条
 #
 version: 1
-generated_from: ref.md
+generated_from: curated-tradition-survey
 schema: schemas/tradition.schema.md
 audit_applied: .audit/v0/aggregate.md
 traditions:
@@ -2769,11 +2769,10 @@ traditions:
   name: Ayahuasca Neo-shamanic 系
   name_en: Ayahuasca Neo-shamanism
   category: modern-energy-newage
-  status: seeded
+  status: skipped
   has_prayer_tradition: true
   ref_note: Icaros 唱诵主线。
-  seeded_at: '2026-05-18'
-  notes: grok-skipped
+  skip_reason: no-lineage
 - id: bodytalk-system
   name: BodyTalk System
   name_en: BodyTalk System
@@ -2839,13 +2838,13 @@ traditions:
   ref_note: 主要静默与花卉对话，无定式祷词。
   skip_reason: no-prayer
 - id: harner-core-shamanism
-  name: 新德鲁伊 / Michael Harner 核心萨满工作坊
+  name: Core Shamanism (Michael Harner / FSS)
   name_en: Michael Harner Core Shamanism
   category: modern-energy-newage
-  status: seeded
+  status: skipped
   has_prayer_tradition: true
   ref_note: 召唤动物图腾的吟唱（journey songs）。
-  seeded_at: '2026-05-18'
+  skip_reason: no-lineage
 - id: holotropic-breathwork
   name: Holotropic Breathwork / Rebirthing / Wim Hof Method
   name_en: Holotropic Breathwork / Rebirthing / Wim Hof Method

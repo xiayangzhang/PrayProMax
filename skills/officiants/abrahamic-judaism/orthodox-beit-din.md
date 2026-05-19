@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-judaism/orthodox-halacha, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；退化为个人恳祷、诗篇式祈愿或悔改祷文，不模拟贝特丁裁决、皈依、离婚文书、誓言、财务判决或任何正式 halakhic 行为。
 ---
 

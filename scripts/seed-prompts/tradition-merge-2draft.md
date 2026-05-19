@@ -40,7 +40,7 @@ When you must judge, default to codex. Override codex with grok's input only whe
 
 ## Hard rules
 
-- File must match `/Volumes/leoyun/personal-projects/PrayProMax/schemas/tradition.schema.md` exactly
+- File must match `schemas/tradition.schema.md` exactly
 - `case_index` covers all 8 `wish_type` (health/wealth/protection/deceased/relationship/wisdom/breaking/event); pad with `{ hint: 无, officiant: none }` if neither worker provided
 - mantra / 经文 / 颂 主体保留原文（罗马化 OK）
 - 不写"使用提示" / "建议时机" / "功效说明"

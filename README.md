@@ -1,131 +1,84 @@
 # PrayProMax
 
-**急功近利地工程化祈祷。**
+> A software prayer flag for 289 living traditions, inscribed in parallel by an AI officiant.
+> Ruthlessly utilitarian, engineered, cross-tradition prayer.
+> In the prayer-wheel tradition: the form does the work.
 
-把全世界宗教 / 玄学体系中的祈祷术统一编码为可调度的 skill / prompt 库。
-用户给出愿望（+ 可选身份锚定），AI 遍历所有派别，从相关者中起草，合并为按规范的祈祷词 md。
+[中文 README](README.zh.md) · [Manifesto](docs/manifesto.md)
 
-## 项目定位
+---
 
-- **不质疑玄学本身。** 我们只是把"急功近利、有针对性、高效率的祈祷"这件早已存在的事工程化。
-- **不冒犯。** 历史上每种主流传统都早已有自己的"急功近利祈祷范式"：
-  - 藏传转经筒、念珠、玛尼石堆 — 重复祈祷的工程化
-  - 天主教 Novena（连续 9 日祷）、玫瑰经 — 结构化批量
-  - 伊斯兰 Tasbih 念珠（33×3）— 同上
-  - 道教科仪、符箓 — 制式化感应
-  - 犹太教 Tehillim 集体念诵 — 群体并行
-  - 西方 grimoire 与 chaos magic sigil — 显式的"工程化巫术"
+## The premise
 
-  PrayProMax 把这些散落的范式统一编码为可调度的 skill 库，**不评判灵不灵，只保证规范合规**。
+The Tibetan mani wheel does not pray — the *form* prays. A Catholic perpetual-adoration chapel can hold the night hours with a recorded liturgy. A mezuzah sanctifies a door whose scroll no one rereads. In each case the religious load sits on the form, not on someone's interior state.
 
-## 当前状态 (v0.1)
+If form does the work, then an AI walking the right officiant persona, the right schema, and the right canon outputs a real prayer in the same sense the wheel does. PrayProMax is built around that bet.
 
-- **291 个 seeded traditions** 覆盖 18 大类
-- **263 个 officiant 卡**（虚拟 prompt persona，对应所有需要法师/术师/僧侣等专人主持的场景）
-- **3-tier RAG 缓存**：prayers/ → tradition.case_index → grok web search fallback
-- 一次 pray flow 端到端 ~14 分钟（291 派别全遍历）
-- AGPL-3.0 license
+Mechanically, PrayProMax is closer to a Tibetan **prayer flag** than to the wheel — inscribed once, hung up, the wind reads it, no continuous turning required. Same theology, simpler engineering. Each run is one inscription; the rendered document is the flag.
 
-## 架构
+The full essay is at [docs/manifesto.md](docs/manifesto.md).
 
-```
-PrayProMax/
-├── skills/
-│   ├── pray/SKILL.md              # root 调度 skill（用户面）
-│   ├── traditions/                # 派别子文档
-│   │   ├── INDEX.yaml             # 345 条派别 + 元数据
-│   │   ├── _template.md           # 子 md 模板
-│   │   └── <category>/<id>.md     # 291 个 seeded
-│   └── officiants/                # 虚拟 prompt persona（NOT 真人中介）
-│       └── <category>/<id>.md     # 263 个 officiant 卡
-├── prayers/                       # 自增长的祈祷词 RAG 知识库
-│   ├── INDEX.json
-│   └── <wish_type>/<id>.md        # 脱敏骨架（社区贡献回流的核心）
-├── schemas/
-│   ├── tradition.schema.md
-│   ├── officiant.schema.md
-│   └── prayer.schema.md
-├── scripts/
-│   ├── sub2api.py                 # OpenAI-compat caller (路由 gpt/grok key)
-│   ├── render-prompt.py           # template 渲染
-│   ├── dispatch-seed.py           # Phase E 派别 seeding (codex+grok 双 worker + merge)
-│   ├── dispatch-officiants.py     # officiant 卡批量生成
-│   ├── pray-all.py                # 用户面：全 291 遍历 + 3-tier RAG + enrichment 暂存
-│   ├── review-seeded.py           # 静态 schema + 内容质量扫
-│   └── seed-prompts/              # worker prompt 模板
-├── docs/
-│   ├── architecture.md            # 数据模型 + dispatcher + pray pipeline 全图
-│   ├── feedback-loop.md           # 社区贡献循环 + PR 流 + agent review gate
-│   └── seeding-pipeline.md        # Phase A–E 冷启动复盘 + 社区复制指南
-└── ref.md                         # 派别清单原始资料（seed source）
-```
+## On the attitude
 
-## 用户工作流（一次 pray flow）
+Ruthlessly utilitarian. Parallel dispatch, structured schemas, side-effect mitigation written into the prayer body, a three-tier RAG cache — not decoration. If form does the work, the form had better be well-run. Engineering posture is the contemporary form-precedence move: how we today honor what the prayer wheel honored nine hundred years ago.
 
-```
-wish (text) + anchors (LOCAL-only key-value)
-   │
-   │  classify → wish_type ∈ {health, wealth, protection, deceased,
-   │              relationship, wisdom, breaking, event}
-   │  safety check → refuse if HARMFUL (wishes harm to others)
-   ▼
-遍历 291 派别 (parallel=10):
-   ├─ L1: prayers/ RAG hit?          (0 search cost — 别人沉淀的骨架)
-   ├─ L2: tradition.case_index hint? (低成本 LLM 起草)
-   └─ L3: grok --search fallback     (有成本，但找到的会 stage 为 PR candidate)
-   │
-   ▼
-draft per tradition (原文 mantra 保留 + {{anchors.*}} 占位)
-   │
-   ▼
-synthesize universal closing (cross-tradition 总回向 + no-harm + no-exchange)
-   │
-   ▼
-render anchors locally → outputs/wish-<slug>-<ts>/RENDERED.md
-also: placeholders/ (PII-free) → 可贡献回 prayers/
-also: PR-CANDIDATE.md (L3 enrichments 待社区贡献)
-```
+The traditions are taken seriously enough to engineer, never romanticized and never condescended to.
 
-## 硬约束
+## The work
 
-- **anchors 绝不进 LLM context** — 完全本地脱敏；所有 LLM 看到的都是 `{{anchors.<key>}}` 占位符；本地渲染发生在最后
-- **mantra / 经文 / 颂主体保留原文** — 梵文 / 巴利文 / 拉丁文 / 阿拉伯文 / 希伯来文 / 教会斯拉夫文 / 藏文 / Geʽez / Aramaic / ...；用户语言（中文）只用于个人发愿陈述段
-- **不混合 deity 同段呼请** — 多派别并列分块 OK
-- **执行每个 tradition 子 md 的 `taboos` 字段**
-- **lineage 规则** — 仅收录有传承的（详见 [`CONTRIBUTING.md`](CONTRIBUTING.md)）
+289 living traditions encoded as structured sub-documents — case index, taboos, protective closings, original liturgical language. 262 virtual officiant cards stand alongside as prompt personas.
 
-### 副作用 / 代价 / 交换处理（part of prayer body，非 metadata）
+A user names a wish. The system traverses every tradition and drafts each section in that tradition's own canonical tongue — Classical Arabic, Tibetan, Latin, Geʽez, Sanskrit, Church Slavonic. Only the personal-aspiration paragraph uses the user's language. Deities never mix within a stanza. No-harm / no-deprivation / no-quid-pro-quo clauses are written into the prayer body, not appended as footnotes.
 
-- 高 `backlash_risk` 派别：自动嵌入该派别 `mitigation` 作收尾保护仪 (回向 / 净化 / 谢神 / 护身咒)
-- **No-harm clause**：不为损人之愿起草
-- **No-deprivation clause**：求财 / 求寿 / 求成功 → 必加"不夺他人福报、寿数、机运"句
-- **No quid-pro-quo / 无交换 / 无还愿债**：不立"如蒙允 / 我必 X" 式契约；不含付费 / 牺牲 / 灵魂质押
-- **Cross-tradition 总回向**：session 末尾合成统一闭式，覆盖以上各条 + 法界回向
+Closed-lineage traditions (Sun Dance, Yi Bimo, Abakuá, Shipibo ícaros) get a short honest acknowledgement and never an attempt to reconstruct restricted material.
 
-## 怎么用
+Eight full inscriptions are committed under [`examples/`](examples/) — generic life wishes (`safe-travel`, `job-interview`, `wisdom-study`) and developer/founder wishes (`merge-pr`, `ship-clean`, `yc-app`, `hackathon-win`, `github-flourish`). Each is ~20k lines across all 289 traditions.
 
-### 用 pray skill 跑一个愿
+## Run it
 
 ```bash
-# anchors.json: {"name-1": "...", "beneficiary": "...", ...}
-python3 scripts/pray-all.py "你的愿望" --anchors anchors.json --slug my-wish --parallel 10
+git clone https://github.com/xiayangzhang/PrayProMax.git
+cd PrayProMax
+
+# Any OpenAI-compatible endpoint works
+export OPENAI_API_KEY='sk-...'
+export OPENAI_MODEL='gpt-5.5'
+
+# Anchors stay local — names, dates, addresses never enter LLM context
+echo '{"name-1": "your name", "beneficiary": "your name"}' > anchors.json
+
+# Traverses 289 traditions; 15–25 min at parallel=10
+python3 scripts/pray-all.py "I wish for health and longevity" \
+    --anchors anchors.json --slug my-wish --parallel 10
+
+open outputs/wish-my-wish-*/RENDERED.md
 ```
 
-输出在 `outputs/wish-<slug>-<ts>/`。带 anchors 的渲染版仅本地存在；脱敏版可贡献回 `prayers/`。
+The wish text goes to the model; the anchors do not. Output document carries each tradition's section in its own canonical language, joined by a cross-tradition closing.
 
-### 想贡献新派别 / 修补现有派别
+#### Naqshbandi Sufism (Classical Arabic)
+```
+نَوَيْنَا الذِّكْرَ وَالدُّعَاءَ لِوَجْهِ اللهِ تَعَالَى... لِـ <beneficiary>
+أَعُوذُ بِاللهِ مِنَ الشَّيْطَانِ الرَّجِيمِ.
+الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...
+لَا إِلٰهَ إِلَّا اللهُ. × 100
+```
 
-详见 [`CONTRIBUTING.md`](CONTRIBUTING.md) 和 [`docs/seeding-pipeline.md`](docs/seeding-pipeline.md)。
-
-### 想理解整套架构
-
-- [`docs/architecture.md`](docs/architecture.md) — 数据模型 + 流水线
-- [`docs/feedback-loop.md`](docs/feedback-loop.md) — 社区贡献循环 + PR review gate
-- [`docs/seeding-pipeline.md`](docs/seeding-pipeline.md) — 冷启动复盘
+#### Nyingma School, Tibetan Buddhism (Tibetan + Sanskrit)
+```
+sang gyé chö dang tshok kyi chok nam la
+jang chub bar du dak ni kyab su chi
+oṃ āḥ hūṃ vajra guru padma siddhi hūṃ × 3
+```
 
 ## License
 
-[AGPL-3.0](LICENSE) — strong copyleft. 
+MIT. Take it, fork it, change it. Attribution appreciated, never required.
 
-衍生作品（包括 SaaS 形式提供服务者）必须以 AGPL-3.0 开源全部源代码 + 衍生数据。
-我们希望 PrayProMax 永远是公共的工程化祈祷库；衍生者继续公共，则不必造轮子。
+## Contributing
+
+A new tradition, a corrected officiant card, a better prayer skeleton — open a PR. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+---
+
+*a software prayer flag, in the prayer-wheel tradition — Leo Yun ([@xiayangzhang](https://github.com/xiayangzhang)), 2026*

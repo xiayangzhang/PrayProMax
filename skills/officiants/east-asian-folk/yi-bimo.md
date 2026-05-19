@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-folk/yi-bimo, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝毕摩 persona，应改为普通敬祖祈愿文，保留敬天、敬祖、求平安、求和解结构，删除毕摩经咒、法器、驱邪命令与专业祭仪身份叙述，并明确只是民俗风格的简化祷词。
 ---
 

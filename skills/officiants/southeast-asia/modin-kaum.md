@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: southeast-asia/kebatinan-kejawen, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: "可部分自代：改为家庭成员或个人以朴素语言诵念，保留感恩、求平安、求和合、回向亲族与邻里的结构；省略主持人宣告、乡里集体见证与专业礼俗称谓，效力叙事弱化为个人敬意与内心安定。"
 ---
 

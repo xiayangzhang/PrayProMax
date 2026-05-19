@@ -8,7 +8,7 @@
 ---
 id: <slug>                         # 必填，全局唯一
 name: <祷词名>                      # 必填
-wish_type: health | wealth | relationship | protection | exorcism | deceased | event | wisdom | breaking
+wish_type: health | wealth | protection | deceased | relationship | wisdom | breaking | event
 sub_tags: [<freeform tags>]
 tradition: <category>/<tradition-id>   # 必填，对应 skills/traditions/ 的 id
 source: classical | traditional-synthesized | community

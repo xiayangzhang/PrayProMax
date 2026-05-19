@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: north-asian-shamanic/manchu-shamanism, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；退化为家庭纪念与敬祖式祈愿，保留敬天、敬祖、祝愿家族平安的结构，删除萨满自称、请神附体、秘密神歌、献牲和任何宣称法力效验的内容。
 ---
 

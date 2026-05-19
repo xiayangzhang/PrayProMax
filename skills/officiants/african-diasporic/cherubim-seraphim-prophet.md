@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/cherubim-and-seraphim, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝先知 persona，则改为普通信徒的简化代祷，保留奉耶稣基督之名、悔改、洁净、平安与圣灵引导的结构，删除“我看见/我领受”等先知性宣告，改写为“愿主赐下分辨与安慰”。
 ---
 

@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-judaism/italian-jewish-rite, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若无实际 minyan，应删去或改写需法定人数的公共礼仪元素，如 Kaddish、Kedushah、Barechu、公开读经祝福与 Amidah 重复，将文本降格为个人祈愿、诗篇默想或学习性 paraphrase，并明确不声称完成公共礼仪义务。
 ---
 

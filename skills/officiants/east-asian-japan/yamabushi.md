@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-japan/shugendo, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。用户可采用不冒充受传山伏的简化祈愿文，保留净心、忏悔、山岳与神佛敬礼、回向结构；删除自称持有传承修法、加持驱邪、峰中秘法等权能叙事。
 ---
 

@@ -18,7 +18,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/ifa-orisha-yoruba, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为尊敬 Òrúnmìlà、祖灵与个人 ori 的简化祈愿，不冒充占卜祭司，不宣称已得 Odu 或仪式授权，避免秘密仪轨与献祭细节。
 ---
 

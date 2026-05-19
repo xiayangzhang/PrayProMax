@@ -1,5 +1,7 @@
 # PrayProMax — Feedback Loop
 
+> **Status: v0.1 has the local primitives (pray-all.py + propose-pr.py); GitHub Actions PR-review pipeline, auto-merge gating, and self-healing scans are PLANNED, not yet implemented.**
+
 ## The core insight
 
 Search is expensive. If every user has to search the web for every tradition

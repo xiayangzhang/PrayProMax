@@ -22,7 +22,6 @@ required_for:
   - { tradition: east-asian-han/baosheng-dadi-cult, wish_type: protection, prayer_id: "*" }
   - { tradition: east-asian-han/baosheng-dadi-cult, wish_type: breaking, prayer_id: "*" }
   - { tradition: east-asian-han/baosheng-dadi-cult, wish_type: event, prayer_id: "*" }
-self_substitution: partial
 self_replaceable: partial
 self_substitution_notes: 可部分自代；自念版保留保生大帝寶誥、《保生大帝大道真經》、祛病消災神咒、懺悔與回向，删除三獻禮祝文、疏文、祭改、收驚、符水、敕水、過火及任何主持式宣白。
 ---

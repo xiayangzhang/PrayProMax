@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-christianity/armenian-apostolic, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: "可部分自代：若用户拒绝司祭 persona，可改为平信徒的简化祈祷，保留向三一上帝祈求、悔罪、感恩、求怜悯与平安；删除任何司祭口吻、祝圣、赦罪、圣事执行或代表教会宣告的措辞。"
 ---
 

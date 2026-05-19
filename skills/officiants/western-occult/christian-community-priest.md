@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: western-occult/anthroposophy-christian-community, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝司祭 persona，则改为个人默祷或会众读诵文本，保留基督中心、感恩、悔改与更新结构，但不称其为圣礼、按立司祭代祷或正式教会仪式。
 ---
 

@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-christianity/assyrian-church-of-the-east, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝司祭 persona，改写为普通信徒的简化代祷，保留三一称呼、圣经式谦卑和求怜悯结构，删除司祭祝福、圣事性措辞与任何代表教会职分发言的句式。
 ---
 

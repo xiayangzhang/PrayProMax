@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: southeast-asia/bali-hindu, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝祭司 persona，应改为家庭或个人层面的简化祈愿，保留敬奉 Sang Hyang Widhi、感恩、清净与回向，不模拟灌仪权威、不宣称祝圣圣水或执行正式寺庙祭礼。
 ---
 

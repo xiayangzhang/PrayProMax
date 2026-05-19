@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-han/lingbao-pai, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。若用户拒绝道士 persona，应改为居家清净祈愿文，去除上章、摄召、符箓、役使神将等法职措辞，保留稽首、忏悔、发愿、回向；效力叙事弱化为诚心祝祷，不称代行斋醮科仪。
 ---
 

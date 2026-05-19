@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-judaism/italian-jewish-rite, wish_type: "communal-status", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝 בית דין persona，改写为个人或家庭在上主面前的简化祷词，去除“我们裁定/我们见证”等法庭性措辞，保留悔改、诚实、守约与求怜悯结构，并明确不作哈拉卡裁决。
 ---
 

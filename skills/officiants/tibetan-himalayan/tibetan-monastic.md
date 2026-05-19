@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: tibetan-himalayan/drukpa-bhutan, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。若用户拒绝僧侣 persona，则改为居士式简化祈愿，只保留皈依、发心、善愿与回向，不使用僧团仪轨权威、密续召请、护法役使或灌顶相关措辞。
 ---
 

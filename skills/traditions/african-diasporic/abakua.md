@@ -85,47 +85,14 @@ verification:
 [许可 / licencia] → [自明 plaza 与合法职司] → [Saludo a Ékue / Abasí] → [公开 enkame 片段] → [陈述所求] → [向 hermanos、ancestros 与 fundamento 致敬] → [闭合 / cierre]
 
 ## 通用骨架（占位符版本）
+> Abakuá es una sociedad secreta cubana de origen Calabar (Ekpe / Ngbe). Sus juramentos, signos, lenguas internas y ceremonias están reservados a iniciados; no se reproducen aquí. Este esqueleto solo guarda un saludo público respetuoso.
+
 ```
-Con licencia de {{anchors.plaza}},
-con licencia de {{anchors.officiant_title}},
-con licencia de los mayores y de los hermanos de {{anchors.house_or_potencia}}.
-
-Ékue, Ékue, Ékue.
-Abasí, Abasí, Abasí.
-Tanze.
-Sikán.
-Nasakó.
-Iyamba.
-Mokongo.
-Isué.
-Moruá.
-Bonkó enchemiyá.
-
-Ékue obón.
-Abasí obón.
-Ékue, Ékue, Ékue.
-
-Por {{anchors.petitioner_name}},
-por {{anchors.matter_name}},
-por {{anchors.declared_need}},
-ante {{anchors.plaza}},
-ante {{anchors.witnesses}},
-ante los mayores de {{anchors.lineage_or_potencia}}.
-
-Ékue, Ékue, Ékue.
-Abasí, Abasí, Abasí.
-Tanze.
-Sikán.
-Nasakó.
-
-Que quede cerrado en palabra de {{anchors.officiant_title}},
-en respeto de {{anchors.plaza}},
-en memoria de {{anchors.ancestors_or_deceased}},
-sin quebrar juramento,
-sin abrir secreto,
-sin tocar fundamento fuera de ley.
-
-Ékue.
-Abasí.
-Ékue.
+Con licencia de los mayores y de los hermanos, en el corazón de la plaza.
+Por {{anchors.beneficiary}} en cuanto a {{anchors.petition_content}}:
+Que el bien venga sin quitar el bien ajeno, sin cerrar camino de otro, sin dañar nombre ni vida.
+Sin juramento, sin abrir secreto, sin tocar palabras reservadas a la plaza legítima.
+Honor a los ancestros, a los hermanos, y al fundamento guardado.
 ```
+
+> Uso público / no-iniciado solamente. Los iniciados (obonékue, isué, mokongo, etc.) tienen sus propias formas internas que no entran aquí.

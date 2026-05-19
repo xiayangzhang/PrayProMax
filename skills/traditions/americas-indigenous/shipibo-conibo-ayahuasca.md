@@ -81,45 +81,18 @@ verification:
 [许可与净心] → [说明来意] → [呼请 rao / ibo / jakon nete] → [ícaro / rao bewá 正行] → [limpieza / soplada / arkana] → [安置愿望] → [despedida / cierre] → [感谢与守禁]
 
 ## 通用骨架（占位符版本）
+> Shipibo-Konibo healing tradition centers on ayahuasca dieta, ícaros (sacred songs), and arkanas held by maestros within lineage and apprenticeship. These are not reproduced here. Ayahuasca ingestion carries medical, legal, and spiritual risk; we do not draft session prayers. This skeleton keeps only respectful acknowledgment.
+
 ```
-Jakon nete, jakon shinan, jakon joi.
-Nokon shinan riki jakon shinan.
-Nokon joi riki jakon joi.
-
-Nokon jane riki {{anchors.prayer_name}}.
-{{anchors.person_name}}-n shinan, {{anchors.person_name}}-n yora, {{anchors.person_name}}-n bai,
-jakon neteain, jakon shinanman, jakon joiman.
-
-Rao ibo, jakon rao, koshi rao,
-nokon joi ninkáwe, nokon shinan oinwe.
-
-Jakon nete, jakon shinan, jakon joi.
-Jakon rao, jakon niwe, jakon bai.
-{{anchors.wish_statement}}
-
-Ícaro / rao bewá:
-“Jakon nete, jakon shinan, jakon joi,
-rao koshi, rao koshi,
-jakon niwe, jakon niwe,
-arkana, arkana,
-limpia, limpia,
-soplada, soplada.”
-
-{{anchors.canonical_icaro_name}}
-
-{{anchors.person_name}}-n yora jakon,
-{{anchors.person_name}}-n shinan jakon,
-{{anchors.person_name}}-n joi jakon,
-{{anchors.household_or_place}} jakon.
-
-Arkana:
-“Jakon nete, jakon shinan, jakon joi.
-Arkana koshi, arkana jakon.
-Niwe jakon, bai jakon, yora jakon.”
-
-Despedida:
-Rao ibo, jakon rao, gracias.
-Jakon nete, jakon shinan, jakon joi.
-Nokon joi keyota.
-Jakon.
+With humble heart, we honor the Shipibo-Konibo lineage, the onanya and meraya
+who keep the medicine and the songs.
+For {{anchors.beneficiary}} regarding {{anchors.petition_content}}:
+May this prayer be heard without our claiming to administer ayahuasca,
+dieta, ícaro, soplada, or arkana.
+We do not reproduce family ícaros or healing songs reserved for the lineage.
+We do not advise ingestion of any plant medicine.
+This is a respectful petition only — not a session, not a substitute for trained medicine work
+and not medical advice.
 ```
+
+> Public / non-practitioner context only. Authorized Shipibo healers, apprentices, and retreat facilitators draw on their own lineage forms, not from this skeleton.

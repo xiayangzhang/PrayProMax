@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-judaism/practical-kabbalah, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为不含神秘名号与操作性仪式的个人祈祷，保留悔改、护佑、医治、平安与慈悲请求，效力叙事弱化为普通虔敬祷词。
 ---
 

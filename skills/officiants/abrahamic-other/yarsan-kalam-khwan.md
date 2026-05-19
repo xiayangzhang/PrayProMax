@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-other/yarsanism, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: "可部分自代：改为普通信众的简化祈愿，保留敬畏、合一、守约与善愿主题；删除卡拉姆诵唱者身份、贾姆领诵口吻和任何暗示秘传权威的措辞。"
 ---
 

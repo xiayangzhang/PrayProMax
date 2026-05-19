@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: southeast-asia/dao-mau, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝此 persona，改为普通善信的简化赞圣文，保留敬称、感恩与祈愿，删除唱文者身份、宫调提示、降圣铺陈和专业曲腔叙述，效力叙事弱化为个人虔敬表达。
 ---
 

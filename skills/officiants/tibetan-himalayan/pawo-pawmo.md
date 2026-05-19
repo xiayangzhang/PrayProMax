@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: tibetan-himalayan/pawo-pawmo, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。用户拒绝 persona 时，改为普通敬山神与祖灵的简化祈愿，保留感恩、陈愿、求和解、愿众生安稳四段，删除入神、通灵、驱邪权威与秘密仪式口吻，效力叙事弱化为个人诚心祈愿。
 ---
 

@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: south-asia/shaiva-siddhanta, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为居家虔敬诵念版，保留礼敬湿婆、忏悔净业、祈愿恩典与回向众生，省略灌顶祭司专属的安神、结印、坛场启请、复杂供养次第与寺院 consecration 语汇。
 ---
 

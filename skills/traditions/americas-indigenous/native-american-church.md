@@ -90,68 +90,16 @@ verification:
 [开场称名与净心] → [说明祈祷对象与会众见证] → [向 Creator / Great Spirit / Father God 呼告] → [为当事人与家族陈明祈愿] → [公开经文或公共赞歌段落] → [授权 peyote song 段落] → [忏悔、宽恕与端正道路] → [为会众、祖先与后代作总祷] → [感谢与 Amen]
 
 ## 通用骨架（占位符版本）
+> The Native American Church holds peyote ceremonies, Roadman-led services, and water-call songs that are tribal- and family-held; songs and ceremonial sequences are not reproduced here. This skeleton keeps only a respectful public acknowledgment.
+
 ```
-Creator, Great Spirit, Father God,
-we come before You with humble hearts.
-
-We place before You {{anchors.person_name}},
-the family of {{anchors.family_name}},
-and the matter called {{anchors.prayer_intention}}.
-
-Our Father, which art in heaven,
-Hallowed be thy Name.
-Thy Kingdom come.
-Thy will be done in earth,
-As it is in heaven.
-Give us this day our daily bread.
-And forgive us our trespasses,
-As we forgive them that trespass against us.
-And lead us not into temptation;
-But deliver us from evil.
-For thine is the kingdom,
-The power, and the glory,
-For ever and ever.
-Amen.
-
-Creator, Great Spirit,
-look upon {{anchors.person_name}}.
-Straighten the road before {{anchors.person_name}}.
-Put good mind, clean heart, and strong breath
-in {{anchors.person_name}} and in the people gathered for {{anchors.prayer_intention}}.
-
-Amazing grace! how sweet the sound,
-That saved a wretch like me!
-I once was lost, but now am found;
-Was blind, but now I see.
-
-He-ne-ne-yo-wa,
-He-ne-ne-yo-wa,
-He-ne-ne-yo-wa,
-He-ne-ne-yo-wa.
-
-Creator, Great Spirit,
-if there is hurt, let truth stand.
-If there is fear, let courage stand.
-If there is anger, let forgiveness stand.
-If there is sickness, let help and mercy stand.
-If there is grief, let the family of {{anchors.family_name}} stand together.
-
-We remember the old people,
-the ones who prayed before us,
-the ones who carried the road,
-the ones who kept the fire,
-the songs, the water, the cedar, and the drum
-in a good way.
-
-Bless {{anchors.person_name}}.
-Bless {{anchors.family_name}}.
-Bless the children, the elders, the relatives,
-and all who are named in {{anchors.prayer_intention}}.
-
-Creator, Great Spirit,
-thank You for hearing this prayer.
-Thank You for life.
-Thank You for this road.
-
-Amen.
+With humble heart, we honor the Native American Church Roadmen, the Cedarman and Drummer,
+the families and tribes whose ceremonies hold this medicine.
+For {{anchors.beneficiary}} regarding {{anchors.petition_content}}:
+May the prayer rise to Tunkasila / Creator without taking from another's path, family, or medicine.
+We do not claim Roadman standing, family lineage, tribal authority, or peyote access.
+We do not reproduce family or church songs, water-call texts, or ceremonial sequences.
+This is acknowledgment only — a respectful petition in the user's own language.
 ```
+
+> Non-member / public-context use. Members and authorized Roadmen draw on their own family / chapter traditions, not from this skeleton.

@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-japan/onmyodo, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改為居家淨心、敬慎誦讀的簡化祈願，不使用專門式占、複雜方位禁忌或役使式神語句，效力敘事弱化為自我安定、除穢與祈求調和。
 ---
 

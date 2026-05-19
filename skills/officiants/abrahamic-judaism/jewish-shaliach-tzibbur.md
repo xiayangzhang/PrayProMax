@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-judaism/italian-jewish-rite, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝 officiant persona，应改为个人或家庭简化祷词，保留对上主的直接称颂与恳求，避免称自己代表会众或主持公共礼仪，并省略需要 minyan 或正式会堂领诵身份的措辞。
 ---
 

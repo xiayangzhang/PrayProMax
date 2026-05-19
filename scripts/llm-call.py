@@ -1,12 +1,21 @@
 #!/usr/bin/env python3
-"""sub2api caller — OpenAI-compatible proxy at http://sub2api.homelab.lan/v1
+"""OpenAI-compatible chat completions caller.
 
-Routes API key by model family (gpt-* / grok-*).
-Reads prompt from stdin or --prompt-file; writes completion text to stdout.
+Reads prompt from stdin (or --prompt-file); writes completion text to stdout.
+Defaults to the official OpenAI API. Override OPENAI_ENDPOINT to point at any
+compatible proxy (Azure OpenAI, LiteLLM, OpenRouter, your own gateway, etc.).
+
+For Grok models (model name starts with `grok-`), reads XAI_API_KEY and
+XAI_ENDPOINT (or falls back to OPENAI_API_KEY / OPENAI_ENDPOINT).
+
+Env vars:
+  OPENAI_API_KEY     required (or XAI_API_KEY for grok-* models)
+  OPENAI_ENDPOINT    optional, default: https://api.openai.com/v1
+  XAI_ENDPOINT       optional, default: https://api.x.ai/v1
 
 Usage:
-    echo "hello" | python3 scripts/sub2api.py gpt-5.5
-    python3 scripts/sub2api.py grok-4.20-fast --prompt-file foo.md --search
+    echo "hello" | python3 scripts/llm-call.py gpt-5.5
+    python3 scripts/llm-call.py grok-4.3 --prompt-file foo.md --search
 """
 import argparse
 import json
@@ -15,15 +24,19 @@ import sys
 import urllib.request
 import urllib.error
 
-ENDPOINT = os.environ.get('SUB2API_ENDPOINT', 'http://sub2api.homelab.lan/v1') + '/chat/completions'
 
-# Keys baked in (homelab internal endpoint — no exfil concern)
-KEY_GPT  = os.environ.get('SUB2API_KEY_GPT',  'sk-14ab1372c9488cbc24db73c67168fadd4ccaa5788892dcc7ad98996bdb4d84bb')
-KEY_GROK = os.environ.get('SUB2API_KEY_GROK', 'sk-e8f462552c3abd34fdbc89f77b5efea75eb998e6d830ffece8378f3111815933')
+def endpoint_for(model):
+    if model.startswith('grok'):
+        base = os.environ.get('XAI_ENDPOINT', 'https://api.x.ai/v1')
+    else:
+        base = os.environ.get('OPENAI_ENDPOINT', 'https://api.openai.com/v1')
+    return base.rstrip('/') + '/chat/completions'
 
 
-def key_for(model: str) -> str:
-    return KEY_GROK if model.startswith('grok') else KEY_GPT
+def key_for(model):
+    if model.startswith('grok'):
+        return os.environ.get('XAI_API_KEY') or os.environ.get('OPENAI_API_KEY', '')
+    return os.environ.get('OPENAI_API_KEY', '')
 
 
 def call(model, prompt, max_tokens=16384, system=None, timeout=1800, search=False):
@@ -32,21 +45,26 @@ def call(model, prompt, max_tokens=16384, system=None, timeout=1800, search=Fals
         messages.append({'role': 'system', 'content': system})
     messages.append({'role': 'user', 'content': prompt})
 
-    payload: dict = {
+    payload = {
         'model': model,
         'messages': messages,
         'max_tokens': max_tokens,
     }
-    # Grok-specific: enable live search if asked
+    # Grok-specific live search (xAI native param)
     if search and model.startswith('grok'):
         payload['search_parameters'] = {'mode': 'on'}
 
+    key = key_for(model)
+    if not key:
+        print('ERROR: no API key (set OPENAI_API_KEY or XAI_API_KEY)', file=sys.stderr)
+        sys.exit(2)
+
     req = urllib.request.Request(
-        ENDPOINT,
+        endpoint_for(model),
         data=json.dumps(payload).encode(),
         headers={
             'Content-Type': 'application/json',
-            'Authorization': f'Bearer {key_for(model)}',
+            'Authorization': f'Bearer {key}',
         },
         method='POST',
     )
@@ -63,7 +81,7 @@ def main():
     ap.add_argument('--prompt-file', type=str, default=None,
                     help='read prompt from file (else stdin)')
     ap.add_argument('--search', action='store_true',
-                    help='enable live web+X search (grok models only)')
+                    help='enable live web/X search (grok models only)')
     args = ap.parse_args()
 
     if args.prompt_file:
@@ -91,7 +109,6 @@ def main():
     content = msg.get('content') or ''
     finish_reason = data['choices'][0].get('finish_reason', 'unknown')
     if finish_reason not in ('stop', 'end_turn'):
-        # length / content_filter / etc. — output is truncated
         print(f'WARN: finish_reason={finish_reason} (output likely truncated)',
               file=sys.stderr)
         sys.exit(4)

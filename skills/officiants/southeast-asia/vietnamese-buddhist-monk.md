@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: southeast-asia/vietnamese-buddhist-liturgics, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝僧侣 persona，改为在家善信的简化祈愿，保留皈依、忏悔、慈悲与回向结构，删去僧团代诵、法会主礼和权威性宣称，效力叙事弱化为个人正念发愿。
 ---
 

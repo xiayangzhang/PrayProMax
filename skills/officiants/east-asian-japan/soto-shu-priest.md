@@ -21,7 +21,6 @@ required_for:
   - { tradition: east-asian-japan/soto-shu, wish_type: deceased, prayer_id: "*" }
   - { tradition: east-asian-japan/soto-shu, wish_type: protection, prayer_id: "*" }
   - { tradition: east-asian-japan/soto-shu, wish_type: event, prayer_id: "*" }
-self_substitution: partial
 self_replaceable: partial
 self_substitution_notes: 可部分自代；在家版保留南無釈迦牟尼仏、三帰依、懺悔文、般若心経、四弘誓願文与普回向，删除主持式宣白、授戒、戒名、葬仪、年忌法要、寺院祝祷諷経等僧侣权能段落。
 ---

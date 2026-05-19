@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: americas-indigenous/native-american-church, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝司火者 persona，则改为普通NAC风格的尊敬性祷词，保留造物主、家庭、医治、清醒、道路与黎明等主题，但删除司火职责、会场秩序、圣火守护等角色性措辞，且不描述具体仪式步骤。
 ---
 

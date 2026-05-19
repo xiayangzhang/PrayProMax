@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: oceanic/samoa-kava-lotu-tofa, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。若用户拒绝 tulāfale persona，改为简化的家庭或共同体祝词：保留感恩、平安、长幼敬意与共享饮食/饮品意象，删除头衔宣告、礼仪演说权威、族谱或‘ava 圆席秩序的权能叙事。
 ---
 

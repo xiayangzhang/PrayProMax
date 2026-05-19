@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-folk/yao-dujie-guadeng, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。若用户拒绝师公 persona，改写为家人或本人在灯前向祖先与护佑神明的简化禀愿，删除师公发令、召兵、开坛、度戒授职等权能性措辞，仅保留敬祖、立愿、守戒、求护佑的温和表达，并明确效力叙事弱化。
 ---
 

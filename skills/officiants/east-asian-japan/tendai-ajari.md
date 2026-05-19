@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-japan/tendai-taimitsu, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。若用户拒绝阿闍梨 persona，应改为在家信众的简化发愿文，保留皈依、忏悔、善愿、回向结构，删除灌顶师承口吻、坛法暗示和任何密教权能宣称。
 ---
 

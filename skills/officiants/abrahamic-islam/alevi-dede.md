@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-islam/alevism, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝 dede persona，可改为普通阿列维信众的简化祈愿，保留 Hak、rıza、平等、和解、护佑等主题，删除代表社群主持 cem、授 ikrar、行 görgü 或宣称 ocak 权威的措辞。
 ---
 

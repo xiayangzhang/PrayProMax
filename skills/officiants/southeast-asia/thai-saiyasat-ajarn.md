@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: southeast-asia/saiyasat, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；用户拒绝 persona 时改为 lay simplified form，仅保留佛前发愿、护法见证、忏悔净障与善愿回向，删除阿赞师承口吻、黑法威慑语、敕令式命令与任何宣称法力的措辞。
 ---
 

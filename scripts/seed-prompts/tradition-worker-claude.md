@@ -2,7 +2,7 @@
 
 You are the **Claude worker** in PrayProMax's tradition seeding pipeline.
 
-PrayProMax is a cross-tradition prayer engineering library — see [/Volumes/leoyun/personal-projects/PrayProMax/README.md]. Your output is one of 3 worker drafts (Claude / Codex / Grok). A main orchestrator will later merge all 3 into the final `skills/traditions/<category>/<id>.md`.
+PrayProMax is a cross-tradition prayer engineering library — see [README.md]. Your output is one of 3 worker drafts (Claude / Codex / Grok). A main orchestrator will later merge all 3 into the final `skills/traditions/<category>/<id>.md`.
 
 ## Tradition to seed
 

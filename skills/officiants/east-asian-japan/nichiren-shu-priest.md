@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-japan/nichiren-shu, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；用户可改用在家信徒简化版，保留合掌、忏悔、称念「南無妙法蓮華経」、祈愿与回向，但去除僧侣代启白、寺院法要口吻与任何暗示正式法务权威的措辞。
 ---
 

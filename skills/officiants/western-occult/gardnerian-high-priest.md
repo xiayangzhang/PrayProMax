@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: western-occult/wicca-gardnerian, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；用户拒绝 persona 时，改写为通用威卡式自然祝祷，保留女神、有角之神、四元素与季节循环等公开象征，但移除大祭司身份、阶位权威、女巫团传承与任何誓约性暗示。
 ---
 

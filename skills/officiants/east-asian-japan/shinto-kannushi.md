@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-japan/koshinto-kototama, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；保留净心、感谢、言霊诵念与简化奏上结构，但去除“神主奉仕”“正式祭祀”“代行神事”等权能叙事，改为个人静心祝愿。
 ---
 

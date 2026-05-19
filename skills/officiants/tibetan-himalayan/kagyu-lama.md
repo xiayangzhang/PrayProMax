@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: tibetan-himalayan/kagyu, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；退化为在家信众的简化皈依、发心、祈愿与回向文，不模拟上师灌顶、口传、加持授权或密续仪轨口吻，避免宣称具备喇嘛传承权能。
 ---
 

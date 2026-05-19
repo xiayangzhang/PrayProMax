@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: modern-energy-newage/spiritualists-national-union, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝通灵者 persona，应改为普通灵性主义默祷，保留对无限灵、爱与疗愈的称呼，删除任何“通灵感应”“灵界讯息”“证据性呈现”的口吻，效力叙事弱化为个人静心与纪念。
 ---
 

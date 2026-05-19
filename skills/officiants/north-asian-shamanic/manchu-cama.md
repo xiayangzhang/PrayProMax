@@ -18,7 +18,6 @@ persona_prompt: |
 required_for:
   - { tradition: north-asian-shamanic/manchu-shamanism, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝萨满 persona，应改为普通敬祖祝愿文，保留敬祖、感恩、祈安、回向家族和睦的结构，删除请神降临、附体口吻、堂口权能与秘传暗示，效力叙事弱化为个人纪念与祝福。
 ---
 

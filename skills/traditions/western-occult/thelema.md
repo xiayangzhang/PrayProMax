@@ -117,5 +117,10 @@ Aum! let it fill me!
 
 Let {{anchors.petition}} be ordered according to the True Will of {{anchors.name}}, without restriction of another star.
 
+[Closing — repeat the banishing to seal the working]
+ΑΠΟ ΠΑΝΤΟΣ ΚΑΚΟΔΑΙΜΟΝΟΣ.
+ΦΛΕΓΕΙ ΓΑΡ ΠΕΡΙ ΜΟΥ Ὁ ΑΣΤΗΡ ΤΩΝ ΠΕΝΤΕ,
+ΚΑΙ ΕΝ ΤΗΙ ΣΤΗΛΗΙ Ὁ ΑΣΤΗΡ ΤΩΝ ἙΞ ἙΣΤΗΚΕ.
+
 Love is the law, love under will.
 ```

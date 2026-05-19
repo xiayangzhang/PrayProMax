@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/santeria-lukumi, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；退化为面向 Olodumare、Orisha 与祖灵的尊敬性简短祈愿，保留感恩、洁净、求指引与求平衡，不使用祭司权威口吻，不模拟占卜、附体、秘密仪式或具体供献指令。
 ---
 

@@ -18,7 +18,6 @@ persona_prompt: |
 required_for:
   - { tradition: south-asia/sri-lanka-thovil, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为家庭安全祈愿与安抚式短诵，保留礼敬、净心、祈求平安与回向，不模拟完整驱邪舞鼓、附体问答、命令鬼灵或专业仪式权威。
 ---
 

@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: southeast-asia/cambodian-smot, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝该 persona，可改为普通高棉佛教风格的简短诵念文，保留皈依、无常、回向功德与慈悲祝愿，但去除专业 smot 的拖腔、哀咏声口与传承吟唱权威叙事。
 ---
 

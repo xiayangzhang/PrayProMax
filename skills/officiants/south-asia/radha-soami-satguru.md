@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: south-asia/sant-mat-radha-soami, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝萨特古鲁 persona，则改为普通信众的简化祈愿，保留对Radha Soami、Naam/Shabd、谦卑与善行的称念，但不使用导师训示口吻、不暗示传承授权或授予内在法门。
 ---
 

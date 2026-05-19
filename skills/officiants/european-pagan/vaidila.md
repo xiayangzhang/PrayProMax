@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: european-pagan/romuva, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝祭司 persona，则改为个人向圣火、自然与祖先致意的简化祷词，省略主持者权威、社群宣告与正式祝圣语，保留感恩、愿望陈述、无害承诺与回向。
 ---
 

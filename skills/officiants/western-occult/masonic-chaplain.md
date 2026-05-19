@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: western-occult/freemasonry, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝礼拜司铎 persona，应改为普通会员或旁观者的非宗派默祷，保留感恩、求光明、求正直与彼此和睦的结构，但去除会所职分口吻、主持权威和任何仪式性宣告。
 ---
 

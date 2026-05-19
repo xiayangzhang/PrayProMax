@@ -1,22 +1,23 @@
 #!/usr/bin/env python3
-"""Phase E continuous dispatcher (v2 — HTTP API via sub2api).
+"""Phase E continuous dispatcher (v2 — HTTP API OpenAI-compatible API).
 
 Per tradition:
-  1. gpt-5.5 worker (tradition-worker-api prompt) — writes skills/traditions/<cat>/<id>.md
-  2. grok-4.20-fast worker (existing tradition-worker-grok prompt) — writes .seed/<id>/grok.md
-  3. gpt-5.5 merge (tradition-merge-api prompt with embedded drafts) — overwrites tradition file
+  1. OpenAI worker (tradition-worker-api prompt) — writes skills/traditions/<cat>/<id>.md
+  2. Grok worker (optional, for L3 search) (existing tradition-worker-grok prompt) — writes .seed/<id>/grok.md
+  3. OpenAI merge (tradition-merge-api prompt with embedded drafts) — overwrites tradition file
   4. validate produced file (YAML parse + required fields)
   5. INDEX.yaml status: pending → seeded (via lock to prevent race)
 
 Concurrency: N traditions in parallel.
 Per-call timeout: 1200s.
 Retry: 1 retry on transient HTTP errors.
-Exit early on: ≥3 consecutive sub2api 503s, ≥3 consecutive 429s, "usage limit" pattern.
+Exit early on: ≥3 consecutive OpenAI-compatible API 503s, ≥3 consecutive 429s, "usage limit" pattern.
 
 Usage:
     python3 scripts/dispatch-seed.py [--parallel N] [--limit N] [--ids id1,id2,...]
 """
 import argparse
+import os
 import asyncio
 import json
 import re
@@ -30,15 +31,15 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 INDEX_PATH = ROOT / 'skills/traditions/INDEX.yaml'
 RENDER = ROOT / 'scripts/render-prompt.py'
-SUB2API = ROOT / 'scripts/sub2api.py'
+LLM_CALL = ROOT / 'scripts/llm-call.py'
 SEED_DIR = ROOT / '.seed'
 LOG_DIR = SEED_DIR / 'dispatch-logs'
 STATE_PATH = SEED_DIR / 'dispatch-state.json'
 
 # Defaults
-MODEL_WORKER = 'gpt-5.5'
-MODEL_GROK   = 'grok-4.20-fast'
-MODEL_MERGE  = 'gpt-5.5'
+MODEL_WORKER = os.environ.get('OPENAI_MODEL', 'gpt-5.5')
+MODEL_GROK   = os.environ.get('XAI_MODEL', 'grok-4.3')
+MODEL_MERGE  = os.environ.get('OPENAI_MODEL', 'gpt-5.5')
 CALL_TIMEOUT = 1200  # seconds per HTTP call
 MAX_TOKENS_WORKER = 16384
 MAX_TOKENS_MERGE = 16384
@@ -117,7 +118,7 @@ def render_prompt(worker, tid):
     return out.stdout
 
 
-# ───── HTTP worker (sub2api) ───────────────────────────────────
+# ───── HTTP worker ─────────────────────────────────────────────────────────────
 
 FATAL_PATTERNS = [
     'You\'ve hit your usage limit',
@@ -127,13 +128,13 @@ FATAL_PATTERNS = [
 ]
 
 
-async def _run_sub2api_once(prompt_text, model, output_path, log_path,
+async def _run_llm_once(prompt_text, model, output_path, log_path,
                              extra_args, max_tokens):
     """Single attempt. Returns (rc, log_text, output_size)."""
     output_path.parent.mkdir(parents=True, exist_ok=True)
     tmp_path = output_path.with_suffix(output_path.suffix + '.tmp')
 
-    args = ['python3', str(SUB2API), model,
+    args = ['python3', str(LLM_CALL), model,
             '--max-tokens', str(max_tokens),
             '--timeout', str(CALL_TIMEOUT)]
     if extra_args:
@@ -168,15 +169,15 @@ async def _run_sub2api_once(prompt_text, model, output_path, log_path,
         return rc, log_text, 0
 
 
-async def run_sub2api(prompt_text, model, output_path, tid, label,
+async def run_llm(prompt_text, model, output_path, tid, label,
                        extra_args=None, max_tokens=MAX_TOKENS_WORKER,
                        retries=1):
-    """Call sub2api with up to (1 + retries) attempts on transient failures.
+    """Call OpenAI-compatible API with up to (1 + retries) attempts on transient failures.
     Don't retry on fatal usage-limit pattern.
     """
     log_path = LOG_DIR / f'{tid}-{label}.log'
     for attempt in range(retries + 1):
-        rc, log_text, size = await _run_sub2api_once(
+        rc, log_text, size = await _run_llm_once(
             prompt_text, model, output_path, log_path, extra_args, max_tokens
         )
         if rc == 0 and size >= 200:
@@ -241,7 +242,7 @@ async def process_tradition(t, fatal_signal):
     tradition_file = ROOT / f'skills/traditions/{cat}/{tid}.md'
     grok_out = tdir / 'grok.md'
 
-    # === Step 1: codex worker (gpt-5.5) + grok worker, parallel ===
+    # === Step 1: OpenAI worker + Grok worker, parallel ===
     try:
         codex_prompt = render_prompt('api', tid)
         grok_prompt = render_prompt('grok', tid)
@@ -249,9 +250,9 @@ async def process_tradition(t, fatal_signal):
         return ('error', {'where': 'render', 'msg': str(e)})
 
     codex_t, grok_t = await asyncio.gather(
-        run_sub2api(codex_prompt, MODEL_WORKER, tradition_file, tid, 'worker',
+        run_llm(codex_prompt, MODEL_WORKER, tradition_file, tid, 'worker',
                     max_tokens=MAX_TOKENS_WORKER),
-        run_sub2api(grok_prompt, MODEL_GROK, grok_out, tid, 'grok',
+        run_llm(grok_prompt, MODEL_GROK, grok_out, tid, 'grok',
                     extra_args=['--search'], max_tokens=8192),
         return_exceptions=True,
     )
@@ -264,7 +265,7 @@ async def process_tradition(t, fatal_signal):
 
     if detect_fatal_in_log(codex_log):
         fatal_signal.set()
-        return ('fatal', {'where': 'codex-worker', 'msg': 'sub2api usage limit',
+        return ('fatal', {'where': 'codex-worker', 'msg': 'OpenAI-compatible API usage limit',
                           'log_tail': codex_log[-300:]})
 
     if codex_rc != 0 or codex_size < 200:
@@ -282,14 +283,14 @@ async def process_tradition(t, fatal_signal):
         except Exception as e:
             return ('error', {'where': 'render-merge', 'msg': str(e)})
 
-        m_rc, m_log, m_size = await run_sub2api(
+        m_rc, m_log, m_size = await run_llm(
             merge_prompt, MODEL_MERGE, tradition_file, tid, 'merge',
             max_tokens=MAX_TOKENS_MERGE,
         )
         if detect_fatal_in_log(m_log):
             fatal_signal.set()
             return ('fatal', {'where': 'codex-merge',
-                              'msg': 'sub2api usage limit',
+                              'msg': 'OpenAI-compatible API usage limit',
                               'log_tail': m_log[-300:]})
         if m_rc != 0 or m_size < 200:
             return ('error', {'where': 'codex-merge',

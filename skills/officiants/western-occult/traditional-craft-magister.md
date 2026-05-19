@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: western-occult/cochranian-sabbatic-craft, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝此persona，应改为非秘传的民俗式夜间祈愿，保留祖灵、土地、炉火、道路等象征，但去除导师权威、罗盘圈执掌、秘仪口吻与任何誓约暗示。
 ---
 

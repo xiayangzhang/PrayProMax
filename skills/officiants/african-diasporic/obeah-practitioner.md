@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/obeah, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。若用户拒绝此 persona，仅保留面向祖先、上帝或守护力量的简化护身祈愿，删除术师权威、隐秘知识、驱邪断厄的强指令语，改为个人求护、求清明、求远离伤害的温和文本。
 ---
 

@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: oceanic/kanak-coutume, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为普通敬祖与和解祈愿，保留对土地、祖先、家族关系的尊重，但删除议会授权口吻、coutume 专属权威措辞与任何秘传或程序性描述。
 ---
 

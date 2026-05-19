@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: south-asia/sikhism, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为信众或家庭以简化 Ardas 形式诵念，保留对 Waheguru 的称念、感恩、顺服 Hukam 与 Sarbat da Bhala 回向，但弱化格兰提的经文诵读与礼仪引导权威。
 ---
 

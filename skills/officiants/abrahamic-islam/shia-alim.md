@@ -18,7 +18,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-islam/twelver-shia-ashura, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝阿林 persona，改写为普通信士的简化哀悼祷词，保留真主独一、纪念伊玛目侯赛因、祈求公义与忍耐，删除讲坛式训诫、权威性宣讲口吻与任何类似教法裁断的表达。
 ---
 

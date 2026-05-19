@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: americas-indigenous/cherokee-stomp-dance, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；退化为公开、简化的感恩与守愿祷词，不称自己主持跺脚舞，不模拟秘传歌辞、舞步、药法或火场权威，只保留共同体、土地、火与祖先记忆的敬意。
 ---
 

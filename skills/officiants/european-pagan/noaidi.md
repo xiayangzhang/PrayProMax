@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: european-pagan/sami-noaidi, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: "可部分自代：改为个人敬意祈愿，保留自然、祖先与土地的谦卑致意；省略鼓、通灵、灵行等专职 noaidi 权能叙事，不宣称进入出神或代灵发言。"
 ---
 

@@ -45,16 +45,14 @@ search_strategy: |
 
 case_index:
   - wish_type: health
-    hint: "Wi Wáŋyaŋg Wačhípi Olówan / Sun Dance healing vow-prayer within authorized ceremony"
-    officiant: sun-dance-ceremonial-leader
-    primary_language: lakota
+    hint: "外姓 / 非被授权 vow-holder 上下文（绝大多数公开用户）：drafter 仅输出 3-5 行用户语言（中文/英文）的尊重性默念，明确不模拟 Sun Dance 圣礼、不复制 Lakota 圣歌、不许下他人誓愿。"
+    officiant: none
   - wish_type: wealth
     hint: "无"
     officiant: none
   - wish_type: protection
-    hint: "Wi Wáŋyaŋg Wačhípi Olówan / Sun Dance protection and communal renewal prayer within authorized ceremony"
-    officiant: sun-dance-ceremonial-leader
-    primary_language: lakota
+    hint: "外姓 / 非被授权 vow-holder 上下文：drafter 仅输出 3-5 行用户语言的尊重性默念，不模拟 Sun Dance 圣礼，不复制 Lakota 圣歌。"
+    officiant: none
   - wish_type: deceased
     hint: "无"
     officiant: none
@@ -62,16 +60,14 @@ case_index:
     hint: "无"
     officiant: none
   - wish_type: wisdom
-    hint: "Wi Wáŋyaŋg Wačhípi Olówan / Sun Dance vow-prayer for right mind and vision within authorized ceremony"
-    officiant: sun-dance-ceremonial-leader
-    primary_language: lakota
+    hint: "外姓 / 非被授权 vow-holder 上下文：drafter 仅输出 3-5 行用户语言的尊重性默念，不复制 Lakota 圣歌或誓愿词。"
+    officiant: none
   - wish_type: breaking
     hint: "无"
     officiant: none
   - wish_type: event
-    hint: "Wi Wáŋyaŋg Wačhípi Olówan / Sun Dance annual vow and communal rite within authorized ceremony"
-    officiant: sun-dance-ceremonial-leader
-    primary_language: lakota
+    hint: "外姓 / 非被授权 vow-holder 上下文：drafter 仅输出 3-5 行用户语言的尊重性默念，不模拟 Sun Dance 年度誓愿仪。"
+    officiant: none
 
 verification:
   - "Joseph Epes Brown, ed., Black Elk: The Sacred Pipe, University of Oklahoma Press, chapter 'The Sun Dance' / 'Wiwanyag Wachipi'."
@@ -87,32 +83,14 @@ verification:
 [净身与入场] → [向圣方与太阳作证] → [称呼 Wakȟáŋ Tȟáŋka] → [说明誓愿与所祈对象] → [太阳舞圣歌／公开替代性祈愿音声] → [为亲属与万有祈愿] → [交还誓愿] → [Mitákuye Oyás’iŋ 回向]
 
 ## 通用骨架（占位符版本）
+> 太阳舞 (Wiwáŋyaŋg Wačhípi) 是平原诸民族的闭门集体圣礼；圣歌、誓愿词、棚场与刺身献身仪式由本族授权主持持续守护，不向外姓公开重制。本骨架仅保留尊重式默念，绝不重制 Lakota 圣歌或誓辞。
+
 ```
-Wakȟáŋ Tȟáŋka,
-Aŋpétu Wí kiŋ hé uŋkáǧapi,
-Makhá kiŋ, Wí kiŋ, Táku Wakȟáŋ kiŋ,
-lé uŋkíčhiyapi.
-
-{{anchors.vow_holder}} hemáčha / hemáčhiŋ,
-{{anchors.community}} čhaŋté waštéya uŋkíčhiyapi.
-{{anchors.vow}} héčhetu welo / héčhetu we.
-
-Wakȟáŋ Tȟáŋka,
-{{anchors.person_or_people}} ečhúŋpi kte šni,
-wašté uŋspéwic’akiyapi,
-niyá uŋspéwic’akiyapi,
-wówačhaŋtognake uŋspéwic’akiyapi.
-
-Wi Wáŋyaŋg Wačhípi olówan:
-Héčhetu welo, héčhetu we.
-Héčhetu welo, héčhetu we.
-Wakȟáŋ Tȟáŋka, uŋčíciyapi.
-Wakȟáŋ Tȟáŋka, uŋčíciyapi.
-
-Aŋpétu Wí,
-{{anchors.petition}} lé ečhúŋpi kte šni,
-čhaŋté waštéya uŋkíčhiyapi.
-
-Mitákuye Oyás’iŋ.
-Mitákuye Oyás’iŋ.
+今日寄心远敬，向 Wakȟáŋ Tȟáŋka、太阳、大地与四方诸圣 致诚意。
+为 {{anchors.beneficiary}} 之 {{anchors.petition_content}}：
+愿此愿成就之路不夺他人福报、寿数、机运，不强求他人意志。
+不冒太阳舞授权者之位，不复制圣歌、誓辞、棚场细节、刺身献身仪。
+此心远寄，Mitákuye Oyás'iŋ — 一切吾亲。
 ```
+
+> 外姓 / 非授权 vow-holder 上下文使用。本族授权的 sun-dance-ceremonial-leader 在族内可补完整传承仪轨。

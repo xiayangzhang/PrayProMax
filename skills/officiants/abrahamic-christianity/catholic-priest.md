@@ -19,7 +19,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-christianity/catholic-charismatic-renewal, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝神父 persona，应改为平信徒个人祈祷或家庭祈祷，删除赦罪、祝圣、圣事性宣告和以司铎身份命令式祝福，保留向天主的恳求、圣经默想、圣神引导与爱德回向。
 ---
 

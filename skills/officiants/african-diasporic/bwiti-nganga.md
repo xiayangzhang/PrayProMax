@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/bwiti, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。若用户拒绝 persona，只保留祖先纪念、内省忏悔、家庭守护与自然敬意，删除恩冈加权威口吻、秘传暗示和任何具体仪式技术，改为普通敬祖祈愿文。
 ---
 

@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-han/kejia-shigong-pai, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为家中敬香合掌的简化祈愿，保留敬祖、敬神、祈安、回向结构，删去师公自称、敕令、罡步、符咒与驱役神兵等专属科仪语汇，效力叙事弱化为诚心祈愿与自我省身。
 ---
 

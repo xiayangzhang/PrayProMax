@@ -19,7 +19,6 @@ required_for:
   - { tradition: abrahamic-christianity/roman-catholic-sacramental, wish_type: deliverance, prayer_id: "*" }
   - { tradition: abrahamic-christianity/roman-catholic-sacramental, wish_type: exorcism, prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；退化为平信徒可诵的保护、悔改、求主怜悯与圣弥额尔代祷式祷词，避免使用“我命令”等重大驱魔公式，避免模拟司铎圣事权柄。
 ---
 

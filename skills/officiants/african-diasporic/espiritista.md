@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/santeria-lukumi, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝灵媒 persona，改为普通敬祖与祈求光明守护的简化祷词，去除灵媒辨察、灵性弥撒式措辞与任何代言亡灵的语气，保留安抚、祝福、净化和道德劝勉。
 ---
 

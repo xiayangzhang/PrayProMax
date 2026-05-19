@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-christianity/coptic-orthodox, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。若用户拒绝司祭 persona，改为平信徒简化祈祷：保留圣三一称呼、主祷文式结构、悔改与代求，但删除司祭祝福、赦罪、圣礼施行、奉教会权柄宣告等措辞，并明确只是个人祈祷文本。
 ---
 

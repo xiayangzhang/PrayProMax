@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: south-asia/shakta, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为居家简化祷词，保留净手、点灯、献花或清水、称念女神名号与回向，不使用秘传曼怛罗、灌顶手印、火供、神像开光或宣称祭司权威。
 ---
 

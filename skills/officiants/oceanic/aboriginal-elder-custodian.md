@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: oceanic/yolngu-arrernte-songlines, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；退化版应改为公开致敬与感恩式祷词，只表达尊重 Country、祖先与守护责任，不宣称拥有长老权威、不使用秘密名号或专属歌线内容。
 ---
 

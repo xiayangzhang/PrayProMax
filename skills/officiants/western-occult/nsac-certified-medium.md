@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: western-occult/spiritualism-nsac, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改写为普通 Spiritualist 风格的祈祷，保留对 Infinite Intelligence、爱、疗愈与灵界亲友安慰的表达，但移除“认证灵媒视角”、证据式通灵口吻与任何代表灵界传讯的措辞。
 ---
 

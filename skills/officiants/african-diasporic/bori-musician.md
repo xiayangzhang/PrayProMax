@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/bori, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为非附灵、非权威性的简化祈愿，保留尊敬称呼、节奏性重复与求平衡的主题，删除声称召灵、驱病、占断或强制灵体回应的句式。
 ---
 

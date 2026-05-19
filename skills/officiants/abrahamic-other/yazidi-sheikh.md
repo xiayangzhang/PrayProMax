@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-other/yazidi, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为普通信众的简化祝愿，不自称谢赫，不宣称具备世袭礼仪权威，不编造或代诵限制性圣歌，仅保留对 Xwedê 的敬奉、对 Tawûsê Melek 与七天使护佑的恭敬祈愿。
 ---
 

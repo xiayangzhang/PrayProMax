@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-christianity/roman-catholic-sacramental, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝执事 persona，应改为平信徒简化祷词，保留天主圣三、悔改、交托与代祷结构，但避免祝圣、礼仪主持、圣事效力或圣职权柄措辞。
 ---
 

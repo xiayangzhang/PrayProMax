@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-christianity/jehovahs-witnesses, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；个人或家庭可用简化祷词直接向耶和华祷告，但公开代表会众的语气应弱化为个人代祷，避免声称获得会众正式委派。
 ---
 

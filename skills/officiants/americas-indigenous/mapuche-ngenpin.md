@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: americas-indigenous/mapuche-machi-ngillatun, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为尊重自然、祖辈与共同体的简化祈愿，不模仿Ngenpin权威、不使用伪造Mapudungun圣辞、不声称举行完整Ngillatun。
 ---
 

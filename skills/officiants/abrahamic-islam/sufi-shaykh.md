@@ -19,7 +19,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-islam/sanusiyya, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为普通穆斯林个人杜阿，保留赞主、祝圣、忏悔、托靠与善愿，删除谢赫代祈、师承许可、塔里卡引导等权威叙事，效力叙事弱化为个人虔诚祈求。
 ---
 

@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: southeast-asia/lao-baci, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；简化为家人或当事人围坐、彼此祝福、象征性系白线与说安抚词，保留召回 khwan 与祝愿平安的结构，但不宣称具备完整传统礼师权威。
 ---
 

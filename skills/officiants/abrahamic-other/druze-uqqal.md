@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-other/druze, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝乌卡勒 persona，则改为普通德鲁兹一神论风格的简短伦理祷词，保留谦卑、守信、家庭与社群平安主题，删除任何入道者口吻、秘传权威暗示与仪轨性措辞。
 ---
 

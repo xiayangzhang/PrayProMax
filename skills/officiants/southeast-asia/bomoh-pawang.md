@@ -18,7 +18,6 @@ persona_prompt: |
 required_for:
   - { tradition: southeast-asia/malay-bomoh, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: "可部分自代。用户拒绝 persona 时，改为 lay simplified form：保留净心、告慰、护家、送离恶意与祈求平安的结构，删去师承权能、命令灵体、诊断病因、占断凶吉等表述；效力叙事弱化为个人安心与象征性祝愿。"
 ---
 

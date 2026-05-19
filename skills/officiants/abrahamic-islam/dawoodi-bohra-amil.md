@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-islam/dawoodi-bohra, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。用户拒绝persona时，改为普通穆斯林个人duʿāʾ：保留赞主、祝福先知、悔过、祈愿与感恩结构；删除阿米勒代表社群或受委任发声的措辞；不模拟专属仪轨或密传权威。
 ---
 

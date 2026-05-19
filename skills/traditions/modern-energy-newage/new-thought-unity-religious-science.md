@@ -40,7 +40,7 @@ case_index:
     officiant: none
     primary_language: english
   - wish_type: protection
-    hint: "James Dillet Freeman《Prayer for Protection》：The light of God surrounds me..."
+    hint: "James Dillet Freeman 1941《Prayer for Protection》— reference only; reproduce as paraphrase to respect Unity's rights, e.g. 'Divine light is around me, divine love within me, divine power upholds me, divine presence with me everywhere.'"
     officiant: none
     primary_language: english
   - wish_type: deceased
@@ -111,12 +111,11 @@ Right relationship is expressed with consent, dignity, and peace.
 Whatever is not of Truth is released.
 Whatever is of Love remains.
 
-For protection:
-The light of God surrounds me;
-The love of God enfolds me;
-The power of God protects me;
-The presence of God watches over me;
-Wherever I am, God is.
+For protection (paraphrased — original "Prayer for Protection" by James Dillet Freeman, 1941, copyright Unity; affirm one's own surrounded-by-God-light/love/power/presence framing without reproducing the exact lines):
+Divine light is around me.
+Divine love is within me.
+Divine power upholds me.
+Divine presence is with me, in every place.
 
 I give thanks that this word is already known in Divine Mind.
 I give thanks for peace, clarity, right action, and the visible expression of good in {{anchors.situation}}.

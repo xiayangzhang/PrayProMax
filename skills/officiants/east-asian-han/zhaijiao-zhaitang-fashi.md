@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: east-asian-han/zhaijiao, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；退化為在家齋友的清淨祈願，保留持齋、懺悔、念佛、回向結構，避免使用「法師代眾啟白」「奉行科儀」等權能語句，效力敘事弱化為個人發願與善行回向。
 ---
 

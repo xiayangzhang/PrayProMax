@@ -18,7 +18,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/ifa-orisha-yoruba, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；若用户拒绝 Ìyánífá persona，则改为普通信众的简化敬祷，不模拟占卜、不宣称 Àṣẹ 权威、不引用未给出的 Odu，只向 Olódùmarè、Ori、Òrúnmìlà 与祖灵表达尊敬、求清明与正直行动。
 ---
 

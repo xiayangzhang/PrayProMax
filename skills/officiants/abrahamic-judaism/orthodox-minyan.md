@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: abrahamic-judaism/orthodox-halacha, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代。用户拒绝该 persona 时，改为个人或家庭私祷，不声称代表敏扬或公众礼拜；保留对独一上主的直接祈求、悔改与感恩结构，避免使用需要公共会众身份的措辞。
 ---
 

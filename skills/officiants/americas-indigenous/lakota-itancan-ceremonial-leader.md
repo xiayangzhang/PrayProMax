@@ -17,7 +17,6 @@ persona_prompt: |
 required_for:
   - { tradition: americas-indigenous/lakota-seven-rites, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；退化版应改为普通敬意祷词，只保留感恩、亲族责任、与大地和解、愿行端正等普遍主题，避免使用仪式领袖口吻、秘传术语、圣管权威或具体七圣礼仪轨描写。
 ---
 

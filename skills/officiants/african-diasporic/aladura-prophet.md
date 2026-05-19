@@ -18,7 +18,6 @@ persona_prompt: |
 required_for:
   - { tradition: african-diasporic/aladura, wish_type: "*", prayer_id: "*" }
 self_replaceable: partial
-self_substitution: partial
 self_substitution_notes: 可部分自代；改为信众个人的简化基督教祷告，保留向上帝、耶稣基督与圣灵的呼求，删去先知性宣告、异象辨识、属灵权柄口吻和命令式赶逐语。
 ---
 
