@@ -1,5 +1,39 @@
 {
   "version": 1,
-  "generated_at": "2026-05-19",
-  "entries": []
+  "generated_at": "2026-05-27",
+  "entries": [
+    {
+      "id": "health-baosheng-dadi-cult",
+      "wish_type": "health",
+      "traditions": [
+        "baosheng-dadi-cult"
+      ],
+      "path": "prayers/health/baosheng-dadi-cult.md",
+      "source": "traditional-synthesized",
+      "derived_tier": "L2",
+      "added_at": "2026-05-27"
+    },
+    {
+      "id": "health-dongbei-chumaxian",
+      "wish_type": "health",
+      "traditions": [
+        "dongbei-chumaxian"
+      ],
+      "path": "prayers/health/dongbei-chumaxian.md",
+      "source": "traditional-synthesized",
+      "derived_tier": "L2",
+      "added_at": "2026-05-27"
+    },
+    {
+      "id": "health-chan-zong-yankou-shuilu",
+      "wish_type": "health",
+      "traditions": [
+        "chan-zong-yankou-shuilu"
+      ],
+      "path": "prayers/health/chan-zong-yankou-shuilu.md",
+      "source": "traditional-synthesized",
+      "derived_tier": "L2",
+      "added_at": "2026-05-27"
+    }
+  ]
 }

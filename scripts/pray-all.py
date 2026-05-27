@@ -391,6 +391,73 @@ One word only.'''
     return 'UNCERTAIN'
 
 
+# ───── L1 writeback helpers ──────────────────────────────────
+
+async def extract_petition(section_text, wish_text):
+    """Identify the wish-specific petition paragraph in a drafted section.
+
+    The section is mostly fixed liturgical bones (purification, refuge, mantras,
+    etc.) plus ONE paragraph where the user's specific wish is articulated in
+    plain language. We extract that paragraph verbatim so it can be replaced
+    with a {{petition}} placeholder to make the rest of the section reusable
+    as an L1 cache skeleton.
+
+    Returns the petition paragraph string, or None if no clear petition slot.
+    """
+    prompt = f'''你看一段祷词文本。请找出其中"个人发愿 / 个人祈愿 / petition"的那一段——
+就是用户具体愿景被白话化、具体化的那段。其余部分（净坛 / 净身 / 皈依 / 总赞 / 持咒 / scripture / fixed liturgy）
+是该传统的固定仪轨结构，不算个人发愿。
+
+原始用户愿景（供你定位 petition slot）：
+{wish_text}
+
+祷词文本：
+---
+{section_text}
+---
+
+仅输出那段 petition 段落本身（逐字 verbatim, 必须出现在原文里），不要前后多余解释、不要标记、不要引号、不要 markdown header。
+如果你判断这段文本没有明显独立的个人发愿段（比如纯仪轨 / 无 petition slot / 段落混在 mantra 里无法干净抽出），输出 NO_PETITION。'''
+    result = await call_gpt(prompt, max_tokens=2000)
+    result = result.strip()
+    if not result or result.upper().startswith('NO_PETITION'):
+        return None
+    return result
+
+
+async def draft_petition_for_l1(tradition_entry, fm, wish_text, wish_type):
+    """Draft a fresh petition paragraph in the tradition's voice for a new wish.
+
+    Called when L1 cache hit: the cached skeleton has {{petition}} placeholder,
+    we generate a tradition-appropriate petition for the current wish to
+    substitute in.
+    """
+    name = tradition_entry.get('name', tradition_entry['id'])
+    langs = ', '.join(fm.get('primary_languages', []) or ['汉语'])
+    prompt = f'''你以 {name} 传统的内部声音，为下面这一个具体愿景起草一段"个人发愿 / petition"段落。
+
+该段落将被嵌入该传统的标准祷词骨架里的 petition slot —— 其他部分（净坛 / 皈依 / 持咒 / scripture / fixed liturgy）已就位，你只写 petition 这一段。
+
+愿景类型：{wish_type}
+用户具体愿景：{wish_text}
+本传统主要语言：{langs}（petition 段可用中文白话叙述具体愿景，符合 SKILL.md "personal-aspiration paragraph in user's language" 规则）
+
+硬规则：
+- 仅输出 petition 段落本身。不要标题、不要 markdown header、不要 quote、不要前后解释。
+- 嵌入 no-harm / no-deprivation / no-quid-pro-quo 条款，写在祷词正文里（不是末尾 disclaimer）
+- 不混合本传统以外的神格
+- 使用本传统的称谓、语气、句式
+- 不要使用 {{{{anchors.<key>}}}}（L1 命中时这一段是临时生成的，不缓存）
+- 长度合宜（4-12 句话），不冗长'''
+    return (await call_gpt(prompt, max_tokens=1200)).strip()
+
+
+def strip_frontmatter(text):
+    """Remove YAML frontmatter from a markdown string."""
+    m = re.match(r'^---\n.*?\n---\n*', text, re.DOTALL)
+    return text[m.end():] if m else text
+
+
 # ───── per-tradition driver ──────────────────────────────────
 
 async def process_tradition(entry, wish_text, wish_type, anchor_keys,
@@ -403,20 +470,29 @@ async def process_tradition(entry, wish_text, wish_type, anchor_keys,
     enrich_dir = session_dir / 'enrichments'
     enrich_dir.mkdir(parents=True, exist_ok=True)
 
+    # Load tradition (needed for L1 petition draft + L2/L3)
+    fm, body, full_md = load_tradition_full(entry)
+    if not fm:
+        return {'tid': tid, 'status': 'error', 'tier': '-',
+                'reason': 'tradition file missing or unparseable'}
+
     # L1 — RAG
     l1 = l1_check(wish_type, tid)
     if l1:
         path = ROOT / l1['path']
         if path.exists():
-            sect_path.write_text(path.read_text())
+            cached = path.read_text()
+            skeleton_body = strip_frontmatter(cached)
+            if '{{petition}}' in skeleton_body:
+                # New-style abstracted skeleton: draft fresh petition + substitute
+                petition = await draft_petition_for_l1(entry, fm, wish_text, wish_type)
+                final = skeleton_body.replace('{{petition}}', petition, 1)
+                sect_path.write_text(final)
+            else:
+                # Legacy / un-abstracted cache: use as-is (may carry prior wish text)
+                sect_path.write_text(skeleton_body)
             return {'tid': tid, 'status': 'match', 'tier': 'L1',
                     'section_path': str(sect_path.relative_to(session_dir))}
-
-    # Load tradition
-    fm, body, full_md = load_tradition_full(entry)
-    if not fm:
-        return {'tid': tid, 'status': 'error', 'tier': '-',
-                'reason': 'tradition file missing or unparseable'}
 
     # L2 — case_index
     l2 = l2_check(fm, wish_type)
@@ -665,10 +741,118 @@ def assemble_outputs(session_dir, state, anchors, universal_closing_text=''):
         pr_lines.append(f'- `{tid}` — see `.session/{session_dir.name}/enrichments/{tid}.md`')
     pr_lines.append('')
     pr_lines.append('## Type 2: new prayers/ entries')
-    pr_lines.append('(stage cross-tradition skeletons to prayers/ — TODO in v2)')
+    pr_lines.append('(L1 writeback runs automatically after assemble — see prayers/INDEX.json for new entries this session)')
     (out_dir / 'PR-CANDIDATE.md').write_text('\n'.join(pr_lines))
 
     return out_dir
+
+
+# ───── L1 writeback (prayers/ RAG population) ───────────────
+
+async def writeback_to_prayers(state, session_dir):
+    """Abstract each L2/L3 matched section into a reusable skeleton with
+    {{petition}} placeholder, and write to prayers/<wish_type>/<tradition>.md.
+
+    L1 hits are skipped (already came from prayers/). One entry per
+    (wish_type, tradition_id) — won't overwrite existing entries, so curated
+    PRs upstream stay sticky.
+    """
+    wish_type = state['wish_type']
+    wish_text = state['wish']
+    idx = yaml.safe_load(INDEX_PATH.read_text())
+    by_id = {t['id']: t for t in idx['traditions']}
+
+    PRAYERS_DIR.mkdir(parents=True, exist_ok=True)
+    wish_type_dir = PRAYERS_DIR / wish_type
+    wish_type_dir.mkdir(parents=True, exist_ok=True)
+
+    if PRAYERS_INDEX.exists():
+        index = json.loads(PRAYERS_INDEX.read_text())
+    else:
+        index = {'version': 1, 'entries': []}
+    existing_ids = {e['id'] for e in index.get('entries', [])}
+
+    sem = asyncio.Semaphore(5)  # cap petition-extraction concurrency
+
+    async def writeback_one(r):
+        if r['status'] != 'match':
+            return None
+        if r.get('tier') == 'L1':
+            return None  # came from prayers/, no writeback needed
+        tid = r['tid']
+        entry_id = f'{wish_type}-{tid}'
+        if entry_id in existing_ids:
+            return 'skipped'
+        section_path = session_dir / r['section_path']
+        if not section_path.exists():
+            return 'failed'
+        section_text = section_path.read_text()
+        try:
+            async with sem:
+                petition = await extract_petition(section_text, wish_text)
+        except Exception:
+            return 'failed'
+        if petition is None or petition not in section_text:
+            return 'failed'
+        skeleton = section_text.replace(petition, '{{petition}}', 1)
+
+        tradition_entry = by_id.get(tid, {})
+        cat = tradition_entry.get('category', '')
+        tradition_full_path = f'{cat}/{tid}'
+        langs = tradition_entry.get('primary_languages', []) or []
+        risk = tradition_entry.get('backlash_risk', 'low')
+        verification = tradition_entry.get('verification', []) or []
+
+        name = tradition_entry.get('name', tid)
+        verif_block = '\n'.join(f'  - {v}' for v in verification) if verification else '  - (inherited from tradition file)'
+        prayer_file = wish_type_dir / f'{tid}.md'
+        prayer_file.write_text(f'''---
+id: {entry_id}
+name: {name} — generic {wish_type} skeleton
+wish_type: {wish_type}
+sub_tags: [auto-writeback, {r.get("tier", "?")}-derived]
+tradition: {tradition_full_path}
+source: traditional-synthesized
+primary_languages: {json.dumps(langs, ensure_ascii=False)}
+backlash_risk: {risk}
+featured: false
+verification:
+{verif_block}
+---
+
+{skeleton}
+''')
+        # Append to INDEX (mutation under STATE_LOCK not needed — single coroutine writes index after gather)
+        return {
+            'id': entry_id,
+            'wish_type': wish_type,
+            'traditions': [tid],
+            'path': f'prayers/{wish_type}/{tid}.md',
+            'source': 'traditional-synthesized',
+            'derived_tier': r.get('tier', '?'),
+            'added_at': time.strftime('%Y-%m-%d'),
+        }
+
+    results = await asyncio.gather(*[writeback_one(r) for r in state['results']])
+
+    written = 0
+    skipped = 0
+    failed = 0
+    for res in results:
+        if res is None:
+            continue
+        if res == 'skipped':
+            skipped += 1
+        elif res == 'failed':
+            failed += 1
+        else:
+            index['entries'].append(res)
+            written += 1
+
+    index['generated_at'] = time.strftime('%Y-%m-%d')
+    PRAYERS_INDEX.write_text(json.dumps(index, indent=2, ensure_ascii=False))
+
+    return {'written': written, 'skipped': skipped, 'failed': failed}
 
 
 # ───── main ──────────────────────────────────────────────────
@@ -802,6 +986,12 @@ async def run(args):
                                 universal_closing_text=closing)
     print(f'   → {out_dir.relative_to(ROOT)}/')
     print(f'      INDEX.md / RENDERED.md / sections/ / needs-confirmation.md / PR-CANDIDATE.md')
+
+    # L1 writeback (populate prayers/ RAG for future user reuse)
+    print()
+    print('📚 L1 writeback — abstracting sections to prayers/...')
+    wb = await writeback_to_prayers(state, session_dir)
+    print(f'   wrote={wb["written"]}, skipped-existing={wb["skipped"]}, extraction-failed={wb["failed"]}')
 
 
 def main():
