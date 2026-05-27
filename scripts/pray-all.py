@@ -59,32 +59,55 @@ STATE_LOCK = asyncio.Lock()
 
 # ───── OpenAI-compatible API / grok callers ────────────────────────────────
 
-async def call_gpt(prompt, max_tokens=4096, timeout=600):
-    proc = await asyncio.create_subprocess_exec(
-        'python3', str(LLM_CALL), MODEL,
-        '--max-tokens', str(max_tokens), '--timeout', str(timeout),
-        stdin=asyncio.subprocess.PIPE,
-        stdout=asyncio.subprocess.PIPE,
-        stderr=asyncio.subprocess.PIPE,
-    )
-    out, err = await proc.communicate(input=prompt.encode())
-    if proc.returncode != 0:
-        raise RuntimeError(f'gpt rc={proc.returncode}: {err.decode()[:300]}')
-    return out.decode().strip()
+def _is_transient(err_text):
+    """Heuristic: HTTP 5xx / connection / timeout errors should be retried."""
+    t = err_text.lower()
+    return ('http 5' in t or 'connection' in t or 'timeout' in t
+            or 'temporarily unavailable' in t or 'upstream' in t)
 
 
-async def call_grok_search(query, max_tokens=2048):
-    proc = await asyncio.create_subprocess_exec(
-        'python3', str(LLM_CALL), GROK_MODEL,
-        '--max-tokens', str(max_tokens), '--search',
-        stdin=asyncio.subprocess.PIPE,
-        stdout=asyncio.subprocess.PIPE,
-        stderr=asyncio.subprocess.PIPE,
-    )
-    out, err = await proc.communicate(input=query.encode())
-    if proc.returncode != 0:
-        raise RuntimeError(f'grok rc={proc.returncode}: {err.decode()[:300]}')
-    return out.decode().strip()
+async def call_gpt(prompt, max_tokens=4096, timeout=600, retries=3):
+    last_err = None
+    for attempt in range(retries):
+        proc = await asyncio.create_subprocess_exec(
+            'python3', str(LLM_CALL), MODEL,
+            '--max-tokens', str(max_tokens), '--timeout', str(timeout),
+            stdin=asyncio.subprocess.PIPE,
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE,
+        )
+        out, err = await proc.communicate(input=prompt.encode())
+        if proc.returncode == 0:
+            return out.decode().strip()
+        err_text = err.decode()[:300]
+        last_err = err_text
+        if attempt < retries - 1 and _is_transient(err_text):
+            await asyncio.sleep(5 * (2 ** attempt))  # 5s, 10s, 20s
+            continue
+        raise RuntimeError(f'gpt rc={proc.returncode}: {err_text}')
+    raise RuntimeError(f'gpt failed after {retries} retries: {last_err}')
+
+
+async def call_grok_search(query, max_tokens=2048, retries=3):
+    last_err = None
+    for attempt in range(retries):
+        proc = await asyncio.create_subprocess_exec(
+            'python3', str(LLM_CALL), GROK_MODEL,
+            '--max-tokens', str(max_tokens), '--search',
+            stdin=asyncio.subprocess.PIPE,
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE,
+        )
+        out, err = await proc.communicate(input=query.encode())
+        if proc.returncode == 0:
+            return out.decode().strip()
+        err_text = err.decode()[:300]
+        last_err = err_text
+        if attempt < retries - 1 and _is_transient(err_text):
+            await asyncio.sleep(5 * (2 ** attempt))  # 5s, 10s, 20s
+            continue
+        raise RuntimeError(f'grok rc={proc.returncode}: {err_text}')
+    raise RuntimeError(f'grok failed after {retries} retries: {last_err}')
 
 
 # ───── tradition / officiant loading ─────────────────────────
