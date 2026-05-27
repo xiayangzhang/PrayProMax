@@ -703,7 +703,7 @@ def assemble_outputs(session_dir, state, anchors, universal_closing_text=''):
     if universal_closing_text:
         closing_block = '\n\n---\n\n' + render_anchors(universal_closing_text, anchors)
     rendered_md = (
-        f'# 祈愿: {state["wish"]}\n\n'
+        f'# 祈愿: {render_anchors(state["wish"], anchors)}\n\n'
         f'wish_type: {state["wish_type"]}\n\n'
         f'_Matched traditions: {len(matched)}_\n\n'
         + '\n\n---\n\n'.join(rendered_blocks)
