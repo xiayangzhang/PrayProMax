@@ -256,6 +256,7 @@ Output ONE markdown section:
 - Start with `## {entry["name"]}` heading
 - Follow with prayer body matching the tradition's 通用骨架 structure
 - Use {{{{anchors.<key>}}}} for any user-specific info
+- **具名占位 vs 礼仪自称要严格分清**: when naming the *specific beneficiary* this petition is for, use `{{{{anchors.beneficiary}}}}` (or whichever anchor key from the list above the wish references) — NEVER invent surrogate names like "信士 / 此人 / this devotee / petitioner / 张某". Generic liturgical self-reference (弟子 / 我等 / this servant / فقير / nā kānaka etc.) is the tradition's own canonical idiom and stays as is — don't placeholderize self-reference, only the named beneficiary.
 - Respect taboos strictly (from `taboos` field)
 - Do NOT mix deities from other traditions
 
@@ -349,6 +350,7 @@ Output ONE markdown section:
 - Use the search findings to construct a prayer that this tradition would recognize
 - If findings include a real mantra/prayer, embed it verbatim in **original language** (NOT Chinese translation)
 - Use {{{{anchors.<key>}}}} placeholders for personal info
+- **具名占位 vs 礼仪自称要严格分清**: when naming the *specific beneficiary*, use `{{{{anchors.beneficiary}}}}` (or whichever anchor key the wish references) — NEVER invent surrogate names like "信士 / 此人 / this devotee / petitioner". Generic liturgical self-reference (弟子 / 我等 / this servant) stays as the tradition's canonical idiom.
 - Respect tradition's taboos
 - Do NOT mix deities
 - **Mitigation when backlash_risk medium/high**: embed tradition's `mitigation` as closing protective ritual (part of prayer body)
@@ -448,7 +450,7 @@ async def extract_petition(section_text, wish_text):
     return result
 
 
-async def draft_petition_for_l1(tradition_entry, fm, wish_text, wish_type):
+async def draft_petition_for_l1(tradition_entry, fm, wish_text, wish_type, anchor_keys=None):
     """Draft a fresh petition paragraph in the tradition's voice for a new wish.
 
     Called when L1 cache hit: the cached skeleton has {{petition}} placeholder,
@@ -457,6 +459,8 @@ async def draft_petition_for_l1(tradition_entry, fm, wish_text, wish_type):
     """
     name = tradition_entry.get('name', tradition_entry['id'])
     langs = ', '.join(fm.get('primary_languages', []) or ['汉语'])
+    anchor_keys = anchor_keys or []
+    anchors_hint = ', '.join(f'{{{{anchors.{k}}}}}' for k in anchor_keys[:8])
     prompt = f'''你以 {name} 传统的内部声音，为下面这一个具体愿景起草一段"个人发愿 / petition"段落。
 
 该段落将被嵌入该传统的标准祷词骨架里的 petition slot —— 其他部分（净坛 / 皈依 / 持咒 / scripture / fixed liturgy）已就位，你只写 petition 这一段。
@@ -465,12 +469,18 @@ async def draft_petition_for_l1(tradition_entry, fm, wish_text, wish_type):
 用户具体愿景：{wish_text}
 本传统主要语言：{langs}（petition 段可用中文白话叙述具体愿景，符合 SKILL.md "personal-aspiration paragraph in user's language" 规则）
 
+Anchors available (USE these placeholders — NEVER write real personal info; the placeholder will be substituted to real values only at final local render):
+{anchors_hint or "(none provided)"}
+
 硬规则：
 - 仅输出 petition 段落本身。不要标题、不要 markdown header、不要 quote、不要前后解释。
 - 嵌入 no-harm / no-deprivation / no-quid-pro-quo 条款，写在祷词正文里（不是末尾 disclaimer）
 - 不混合本传统以外的神格
 - 使用本传统的称谓、语气、句式
-- 不要使用 {{{{anchors.<key>}}}}（L1 命中时这一段是临时生成的，不缓存）
+- **具名占位 vs 礼仪自称要严格分清**：
+  - 当指代"具体受愿者"（specific beneficiary, this petition's named subject）时——必须用 `{{{{anchors.beneficiary}}}}` 占位（或 wish 文本里出现的其他 anchor key），**严禁**编造"信士 / 此人 / this devotee / petitioner / 张某" 等任何代号去替名字。
+  - 当作传统**礼仪性自称**（弟子 / 我等 / this servant of God / nā kānaka / فقير 等本传统的自指惯用语）时，使用该传统的 canonical 自称语即可、不需占位符。
+  - 简洁判断：「为<某人>祈求」这种句子里的<某人>—— 用 placeholder；「我等 / 弟子等 礼敬 / 顶礼」这种—— 用本传统自称。
 - 长度合宜（4-12 句话），不冗长'''
     return (await call_gpt(prompt, max_tokens=1200)).strip()
 
@@ -508,7 +518,7 @@ async def process_tradition(entry, wish_text, wish_type, anchor_keys,
             skeleton_body = strip_frontmatter(cached)
             if '{{petition}}' in skeleton_body:
                 # New-style abstracted skeleton: draft fresh petition + substitute
-                petition = await draft_petition_for_l1(entry, fm, wish_text, wish_type)
+                petition = await draft_petition_for_l1(entry, fm, wish_text, wish_type, anchor_keys)
                 final = skeleton_body.replace('{{petition}}', petition, 1)
                 sect_path.write_text(final)
             else:
