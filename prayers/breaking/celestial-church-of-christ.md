@@ -1,0 +1,91 @@
+---
+id: breaking-celestial-church-of-christ
+name: Celestial Church — generic breaking skeleton
+wish_type: breaking
+sub_tags: [auto-writeback, L2-derived]
+tradition: african-diasporic/celestial-church-of-christ
+source: traditional-synthesized
+primary_languages: []
+backlash_risk: low
+featured: false
+verification:
+  - (inherited from tradition file)
+---
+
+## Celestial Church
+
+In the name of the Father, and of the Son, and of the Holy Spirit. Amen.
+
+Hallelujah. Hallelujah. Hallelujah.  
+Halleluyah, Halleluyah, Halleluyah.
+
+O Lord God of Celestial Church of Christ, Father of our Lord Jesus Christ, receive praise, honour, and adoration.  
+Thou art holy, thou art merciful, thou art mighty to save.
+
+Have mercy upon me, O God, according to thy lovingkindness:  
+according unto the multitude of thy tender mercies blot out my transgressions.  
+Wash me throughly from mine iniquity,  
+and cleanse me from my sin.  
+Create in me a clean heart, O God;  
+and renew a right spirit within me.  
+Cast me not away from thy presence;  
+and take not thy holy spirit from me.
+
+Our Father which art in heaven,  
+Hallowed be thy name.  
+Thy kingdom come.  
+Thy will be done in earth, as it is in heaven.  
+Give us this day our daily bread.  
+And forgive us our debts, as we forgive our debtors.  
+And lead us not into temptation,  
+but deliver us from evil:  
+For thine is the kingdom, and the power, and the glory, for ever.  
+Amen.
+
+Baba wa ti mbẹ li ọrun,  
+Ki a bọ̀wọ̀ fun orúkọ rẹ.  
+Ki ìjọba rẹ dé.  
+Ti ìfẹ́ rẹ ni ki a ṣe ni ayé, bí ti ọrun.  
+Fún wa li òní oúnjẹ wa ojoojúmọ́.  
+Dárí gbèsè wa jì wa, bí awa ti ń dárí gbèsè àwọn onígbèsè wa jì wọ́n.  
+Má sì fà wa sinu ìdánwò,  
+ṣùgbọ́n gbà wa lọwọ ibi.  
+Nítorí tirẹ ni ìjọba, àti agbára, àti ògo, lailai.  
+Amin.
+
+He that dwelleth in the secret place of the most High  
+shall abide under the shadow of the Almighty.  
+I will say of the LORD, He is my refuge and my fortress:  
+my God; in him will I trust.  
+Surely he shall deliver thee from the snare of the fowler,  
+and from the noisome pestilence.  
+He shall cover thee with his feathers,  
+and under his wings shalt thou trust:  
+his truth shall be thy shield and buckler.  
+Thou shalt not be afraid for the terror by night;  
+nor for the arrow that flieth by day;  
+nor for the pestilence that walketh in darkness;  
+nor for the destruction that wasteth at noonday.  
+A thousand shall fall at thy side,  
+and ten thousand at thy right hand;  
+but it shall not come nigh thee.  
+Because thou hast made the LORD, which is my refuge,  
+even the most High, thy habitation;  
+There shall no evil befall thee,  
+neither shall any plague come nigh thy dwelling.  
+For he shall give his angels charge over thee,  
+to keep thee in all thy ways.
+
+{{petition}}
+
+Hallelujah. Hallelujah. Hallelujah.  
+Halleluyah, Halleluyah, Halleluyah.
+
+O Lord, receive thanksgiving and praise.  
+Sanctify this prayer by the Holy Spirit.  
+Keep my heart clean, my body disciplined, my words truthful, and my worship holy before thee.  
+Let no strange spirit, no unclean work, no curse, no bargain, and no retaliation enter this supplication.  
+Let all deliverance stand only by the mercy of the Father, through the grace of the Son, and in the power of the Holy Spirit.  
+Let all be sealed in the name of our Lord Jesus Christ.
+
+Amen. Amen. Amen.

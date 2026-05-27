@@ -1,0 +1,47 @@
+---
+id: health-koshinto-kototama
+name: 古神道 / 言霊学派 — generic health skeleton
+wish_type: health
+sub_tags: [auto-writeback, L2-derived]
+tradition: east-asian-japan/koshinto-kototama
+source: traditional-synthesized
+primary_languages: []
+backlash_risk: low
+featured: false
+verification:
+  - (inherited from tradition file)
+---
+
+## 古神道 / 言霊学派
+
+掛けまくも畏き祓戸大神等の大前に、恐み恐みも白す。
+
+祓へ給ひ清め給へ。  
+守り給ひ幸へ給へ。  
+身魂にかかれる諸々の禍事・罪・穢れを、祓へ給ひ清め給へ。
+
+{{petition}}
+
+ひふみ　よいむなや　こともちろらね  
+しきる　ゆゐつわぬ　そをたはくめか  
+うおえ　にさりへて　のますあせゑほれけ
+
+高天原に神留坐す  
+神漏岐神漏美の命以ちて  
+皇御祖神伊邪那岐大神  
+筑紫の日向の橘の小戸の阿波岐原に  
+禊祓ひ給ふ時に生り坐せる祓戸大神等  
+諸々の禍事罪穢有らむをば  
+祓へ給ひ清め給へと申す事を  
+聞こし食せと恐み恐みも白す。
+
+祓へ給ひ清め給へ。  
+守り給ひ幸へ給へ。
+
+願ひ奉る身体康健、病痛遠離、福寿康寧の事、神ながらの道に叶ひ、言霊の幸はひによりて、清く明く直く正しく成らしめ給へ。
+
+もし心に荒び、害意、呪詛、怨み、他を制せむとする曲れる念の残れるあらば、今ここに退け放ち、祓へ給ひ清め給へ。  
+禍つ言は止まり、清き言は生ひ立ち、慎みの心に立ち返らしめ給へ。  
+祓戸大神等、此の身此の心を清め給ひ、天津日嗣の道に背かぬ清明正直の言霊となさしめ給へ。
+
+恐み恐みも白す。

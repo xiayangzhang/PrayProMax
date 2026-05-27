@@ -1,0 +1,52 @@
+---
+id: relationship-shingon-tomitsu
+name: 真言宗（東密） — generic relationship skeleton
+wish_type: relationship
+sub_tags: [auto-writeback, L2-derived]
+tradition: east-asian-japan/shingon-tomitsu
+source: traditional-synthesized
+primary_languages: []
+backlash_risk: low
+featured: false
+verification:
+  - (inherited from tradition file)
+---
+
+## 真言宗（東密）
+
+懺悔：  
+我昔所造諸悪業　皆由無始貪瞋癡  
+従身語意之所生　一切我今皆懺悔  
+
+三帰依：  
+南無帰依仏　南無帰依法　南無帰依僧  
+
+発菩提心：  
+衆生無辺誓願度　煩悩無尽誓願断  
+法門無量誓願学　仏道無上誓願成  
+
+本尊勧請：  
+南無愛染明王  
+三密清浄にして、貪愛を菩提に転じ、和合の善縁を照覧したまへ。  
+
+正行真言念誦：  
+oṃ mahārāga vajroṣṇīṣa vajrasattva jaḥ hūṃ vaṃ hoḥ  
+
+oṃ mahārāga vajroṣṇīṣa vajrasattva jaḥ hūṃ vaṃ hoḥ  
+
+oṃ mahārāga vajroṣṇīṣa vajrasattva jaḥ hūṃ vaṃ hoḥ  
+
+所願言上：  
+{{petition}}  
+
+回向：  
+願以此功徳　普及於一切  
+我等与衆生　皆共成仏道  
+
+重ねて懺悔し、三宝に帰依し、所修の功徳を一切に回向し奉る。  
+南無帰依仏　南無帰依法　南無帰依僧  
+
+願以此功徳　普及於一切  
+我等与衆生　皆共成仏道  
+
+南無大師遍照金剛
