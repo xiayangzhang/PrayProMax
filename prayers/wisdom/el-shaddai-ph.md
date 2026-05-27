@@ -1,0 +1,84 @@
+---
+id: wisdom-el-shaddai-ph
+name: 菲律宾 El Shaddai — generic wisdom skeleton
+wish_type: wisdom
+sub_tags: [auto-writeback, L2-derived]
+tradition: abrahamic-christianity/el-shaddai-ph
+source: traditional-synthesized
+primary_languages: []
+backlash_risk: low
+featured: false
+verification:
+  - (inherited from tradition file)
+---
+
+## 菲律宾 El Shaddai
+
+In the name of the Father, and of the Son, and of the Holy Spirit. Amen.
+
+El Shaddai, El Shaddai, El Elyon na Adonai,  
+we praise You, we worship You, we thank You, and we glorify Your holy name.
+
+Lord Jesus Christ, have mercy on us.  
+Panginoon, maawa ka.  
+Kristo, maawa ka.  
+Panginoon, maawa ka.
+
+Our Father, who art in heaven,  
+hallowed be thy name;  
+thy kingdom come;  
+thy will be done on earth as it is in heaven.  
+Give us this day our daily bread;  
+and forgive us our trespasses,  
+as we forgive those who trespass against us;  
+and lead us not into temptation,  
+but deliver us from evil. Amen.
+
+You who dwell in the shelter of the Most High,  
+who abide in the shade of the Almighty,  
+say to the LORD, “My refuge and fortress,  
+my God in whom I trust.”  
+He will rescue you from the fowler’s snare,  
+from the destroying plague,  
+He will shelter you with his pinions,  
+and under his wings you may take refuge;  
+his faithfulness is a protecting shield.
+
+{{petition}}
+
+“If any of you lacks wisdom, he should ask God who gives to all generously and ungrudgingly, and he will be given it.”
+
+Holy Spirit, light of truth,  
+guide the mind, memory, understanding, and discipline of the student.  
+Remove confusion, fear, laziness, pride, and distraction.  
+Teach humility, perseverance, honesty, and love for truth.  
+Bless every lesson, review, examination, teacher, classmate, and decision according to Your will.
+
+We ask for success without envy, cheating, or harm;  
+not to take unjustly from others,  
+not to dispossess others of their rightful good,  
+but to grow in wisdom, service, and gratitude before God.
+
+Therefore I tell you, all that you ask for in prayer,  
+believe that you will receive it and it shall be yours.
+
+Lord, not as a bargain and not by our power,  
+but according to Your mercy and holy will,  
+we ask this in the name of Jesus Christ. Amen.
+
+Hail Mary, full of grace, the Lord is with thee;  
+blessed art thou among women,  
+and blessed is the fruit of thy womb, Jesus.  
+Holy Mary, Mother of God,  
+pray for us sinners,  
+now and at the hour of our death. Amen.
+
+Glory be to the Father, and to the Son, and to the Holy Spirit,  
+as it was in the beginning, is now, and ever shall be,  
+world without end. Amen.
+
+May the Lord bless us, protect us from all evil,  
+keep us faithful in prayer, truthful in study, humble in success,  
+and bring us to everlasting life. Amen.
+
+In the name of the Father, and of the Son, and of the Holy Spirit. Amen.

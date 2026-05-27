@@ -1,0 +1,98 @@
+---
+id: event-lao-baci
+name: 老挝 Baci / Sou Khwan — generic event skeleton
+wish_type: event
+sub_tags: [auto-writeback, L2-derived]
+tradition: southeast-asia/lao-baci
+source: traditional-synthesized
+primary_languages: []
+backlash_risk: low
+featured: false
+verification:
+  - (inherited from tradition file)
+---
+
+## 老挝 Baci / Sou Khwan
+
+Namo tassa bhagavato arahato sammāsambuddhassa.  
+Namo tassa bhagavato arahato sammāsambuddhassa.  
+Namo tassa bhagavato arahato sammāsambuddhassa.
+
+Buddhaṃ saraṇaṃ gacchāmi.  
+Dhammaṃ saraṇaṃ gacchāmi.  
+Saṅghaṃ saraṇaṃ gacchāmi.
+
+Dutiyampi Buddhaṃ saraṇaṃ gacchāmi.  
+Dutiyampi Dhammaṃ saraṇaṃ gacchāmi.  
+Dutiyampi Saṅghaṃ saraṇaṃ gacchāmi.
+
+Tatiyampi Buddhaṃ saraṇaṃ gacchāmi.  
+Tatiyampi Dhammaṃ saraṇaṃ gacchāmi.  
+Tatiyampi Saṅghaṃ saraṇaṃ gacchāmi.
+
+ວາງພາຂວັນໃຫ້ສະອາດ, ວາງຝ້າຍຂາວໃຫ້ເປັນມຸງຄຸນ,  
+ໃຫ້ດອກໄມ້ ເຂົ້າໜຽວ ໄຂ່ ແລະນ້ຳໃຈດີ ເປັນພະຍານ.  
+ສຸຂີ ໂຫຕຸ ຜູ້ໄປສຳພາດວຽກ.  
+ອາໂຣຄະຍາ ປະຣະມາ ລາພາ.
+
+ໂອ ຂວັນເອີຍ, ຂວັນມາເດີ.  
+ຂວັນຂອງຜູ້ໄປສຳພາດວຽກ ມາເດີ.  
+ຂວັນຢູ່ເຮືອນ ໃຫ້ມາສູ່ເຮືອນ.  
+ຂວັນຢູ່ທາງໄກ ໃຫ້ມາທາງໃກ້.  
+ຂວັນຢູ່ເໜືອ ໃຫ້ມາ.  
+ຂວັນຢູ່ໃຕ້ ໃຫ້ມາ.  
+ຂວັນຢູ່ຕາເວັນອອກ ໃຫ້ມາ.  
+ຂວັນຢູ່ຕາເວັນຕົກ ໃຫ້ມາ.
+
+ມາເດີຂວັນເອີຍ.  
+ມາຢູ່ກັບເນື້ອ ກັບຕົວ.  
+ມາຢູ່ກັບຫົວ ກັບໃຈ.  
+ມາຢູ່ກັບຕາ ກັບຫູ.  
+ມາຢູ່ກັບປາກ ກັບສຽງ.  
+ມາຢູ່ກັບຄວາມຄິດສະຫວ່າງ.  
+ມາຢູ່ກັບຄຳເວົ້າອ່ອນຫວານ.  
+ມາຢູ່ກັບວັນສຳພາດວຽກ.  
+ມາຢູ່ກັບທາງດີ ແລະໂອກາດດີ.
+
+ຂວັນຢ່າໄປຫຼົງ.  
+ຂວັນຢ່າໄປລືມ.  
+ຂວັນຢ່າໄປຢູ່ທາງໄກ.  
+ຂວັນກັບມາເດີ.  
+ຂວັນມາເດີ.  
+ຂວັນມາເດີ.
+
+ສີສຸດທິ ສີມຸງຄຸນ.  
+ສີວິໄລ ສີຈະເລີນ.  
+{{petition}}
+
+ຝ້າຍຂາວນີ້ ຜູກແຂນຜູ້ໄປສຳພາດວຽກ.  
+ຜູກໃຫ້ຂວັນຢູ່.  
+ຜູກໃຫ້ຂວັນມາ.  
+ຜູກໃຫ້ດີ.  
+ຜູກໃຫ້ງາມ.  
+ຜູກໃຫ້ມຸງຄຸນ.  
+ຜູກໃຫ້ສຸກຂີ.  
+ຜູກໃຫ້ຈະເລີນ.
+
+Jayanto bodhiyā mūle  
+sakyānaṃ nandivaḍḍhano;  
+evaṃ tvaṃ vijayo hohi,  
+jayassu jayamaṅgale.
+
+Bhavatu sabba-maṅgalaṃ,  
+rakkhantu sabba-devatā;  
+sabba-buddhānubhāvena,  
+sadā sotthī bhavantu te.
+
+Bhavatu sabba-maṅgalaṃ,  
+rakkhantu sabba-devatā;  
+sabba-dhammānubhāvena,  
+sadā sotthī bhavantu te.
+
+Bhavatu sabba-maṅgalaṃ,  
+rakkhantu sabba-devatā;  
+sabba-saṅghānubhāvena,  
+sadā sotthī bhavantu te.
+
+Idaṃ me puññaṃ āsavakkhayāvahaṃ hotu.  
+Idaṃ me puññaṃ nibbānassa paccayo hotu.
