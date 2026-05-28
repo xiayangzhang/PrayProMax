@@ -308,9 +308,13 @@ Map by category (consult primary_languages in the sub-md frontmatter to confirm)
 - 欧洲异教复兴 → Old Norse / Old Irish / Lithuanian / etc. per tradition
 - 新思想 / Unity → English (its native idiom)
 
-**Only Chinese (or user's language) allowed in these parts:**
-- The user-aspiration paragraph that contains `{{{{anchors.*}}}}` placeholders
-- Brief inline section heading
+**Petition / personal-aspiration slot — language & form rules:**
+- Default: the petition (个人发愿 / niyya / intentio / 表文 / 啟請 / collect) is written in the SAME language and register as the surrounding liturgy. Latin oration for Latin Mass, norito 体 for Shinto, 文言 4-character lines for Han Buddhist 寶誥, Arabic du'a for Sufi, Tibetan sadhana aspiration for Vajrayana, etc.
+- Specific facts that resist translation (date / draw number / modern entity names / timezone deadlines) MAY appear as loaned / transliterated fragments embedded INTO the petition's liturgical sentence structure — they don't break the slot's language; they're slotted into its grammar.
+- DO NOT write the petition as a separate modern vernacular paragraph sandwiched between two blocks of original-language liturgy. That "Chinese sandwich" pattern is exactly the failure mode this rule forbids.
+- ONLY if you have NO confidence that you can authentically reproduce this tradition's petition idiom (you'd be guessing/inventing): write the petition in the language of the user's wish (detect from wish text — do NOT default to Chinese) and prepend a single line: `[user-vernacular-fallback — community curation welcome for this tradition's petition idiom]`. This is a marker for downstream review; use only as last resort.
+
+**Brief inline section heading** in user's wish language is OK.
 
 **All fixed mantras / scriptural recitations / formulaic prayers must appear in original — do NOT translate them. Romanization with original script alongside is acceptable.**
 
@@ -359,9 +363,11 @@ Output ONE markdown section:
 - **Oral/closed-lineage minimal section**: if tradition is oral or closed-initiation and public liturgical language isn't safely reconstructible, output a SHORT 3-7 line section: brief acknowledgment + petition with `{{{{anchors.*}}}}` + humility close. NEVER include `公开可引用部分有限` / `本派别仪轨多属师承口传` / "This prayer is open" / "We do not claim authority" or any "this section is..." disclaimer **as prayer body**. Express humility via a SHORT prayerful petition only.
 - **No fabrication of original-language text**: only embed mantras/scriptures you recall with HIGH confidence as canonical. For obscure specialized formulas (Tijaniyya awrad / Abakuá ritual / Beta Israel non-rabbinic / etc.), when uncertain, default to general supplications from the tradition's broader canon. Sparse correct > verbose corrupted.
 
-## LANGUAGE RULE (critical)
+## LANGUAGE & PETITION-SLOT RULE (critical)
 
-Prayer body (mantras, scriptural recitations, fixed prayers) MUST be in the tradition's **original liturgical language** — never Chinese translation. Romanized OK alongside native script. Chinese only allowed for: (a) user-aspiration paragraph with `{{{{anchors.*}}}}`, (b) brief section heading.
+Prayer body (mantras, scriptural recitations, fixed prayers) MUST be in the tradition's **original liturgical language** — never translation. Romanized OK alongside native script.
+
+Petition / personal-aspiration slot: same language and register as the surrounding liturgy (Latin oration, norito 体, 文言 4-char lines, du'a, Tibetan aspiration, etc.). Specific facts that resist translation (date / draw number / modern entity names / timezone deadlines) may be embedded as loaned fragments INTO the petition's liturgical sentence structure. DO NOT write the petition as a separate modern vernacular paragraph between two original-language blocks. If you have NO confidence in this tradition's petition idiom, write in the language of the user's wish (detect from wish text — do NOT default to Chinese) and prepend `[user-vernacular-fallback — community curation welcome for this tradition's petition idiom]`. Brief section heading in user's wish language is OK.
 
 Output the section only — no preamble, no commentary, no fences.
 If findings turned out unusable / hallucinated / unverifiable, output literally:
@@ -450,39 +456,194 @@ async def extract_petition(section_text, wish_text):
     return result
 
 
-async def draft_petition_for_l1(tradition_entry, fm, wish_text, wish_type, anchor_keys=None):
+async def draft_petition_for_l1(tradition_entry, fm, wish_text, wish_type,
+                                 anchor_keys=None, skeleton_body=''):
     """Draft a fresh petition paragraph in the tradition's voice for a new wish.
 
     Called when L1 cache hit: the cached skeleton has {{petition}} placeholder,
     we generate a tradition-appropriate petition for the current wish to
-    substitute in.
+    substitute in. Receives the surrounding skeleton text so the LLM can
+    style-match (language, register, line-form, prosody).
+
+    Output ends with a single line: [CONFIDENCE: HIGH|MEDIUM|LOW]
+    HIGH   = matches the tradition's actual petition idiom (language/register/form)
+    MEDIUM = plausible approximation, recognizable to a practitioner
+    LOW    = LLM is unsure of this tradition's petition idiom; needs escalation
     """
     name = tradition_entry.get('name', tradition_entry['id'])
-    langs = ', '.join(fm.get('primary_languages', []) or ['汉语'])
+    langs = ', '.join(fm.get('primary_languages', []) or [])
     anchor_keys = anchor_keys or []
     anchors_hint = ', '.join(f'{{{{anchors.{k}}}}}' for k in anchor_keys[:8])
-    prompt = f'''你以 {name} 传统的内部声音，为下面这一个具体愿景起草一段"个人发愿 / petition"段落。
+    skeleton_excerpt = skeleton_body[:3500] if skeleton_body else '(no skeleton provided)'
 
-该段落将被嵌入该传统的标准祷词骨架里的 petition slot —— 其他部分（净坛 / 皈依 / 持咒 / scripture / fixed liturgy）已就位，你只写 petition 这一段。
+    prompt = f'''You are drafting a single petition (个人发愿 / niyya / intentio / 表文 / 啟請 / etc.) for a prayer in the {name} tradition.
 
-愿景类型：{wish_type}
-用户具体愿景：{wish_text}
-本传统主要语言：{langs}（petition 段可用中文白话叙述具体愿景，符合 SKILL.md "personal-aspiration paragraph in user's language" 规则）
+This petition will be inserted into the slot marked `{{{{petition}}}}` inside the tradition's standard prayer skeleton shown below. EVERYTHING ELSE — opening liturgy, mantras / scripture / fixed prayers, refuge, closing — is already in place. You write ONLY the petition slot.
 
-Anchors available (USE these placeholders — NEVER write real personal info; the placeholder will be substituted to real values only at final local render):
+== TRADITION ==
+{name}  (category: {tradition_entry.get("category","?")}, id: {tradition_entry["id"]})
+primary_languages declared: {langs or "(none)"}
+
+== SURROUNDING SKELETON (this is the actual liturgy this petition will sit inside; match its language, register, prosody, line form) ==
+{skeleton_excerpt}
+
+== WISH (user's natural language wish — extract the specific facts, do NOT echo whole sentences) ==
+{wish_text}
+
+wish_type: {wish_type}
+
+== ANCHORS (use these placeholders for personal info; real values are substituted ONLY at final local render — anchor values NEVER enter your context) ==
 {anchors_hint or "(none provided)"}
 
-硬规则：
-- 仅输出 petition 段落本身。不要标题、不要 markdown header、不要 quote、不要前后解释。
-- 嵌入 no-harm / no-deprivation / no-quid-pro-quo 条款，写在祷词正文里（不是末尾 disclaimer）
-- 不混合本传统以外的神格
-- 使用本传统的称谓、语气、句式
-- **具名占位 vs 礼仪自称要严格分清**：
-  - 当指代"具体受愿者"（specific beneficiary, this petition's named subject）时——必须用 `{{{{anchors.beneficiary}}}}` 占位（或 wish 文本里出现的其他 anchor key），**严禁**编造"信士 / 此人 / this devotee / petitioner / 张某" 等任何代号去替名字。
-  - 当作传统**礼仪性自称**（弟子 / 我等 / this servant of God / nā kānaka / فقير 等本传统的自指惯用语）时，使用该传统的 canonical 自称语即可、不需占位符。
-  - 简洁判断：「为<某人>祈求」这种句子里的<某人>—— 用 placeholder；「我等 / 弟子等 礼敬 / 顶礼」这种—— 用本传统自称。
-- 长度合宜（4-12 句话），不冗长'''
-    return (await call_gpt(prompt, max_tokens=1200)).strip()
+═══════════════════════════════════════
+HARD RULES
+═══════════════════════════════════════
+
+1. **Language & register match the surrounding skeleton.** If the skeleton is Latin oration, write the petition as Latin oration. If norito 祝詞 form, write as 祝詞. If 文言 4-character lines (e.g. 寶誥 / 偈), match that line form. If Tibetan sadhana, write Tibetan-style aspiration. If Arabic du'a, write du'a. DO NOT default to modern vernacular prose as a "petition paragraph" — that is exactly the failure mode this prompt is designed to prevent.
+
+2. **Specific facts that resist translation** (date, draw numbers, modern entity names like "thelott Powerball", deadlines with timezone) MAY appear as transliterated / loaned / vernacular fragments embedded INTO the petition's liturgical sentence structure. Don't dump them as a flat block. Example pattern (Latin): "...pro sorte numero MDLXVII (Powerball ✦ thelott) die XXVIII Maii MMXXVI AEST ..." Example pattern (norito): "...thelott Powerball 第一五六七番、明け方 五月二十八日、八時半 AEST に至るまで、..."
+
+3. **具名占位 vs 礼仪自称要严格分清**:
+   - When the petition names the *specific beneficiary*, use `{{{{anchors.beneficiary}}}}` (or whichever anchor key from the list above the wish references). NEVER invent surrogate names: 信士 / 此人 / this devotee / petitioner / 该信徒 / 张某 are all forbidden as names.
+   - Tradition's own canonical SELF-REFERENCE (弟子 / 我等 / this servant / فقير / nā kānaka / etc.) stays as the tradition's idiom — don't placeholderize self-reference, only the named beneficiary.
+
+4. **Side-effect clauses** must be IN the petition body, not as footnoted disclaimers. In tradition voice: no-harm / no-deprivation / no quid-pro-quo / no exchange-with-deity bargain. Use the tradition's own way of saying these (e.g., Catholic "ut nemini noceam", Buddhist 「不损他人福报」, Islamic "lā ḍarara wa-lā ḍirār", etc.).
+
+5. **Do NOT mix deities from other traditions** into this petition.
+
+6. **Length is governed by the skeleton's prosody, not a sentence count.** A 寶誥 tradition takes ~12 four-char lines. A Latin collect is 3-4 sentences. A norito段 is ~4-8 lines. A Sufi munajat segment is a short rhymed prose passage. Match the surrounding liturgy's rhythm.
+
+═══════════════════════════════════════
+CONFIDENCE EVALUATION (mandatory)
+═══════════════════════════════════════
+
+End your output with one line, on its own, in this exact format:
+
+  [CONFIDENCE: HIGH]    — you have authentic familiarity with this tradition's petition idiom and your output would be recognized by a practitioner as their tradition's voice
+  [CONFIDENCE: MEDIUM]  — plausible approximation; would not embarrass but a practitioner would feel some seams
+  [CONFIDENCE: LOW]     — you are guessing the form / not sure of canonical petition phrasing for this tradition; downstream will trigger a search + retry
+
+Be honest. A LOW rating triggers an L3 web search to fetch reference examples, which improves the project — pretending HIGH when LOW just locks in a bad output.
+
+═══════════════════════════════════════
+OUTPUT
+═══════════════════════════════════════
+
+[petition body matching skeleton's language/register/form]
+
+[CONFIDENCE: <HIGH|MEDIUM|LOW>]'''
+    return (await call_gpt(prompt, max_tokens=1500)).strip()
+
+
+def parse_confidence_tag(text):
+    """Parse trailing [CONFIDENCE: HIGH|MEDIUM|LOW] tag from drafter output.
+
+    Returns (body, confidence) where confidence is 'HIGH' / 'MEDIUM' / 'LOW' /
+    'UNKNOWN' (parse failure — treat as MEDIUM by callers).
+    """
+    m = re.search(r'\[CONFIDENCE:\s*(HIGH|MEDIUM|LOW)\]\s*$',
+                  text.strip(), re.IGNORECASE)
+    if m:
+        confidence = m.group(1).upper()
+        body = text.strip()[:m.start()].rstrip()
+        return body, confidence
+    return text.strip(), 'UNKNOWN'
+
+
+async def search_petition_style(tradition_name, wish_type):
+    """Web search for a tradition's canonical petition / intention-statement form.
+
+    Used when draft_petition_for_l1 self-rates LOW confidence. The goal is to
+    surface 1-3 concrete examples of how this tradition actually structures a
+    request to its deities, so the redraft can imitate authentic form.
+    """
+    query = (
+        f"How does the {tradition_name} religious tradition structure a personal "
+        f"petition / intention statement (a request to its deities for a {wish_type} "
+        f"matter) inside its liturgy? Show 1-3 canonical examples in the original "
+        f"liturgical language, including: (a) the liturgical opening to the petition "
+        f"slot, (b) how the specific request is named (what verb / case / address), "
+        f"(c) the closing to the petition slot. Cite sources."
+    )
+    try:
+        return await call_grok_search(query, max_tokens=2048)
+    except Exception as e:
+        return f'SEARCH_ERROR: {e}'
+
+
+async def redraft_petition_with_findings(tradition_entry, fm, wish_text, wish_type,
+                                          anchor_keys, skeleton_body, findings):
+    """Second-pass petition draft, informed by search findings on tradition idiom."""
+    name = tradition_entry.get('name', tradition_entry['id'])
+    anchor_keys = anchor_keys or []
+    anchors_hint = ', '.join(f'{{{{anchors.{k}}}}}' for k in anchor_keys[:8])
+    skeleton_excerpt = skeleton_body[:3500] if skeleton_body else '(no skeleton)'
+    prompt = f'''SECOND-PASS petition draft for {name}. First attempt self-rated LOW confidence and triggered a web search for this tradition's petition idiom.
+
+== TRADITION ==
+{name}  ({tradition_entry.get("category","?")}, id: {tradition_entry["id"]})
+
+== SEARCH FINDINGS (canonical petition form for this tradition) ==
+{findings}
+
+== SURROUNDING SKELETON (style-match target) ==
+{skeleton_excerpt}
+
+== WISH ==
+{wish_text}
+wish_type: {wish_type}
+
+== ANCHORS ==
+{anchors_hint or "(none)"}
+
+Use the SEARCH FINDINGS to write a petition that authentically imitates this tradition's actual petition form. All hard rules from the first pass still apply:
+- Language/register/prosody match skeleton
+- {{{{anchors.beneficiary}}}} for named beneficiary, tradition self-reference for "we/I"
+- No-harm + no-deprivation + no quid-pro-quo woven into petition body
+- No deity mixing
+- Specific facts (date, draw, time) embedded into tradition's grammatical structure, not dumped as prose
+
+Same output format — petition body, then on its own line:
+[CONFIDENCE: HIGH|MEDIUM|LOW]
+
+If after search you still cannot recover the tradition's petition idiom with confidence, output [CONFIDENCE: LOW] — the next step is a final user-language fallback with a visible marker.'''
+    return (await call_gpt(prompt, max_tokens=1500)).strip()
+
+
+async def draft_petition_user_lang_fallback(tradition_entry, fm, wish_text, wish_type,
+                                             anchor_keys):
+    """Last-resort petition: write in the user's wish language with a visible marker.
+
+    Fires when both first pass AND search-augmented redraft yielded LOW confidence.
+    The marker signals to readers (and to future community contributors) that
+    this tradition's petition slot needs human curation.
+    """
+    name = tradition_entry.get('name', tradition_entry['id'])
+    anchor_keys = anchor_keys or []
+    anchors_hint = ', '.join(f'{{{{anchors.{k}}}}}' for k in anchor_keys[:8])
+    prompt = f'''Final fallback petition for {name}.
+
+We could not authentically reproduce this tradition's petition idiom even after a web search. Write the petition in the SAME LANGUAGE as the user's wish below (detect from wish text — do not default to any specific language). Mark it visibly so readers know this is a fallback.
+
+== WISH (use its language) ==
+{wish_text}
+wish_type: {wish_type}
+
+== TRADITION (still respect its deities & taboos in CONTENT, even if form is in user language) ==
+{name}
+
+== ANCHORS ==
+{anchors_hint or "(none)"}
+
+Output:
+1. ONE line opener (in user's wish language): "[user-vernacular-fallback — LLM could not authentically reproduce {name} petition idiom; community curation welcome]"
+2. The petition itself, in user's wish language
+3. Standard no-harm / no-deprivation / no quid-pro-quo clauses (in user's wish language)
+4. {{{{anchors.beneficiary}}}} for named beneficiary
+5. Address the tradition's actual deities (use their names from the tradition) — don't generic-ize
+
+No CONFIDENCE tag this time — this is the terminal fallback.'''
+    return (await call_gpt(prompt, max_tokens=1500)).strip()
 
 
 def strip_frontmatter(text):
@@ -517,15 +678,40 @@ async def process_tradition(entry, wish_text, wish_type, anchor_keys,
             cached = path.read_text()
             skeleton_body = strip_frontmatter(cached)
             if '{{petition}}' in skeleton_body:
-                # New-style abstracted skeleton: draft fresh petition + substitute
-                petition = await draft_petition_for_l1(entry, fm, wish_text, wish_type, anchor_keys)
+                # New-style abstracted skeleton: draft fresh petition with
+                # confidence escalation (LOW → search + redraft → user-lang fallback)
+                petition_raw = await draft_petition_for_l1(
+                    entry, fm, wish_text, wish_type, anchor_keys, skeleton_body)
+                petition, confidence = parse_confidence_tag(petition_raw)
+                petition_tier = 'L1-direct'
+
+                if confidence == 'LOW':
+                    findings = await search_petition_style(entry["name"], wish_type)
+                    petition_raw_v2 = await redraft_petition_with_findings(
+                        entry, fm, wish_text, wish_type, anchor_keys,
+                        skeleton_body, findings)
+                    petition_v2, confidence_v2 = parse_confidence_tag(petition_raw_v2)
+                    petition_tier = 'L1-search-redraft'
+
+                    if confidence_v2 == 'LOW':
+                        petition = await draft_petition_user_lang_fallback(
+                            entry, fm, wish_text, wish_type, anchor_keys)
+                        petition_tier = 'L1-user-lang-fallback'
+                    else:
+                        petition = petition_v2
+                        confidence = confidence_v2
+
                 final = skeleton_body.replace('{{petition}}', petition, 1)
                 sect_path.write_text(final)
             else:
                 # Legacy / un-abstracted cache: use as-is (may carry prior wish text)
                 sect_path.write_text(skeleton_body)
+                petition_tier = 'L1-legacy'
+                confidence = 'LEGACY'
             return {'tid': tid, 'status': 'match', 'tier': 'L1',
-                    'section_path': str(sect_path.relative_to(session_dir))}
+                    'section_path': str(sect_path.relative_to(session_dir)),
+                    'petition_tier': petition_tier,
+                    'petition_confidence': confidence}
 
     # L2 — case_index
     l2 = l2_check(fm, wish_type)
@@ -652,20 +838,25 @@ Some of the traditions used had medium/high backlash_risk. Their mitigations:
 
 Anchors available: {state.get("anchors_keys") or []}
 
-Write ONE concise paragraph (8-18 sentences in Chinese, since user's wish is in Chinese) that:
-- Functions as a cross-tradition closing dedication
-- Synthesizes the mitigations without naming specific traditions
-- Includes explicit **no-harm clause** (愿所求不损他人，不夺他人福报、寿数、姻缘、机运)
-- Includes explicit **no quid-pro-quo / 无交换 / 无还愿债** clause (本次所祈非以交换为本，不立来日附条件之愿，不欠诸神债负)
-- Includes initiation-respect clause (若以自代行高仪，乞各派师承宽恕)
-- Uses {{{{anchors.beneficiary}}}} or {{{{anchors.name-1}}}} appropriately if listed
-- Closes with a universal dedication to 法界有情
+Write ONE concise paragraph (8-18 sentences). **Match the language of the user's wish text above** (detect from the wish — do NOT default to any specific language; use the wish's own language). Examples by wish language:
+- Chinese wish → 中文 paragraph (use 总回向 / 法界有情 / 不夺他人福报 idiom)
+- English wish → English paragraph (use "dedication" / "no harm to others" / "freely offered without expectation of return" idiom)
+- Spanish / French / Japanese / etc. — same principle, use that language's native dedication vocabulary
 
-No preamble, no commentary. Just the paragraph (start with `## 总回向`).'''
+The paragraph must:
+- Function as a cross-tradition closing dedication
+- Synthesize the mitigations without naming specific traditions
+- Include explicit **no-harm clause** (in wish-language equivalent of "may this not harm others / 不损他人福报 / sin daño a otros / etc.")
+- Include explicit **no quid-pro-quo / no-exchange-with-deity** clause
+- Include initiation-respect clause (something like "if I have presumed to perform a high rite as a layperson, may the lineage holders forgive")
+- Use {{{{anchors.beneficiary}}}} or {{{{anchors.name-1}}}} appropriately if listed
+- Close with a universal dedication (法界有情 / "all sentient beings" / "todos los seres" / etc.)
+
+No preamble, no commentary. Just the paragraph (start with `## ` + a short heading in the wish language, e.g. `## 总回向` for Chinese, `## Universal Dedication` for English).'''
     try:
         return await call_gpt(prompt, max_tokens=1500)
     except Exception as e:
-        return f'## 总回向\n\n_(synthesis failed: {e})_'
+        return f'## Universal Dedication\n\n_(synthesis failed: {e})_'
 
 
 def assemble_outputs(session_dir, state, anchors, universal_closing_text=''):
